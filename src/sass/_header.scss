@@ -1,0 +1,63 @@
+.Header {
+  height: 80vh;
+  background: grey;
+  position: relative;
+  background: rgba(5, 5, 5, 0.3);
+  color: #f4f4f4;
+  //   backdrop-filter: blur(50px);
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../imgs/header4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+    //  backdrop-filter: blur(20px);
+    //  filter: blur(3px);
+  }
+  .Header-wrapper {
+    padding: 0rem 0.5rem;
+    //  border: 1px solid blue;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    h1 {
+      text-transform: uppercase;
+      // border: 1px solid blue;
+      max-width: 700px;
+      // max-width: 50%;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+      font-size: 3rem;
+    }
+
+    p {
+      max-width: 650px;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      // border: 1px solid red;
+      line-height: 1.4;
+      letter-spacing: 0.2px;
+    }
+    a {
+      width: 120px;
+      text-transform: uppercase;
+      padding: 0.5rem;
+      background: #f7e02c;
+      background: #3f58a6;
+      color: white;
+      border: none;
+      text-align: center;
+    }
+  }
+}

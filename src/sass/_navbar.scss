@@ -1,0 +1,61 @@
+.Navbar {
+  //   border: 1px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  .inner-wrapper {
+    //  border: 1px solid red;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    padding: 1.5rem 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    //  position: fixed;
+    //  top: 0;
+    //  left: 0;
+    //  right: 0;
+
+    .logo {
+      // border: 1px solid blue;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      span {
+        //   text-transform: uppercase;
+        margin-left: 0.7rem;
+        font-size: 1.5rem;
+        //   font-weight: 00;
+        color: #f4f4f4;
+        font-family: "Noto Sans", sans-serif;
+      }
+    }
+
+    nav {
+      a {
+        //   border: 1px solid red;
+        margin-right: 2rem;
+        //   padding: 0.4rem;
+        //   font-size: 1rem;
+        color: #f4f4f4;
+        //   font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #d0d1d4;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
