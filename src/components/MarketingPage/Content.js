@@ -53,6 +53,72 @@ const Content = () => {
           <img src={imgtwo} alt="image one" />
         </section>
       </div>
+      <div className="Content-third">
+        <section className="Content-us">
+          <div className="package-us">
+            <h3>compromiso de gift solar</h3>
+            <p>
+              <span>Nuestra mision: </span> facilitar el cambio de nuestro medio
+              ambiente por medio de la energia renovable,{" "}
+              <span>Nuestra vision: </span>
+              desarrollar una empresa a nivel nacional, que facilite el
+              desarrollo de la industria de la energia renovable.{" "}
+              <span>Nuestro compromiso:</span> brindarle un producto y servicio
+              de calidad de la misma forma ayudarle a ahorrar dinero y mantener
+              habitable nuestro planeta tierra. <span>Nuestros valores: </span>
+              Honestidad es nuestro compromiso asi como actuar con la verdad
+              para generar un entorno mas favorable interno y externo para
+              desarrollar el trabajo y cumplir los objetivos de la empresa.
+            </p>
+          </div>
+        </section>
+      </div>
+      <div className="Content-forth">
+        <section className="Content-packages">
+          <h3>paquetes</h3>
+          <div className="Content-inner-wrapper">
+            <div className="premium share">
+              <h3>premium</h3>
+              <p className="subtitle">Mi salud es lo primero</p>
+              <ol>
+                <li>Sistema de paneles solares</li>
+                <li>
+                  Sistema purificadora de agua para toda la casa y un sistema de
+                  agua alkalina instalado debajo del sink de su cocina
+                </li>
+                <li>Primeros 12 mensualidades pagadas por adelantado</li>
+                <li>Y si calificas obtendrás un préstamo personal </li>
+                <li>Mas el incentivo empresarial </li>
+              </ol>
+            </div>
+            <div className="plus share">
+              <h3>plus</h3>
+              <p className="subtitle">Mi ayuda justo a tiempo</p>
+
+              <ol>
+                <li>Sistema de paneles solares</li>
+                <li>Primeros 12 mensualidades pagadas por adelantado</li>
+                <li>Y si calificas obtendrás un préstamo personal </li>
+                <li>Mas el incentivo empresarial </li>
+              </ol>
+            </div>
+            <div className="basic share">
+              <h3>basico</h3>
+              <p className="subtitle">Mis incentivos en camino</p>
+              <ol>
+                <li>Sistema de paneles solares</li>
+                <li>Y si calificas obtendrás un préstamo personal </li>
+                <li>Mas el incentivo empresarial </li>
+              </ol>
+            </div>
+          </div>
+          <div className="terminos">
+            <p className="title">los terminos de planes son los siguientes</p>
+            <p>10 anos, 12 anos, 20 anos, 25 anos empezando al 2.99 APR</p>
+            <button>click aqui para generar mi propuesta</button>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

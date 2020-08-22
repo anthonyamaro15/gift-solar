@@ -29,6 +29,7 @@
         color: #3f58a6;
         margin-bottom: 1.5rem;
         margin-top: -1rem;
+        font-size: 1.5rem;
       }
 
       p {
@@ -52,7 +53,9 @@
 }
 
 .Content-second {
-  background: rgba(63, 88, 166, 0.1);
+  background: rgba(186, 197, 229, 0.2);
+  //   background: #f4f4f4;
+  background: rgba(145, 159, 201, 0.2);
 
   .Content-why {
     max-width: 1300px;
@@ -73,6 +76,7 @@
         color: #3f58a6;
         margin-bottom: 1.5rem;
         margin-top: -1rem;
+        font-size: 1.5rem;
       }
       p {
         font-size: 1rem;
@@ -96,6 +100,125 @@
       // border: 1px solid red;
       width: 550px;
       height: 355px;
+    }
+  }
+}
+
+.Content-third {
+  .Content-us {
+    //  border: 1px solid red;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 9rem 0.5rem;
+
+    .package-us {
+      // border: 1px solid blue;
+      h3 {
+        text-align: center;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #3f58a6;
+      }
+
+      p {
+        line-height: 1.5;
+        //   border: 1px solid red;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        //   font-size: 1.1rem;
+        span {
+          font-weight: bold;
+          //  color: #3f58a6;
+          margin-right: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+.Content-forth {
+  background: #f4f4f4;
+  //   background: rgba(63, 88, 166, 0.1);
+  background: rgba(145, 159, 201, 0.2);
+
+  .Content-packages {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 9rem 0.5rem;
+
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      color: #3f58a6;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .Content-inner-wrapper {
+      display: flex;
+      justify-content: space-between;
+      // border: 1px solid red;
+
+      h3 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .share {
+        width: 32%;
+        margin-top: 0.5rem;
+        padding: 0.9rem;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 15px 0px rgba(200, 200, 200, 0.5);
+        p {
+          //  font-size: 0.9rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          //  font-size: 0.9rem;
+          //  color: #3f58a6;
+        }
+
+        ol li {
+          font-size: 0.9rem;
+          margin-left: 1rem;
+          margin-bottom: 0.5rem;
+          //  line-height: 1.5;
+        }
+      }
+    }
+
+    .terminos {
+      // border: 1px solid red;
+      text-align: center;
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      .title {
+        text-transform: uppercase;
+        margin: 1rem 0 0.3rem;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+
+      button {
+        text-transform: uppercase;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        background: #3f58a6;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
     }
   }
 }
