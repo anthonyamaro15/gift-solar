@@ -1,21 +1,29 @@
 .form {
-  width: 700px;
+  //   width: 700px;
   //   border: 1px solid red;
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
 
-  input {
-    border: none;
-    border-bottom: 1px solid black;
-    padding: 0 0.5rem;
+  label {
+    //  font-size: 0.8rem;
+    input {
+      border: none;
+      border-bottom: 1px solid black;
+      padding: 0 0.5rem;
+    }
   }
+
   h3 {
     text-transform: uppercase;
     //  font-size: 1.2rem;
     text-align: center;
+    font-size: 1rem;
   }
 
   .form-title {
     text-align: center;
     margin: 4rem 0 1rem;
+    font-size: 1.2rem;
   }
 
   .types {
@@ -28,6 +36,7 @@
     label {
       text-transform: uppercase;
       font-weight: bold;
+      font-size: 1rem;
       input {
         margin-left: 0.3rem;
       }
@@ -36,7 +45,7 @@
 
   .subtitle {
     //  border: 1px solid red;
-    font-size: 0.9rem;
+    //  font-size: 0.9rem;
     p {
       text-align: center;
       margin-bottom: 1.5rem;
@@ -47,6 +56,7 @@
       h3 {
         text-align: start;
         margin-bottom: 1rem;
+        //   font-size: 1rem;
       }
 
       label {
@@ -131,7 +141,7 @@
   }
 
   .property-info {
-    font-size: 0.9rem;
+    //  font-size: 0.9rem;
 
     h3 {
       text-align: start;
@@ -319,10 +329,11 @@
       }
 
       .hoa-info {
-        width: 52%;
+        width: 54%;
         //   border: 1px solid red;
+        margin-bottom: 4rem;
         input {
-          width: 77%;
+          width: 79%;
         }
       }
 
@@ -330,12 +341,131 @@
         font-weight: bold;
 
         input {
-          border-bottom: 2px solid red;
+          border-bottom: 1px solid red;
         }
       }
     }
 
     /// inside here
+  }
+
+  .power-info {
+    //  font-size: 0.9rem;
+    //  border: 1px solid red;
+    h3 {
+      text-align: start;
+      margin: 1rem 0;
+    }
+
+    .if-panel-close {
+      margin-bottom: 1rem;
+      span {
+        margin-right: 1rem;
+      }
+
+      label {
+        margin-right: 0.5rem;
+        input {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+
+    .description-if-panel-close {
+      margin-bottom: 1rem;
+      label {
+        width: 99%;
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    .electric-panel-size {
+      margin-bottom: 4rem;
+      // border: 1px solid red;
+      display: flex;
+      span {
+        //   border: 1px solid blue;
+        color: red;
+        font-weight: bold;
+        width: 45%;
+        margin-bottom: 0;
+      }
+
+      label {
+        input {
+          width: 15%;
+        }
+      }
+    }
+  }
+
+  // AC-INFORMATION
+  .ac-information {
+    //  font-size: 0.9rem;
+    //  border: 1px solid red;
+
+    h3 {
+      text-align: start;
+      margin-bottom: 1rem;
+    }
+
+    .how-many-acs-wrapper {
+      label {
+        margin-bottom: 1rem;
+        display: block;
+
+        input {
+          width: 10%;
+        }
+      }
+    }
+
+    .type-of-header {
+      margin-bottom: 1rem;
+      span {
+        margin-right: 1rem;
+      }
+      label {
+        margin-right: 0.5rem;
+        input {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+
+    .have-solar-panels {
+      margin-bottom: 3rem;
+      span {
+        margin-right: 1rem;
+      }
+      label {
+        margin-right: 0.5rem;
+        input {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+
+  // POWER-BILL- INFORMATION
+  .power-bill-info {
+    //  font-size: 0.9rem;
+    h3 {
+      text-align: start;
+      margin-bottom: 1rem;
+    }
+    label {
+      margin-right: 0.5rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      input {
+        width: 60%;
+        //   margin-right: 0.3rem;
+        margin-left: 0.5rem;
+      }
+    }
   }
 
   .update-file {
@@ -344,16 +474,18 @@
     margin-left: -0.5rem;
     input {
       border: none;
+      cursor: pointer;
     }
   }
 
   button {
-    margin: 1rem 0;
+    margin: 1rem 0 4rem;
     text-transform: uppercase;
     padding: 0.5rem 1.5rem;
     font-size: 0.7rem;
     background: #3f58a6;
     color: white;
     border: none;
+    cursor: pointer;
   }
 }
