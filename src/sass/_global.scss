@@ -34,10 +34,13 @@ img {
 }
 
 span,
-button {
+button,
+label,
+input {
   display: inline-block;
 }
 
-button {
+button,
+input {
   outline: none;
 }
