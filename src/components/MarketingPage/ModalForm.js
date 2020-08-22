@@ -274,6 +274,117 @@ const ModalForm = () => {
           </div>
           {/********* end of HOA *********/}
 
+          {/**
+                   <div className="update-file">
+            <label htmlFor="pdf">
+              <input type="file" name="pdf" id="pdf" />
+            </label>
+          </div>
+         */}
+
+          {/********* SECOND FORM INFORMATION *********/}
+          <div className="power-info">
+            <h3>informacion del equipo electrico</h3>
+            <div className="if-panel-close">
+              <span>El panel electrico sta cercado?</span>
+              <label htmlFor="is-panel-close">
+                <input
+                  type="checkbox"
+                  name="is-panel-close"
+                  id="is-panel-close"
+                />
+                Si
+              </label>
+              <label htmlFor="is-panel-open">
+                <input
+                  type="checkbox"
+                  name="is-panel-open"
+                  id="is-panel-open"
+                />
+                No
+              </label>
+            </div>
+            <div className="description-if-panel-close">
+              <span>
+                En caso que el panel eléctrico este cercado, en breves palabras
+                explique en que parte de la casa esta ubicado{" "}
+              </span>
+              <label htmlFor="desc-fo-panel-close">
+                <input
+                  type="text"
+                  name="desc-fo-panel-close"
+                  id="desc-fo-panel-close"
+                />
+              </label>
+            </div>
+            <div className="electric-panel-size">
+              <span>Tamaño del panel eléctrico</span>
+              <label htmlFor="panel-size">
+                <input type="text" name="panel-size" id="panel-size" />
+                Amperes (sta informacion esta ubicada en el corta-corriente
+                principal de la propiedad y es una numeracion entre 100 a 200)
+              </label>
+            </div>
+          </div>
+          {/*********  END OF POWER SYSTEM INFORMATION  *********/}
+
+          <div className="ac-information">
+            <h3>a/c calentadores de agua</h3>
+            <div className="how-many-acs-wrapper">
+              <label htmlFor="acs">
+                Cuantos aires acondicinados?
+                <input type="text" name="acs" id="acs" />
+              </label>
+              <label htmlFor="heaters">
+                Cuantos calentadores de agua?
+                <input type="text" name="heaters" id="heaters" />
+              </label>
+            </div>
+            <div className="type-of-header">
+              <span>Tipo de calentador de agua:</span>
+              <label htmlFor="gas">
+                <input type="checkbox" name="gas" id="gas" />
+                Gas
+              </label>
+              <label htmlFor="electric">
+                <input type="checkbox" name="electric" id="electric" />
+                Electrico
+              </label>{" "}
+              <label htmlFor="solar">
+                <input type="checkbox" name="solar" id="solar" />
+                Solar
+              </label>
+            </div>
+            <div className="have-solar-panels">
+              <span>Tiene sistema solar existente para calentar el agua?</span>
+              <label htmlFor="have-solar-panel">
+                <input
+                  type="checkbox"
+                  name="have-solar-panel"
+                  id="have-solar-panel"
+                />
+                Si
+              </label>
+              <label htmlFor="dont-have-solar-panel">
+                <input
+                  type="checkbox"
+                  name="dont-have-solar-panel"
+                  id="dont-have-solar-panel"
+                />
+                No
+              </label>
+            </div>
+          </div>
+          {/*********  END OF AC INFORMATION *********/}
+          <div className="power-bill-info">
+            <h3>informacion de la cuenta de energia electrica</h3>
+            <label htmlFor="acc-num">
+              Numero de cuenta de NV Energy
+              <input type="number" id="acc-num" name="acc-num" />
+            </label>
+          </div>
+          {/*********  END OF POWER BILL INFO *********/}
+
           <div className="update-file">
             <label htmlFor="pdf">
               <input type="file" name="pdf" id="pdf" />
