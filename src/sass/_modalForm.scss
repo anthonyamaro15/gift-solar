@@ -1,5 +1,7 @@
 .form {
   width: 700px;
+  //   border: 1px solid red;
+
   input {
     border: none;
     border-bottom: 1px solid black;
@@ -38,7 +40,7 @@
     p {
       text-align: center;
       margin-bottom: 1.5rem;
-      font-size: 0.9rem;
+      // font-size: 0.9rem;
     }
 
     .user-info {
@@ -52,9 +54,10 @@
       }
 
       .nombre {
+        //   border: 1px solid red;
         width: 100%;
         input {
-          width: 85%;
+          width: 89%;
         }
       }
 
@@ -88,14 +91,14 @@
       .email {
         width: 100%;
         input {
-          width: 77%;
+          width: 65%;
         }
       }
 
       .address1 {
         width: 100%;
         input {
-          width: 86%;
+          width: 74%;
         }
       }
 
@@ -125,5 +128,232 @@
         }
       }
     }
+  }
+
+  .property-info {
+    font-size: 0.9rem;
+
+    h3 {
+      text-align: start;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .house {
+      // border: 1px solid red;
+      display: flex;
+
+      label {
+        margin-bottom: 1rem;
+
+        input {
+          width: 47%;
+        }
+      }
+    }
+
+    .construction-type {
+      width: 96%;
+      // border: 1px solid red;
+      .year-built {
+        display: flex;
+        span {
+          //  border: 1px solid blue;
+          width: 25%;
+        }
+
+        .checkbox-wrapper {
+          //  border: 1px solid blue;
+          display: flex;
+          justify-content: space-between;
+          width: 75%;
+          margin-bottom: 1rem;
+
+          label {
+            margin-right: 0.5rem;
+            input {
+              margin-right: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .ceiling-type {
+      // border: 1px solid red;
+      width: 97%;
+
+      .year-built {
+        display: flex;
+        span {
+          //  border: 1px solid blue;
+          width: 25%;
+        }
+
+        .checkbox-wrapper {
+          //  border: 1px solid blue;
+          display: flex;
+          justify-content: space-between;
+          width: 60%;
+          margin-bottom: 1rem;
+
+          label {
+            margin-right: 0.5rem;
+            input {
+              margin-right: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .ceiling-condition {
+      // border: 1px solid red;
+      width: 97%;
+
+      .year-built {
+        display: flex;
+        span {
+          //  border: 1px solid blue;
+          width: 25%;
+        }
+
+        .checkbox-wrapper {
+          //  border: 1px solid blue;
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+          margin-bottom: 1rem;
+
+          label {
+            margin-right: 0.5rem;
+            input {
+              margin-right: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .sombreado-techo {
+      // border: 1px solid red;
+      width: 97%;
+
+      .year-built {
+        display: flex;
+        span {
+          //  border: 1px solid blue;
+          width: 25%;
+        }
+
+        .checkbox-wrapper {
+          //  border: 1px solid blue;
+          display: flex;
+          justify-content: space-between;
+          width: 33%;
+          margin-bottom: 1rem;
+
+          label {
+            margin-right: 0.5rem;
+            input {
+              margin-right: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .pool {
+      // border: 1px solid red;
+      width: 97%;
+
+      .year-built {
+        display: flex;
+        span {
+          //  border: 1px solid blue;
+          width: 25%;
+        }
+
+        .checkbox-wrapper {
+          //  border: 1px solid blue;
+          display: flex;
+          justify-content: space-between;
+          width: 15%;
+          margin-bottom: 1rem;
+
+          label {
+            margin-right: 0.5rem;
+            input {
+              margin-right: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .gate {
+      margin-bottom: 1rem;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .HOA {
+      // border: 1px solid red;
+      color: red;
+      display: flex;
+      margin-bottom: 1.5rem;
+      span {
+        margin-right: 1.5rem;
+        font-weight: bold;
+      }
+
+      .yes-hoa {
+        margin-right: 0.7rem;
+        font-weight: bold;
+        input {
+          margin-right: 0.3rem;
+          font-weight: normal;
+          color: red;
+        }
+      }
+
+      .hoa-info {
+        width: 52%;
+        //   border: 1px solid red;
+        input {
+          width: 77%;
+        }
+      }
+
+      .important {
+        font-weight: bold;
+
+        input {
+          border-bottom: 2px solid red;
+        }
+      }
+    }
+
+    /// inside here
+  }
+
+  .update-file {
+    //  border: 1px solid red;
+    margin-bottom: 1rem;
+    margin-left: -0.5rem;
+    input {
+      border: none;
+    }
+  }
+
+  button {
+    margin: 1rem 0;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.7rem;
+    background: #3f58a6;
+    color: white;
+    border: none;
   }
 }
