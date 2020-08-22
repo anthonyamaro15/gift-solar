@@ -1,6 +1,7 @@
 import React from "react";
 import imgOne from "../../imgs/nublada.png";
 import imgtwo from "../../imgs/panelfb.png";
+import ModalForm from "./ModalForm";
 
 const Content = () => {
   return (
@@ -115,7 +116,7 @@ const Content = () => {
           <div className="terminos">
             <p className="title">los terminos de planes son los siguientes</p>
             <p>10 anos, 12 anos, 20 anos, 25 anos empezando al 2.99 APR</p>
-            <button>click aqui para generar mi propuesta</button>
+            <ModalForm />
           </div>
         </section>
       </div>
