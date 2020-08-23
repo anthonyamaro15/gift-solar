@@ -124,7 +124,7 @@ const Content = () => {
           </div>
           <div className="terminos">
             <p className="title">los terminos de planes son los siguientes</p>
-            <p>10 anos, 12 anos, 20 anos, 25 anos empezando al 2.99 APR</p>
+            <p>10 años, 12 años, 20 años, 25 años empezando al 2.99 APR</p>
             <ModalForm />
           </div>
         </section>
