@@ -92,6 +92,104 @@ const AboutContent = () => {
           </div>
         </section>
       </div>
+      {/** HOW GIFT SOLAR IS REACTING TO COVID19 */}
+      <div className="AboutContent-forth">
+        <section className="AboutContent-why">
+          <h3>COMO ES QUE GIFT SOLAR ESTA RESPONDIENDO AL COVID-19 </h3>
+          <div className="description-wrapper">
+            <div className="whyus-container">
+              <span>NUESTRA RESPUESTA A COVID-19</span>
+              <p>
+                Gift Solar se compromete a proteger la salud y la seguridad de
+                nuestros empleados, clientes y comunidades. Como empresa
+                familiar, consideramos a nuestros empleados, distribuidores y
+                clientes parte de nuestra familia. Estamos aquí para servirlos y
+                apoyarlos, porque sabemos que lo superaremos juntos. Gift Solar
+                se clasifica como un negocio esencial y se recomienda
+                encarecidamente que permanezca operando. Esto se debe a que
+                brindamos servicios que tienen un impacto en nuestro mundo y en
+                la economía local. Estamos siguiendo todas las precauciones
+                recomendadas por Centros para el Control y la Prevención de
+                Enfermedades, para crear un ambiente de trabajo seguro mientras
+                permanece abierto. Esperamos presentar un espacio seguro para
+                continuar apoyando a nuestros clientes y comunidades al estar
+                informados sobre nuestra salud.
+              </p>
+              <span>SALUD DEL EMPLEADO</span>
+              <p>
+                A medida que continuamos monitoreando la epidemia de COVID-19,
+                la salud de nuestros empleados está a la vanguardia de todas
+                nuestras decisiones. Para limitar la propagación de COVID-19,
+                Gift Solar y la empresa instaladora, adoptó prácticas de
+                teletrabajo (permite trabajar en un lugar diferente a la
+                oficina) y para los empleados que es necesario trabajar en la
+                oficina, implementó protocolos estrictos que maximizan el
+                espacio interpersonal para los empleados internos que se
+                consideran de "bajo riesgo". Los instaladores trabajan en
+                pequeños equipos de cuatro, que está muy por debajo del mínimo
+                actual de 10 personas recomendado por el gobierno. Los
+                topógrafos trabajan de manera independiente y no requieren
+                contacto con otros. Los técnicos de servicio trabajan en equipos
+                de uno a dos. Todos los empleados de la instaladora han recibido
+                instrucciones sobre todas las medidas de seguridad y
+                descontaminación durante este tiempo. Además, los empleados de
+                la instaladora han comprado máscaras faciales, guantes y equipos
+                de desinfección para todos los empleados de los almacenes en
+                todo el país. Han implementado nuevos procesos de limpieza
+                recomendados por los que incluyen una desinfección quincenal en
+                todas las instalaciones, una "limpieza profunda y completa”,
+                limpieza en todas las superficies duras. Estos son realizados
+                por técnicos certificados de servicios ambientales capacitados
+                para limpiar hospitales e instalaciones de atención médica.
+                Cualquier empleado que se sienta enfermo también debe consultar
+                con el proveedor "HealthiestYou", un servicio gratuito que se
+                ofrece a través del seguro médico de la instaladora.
+              </p>
+              <span>SALUD DE LOS PROPIETARIOS</span>
+              <p>
+                La instaladora ha adoptado una política de NO CONTACTO para
+                proteger a nuestras comunidades. La instaladora se compromete a
+                reducir el riesgo de COVID-19 y al mismo tiempo permite que las
+                personas se cambien a energia solar. La energía solar implica
+                mucho menos contacto del que se podría pensar, ya que la mayoría
+                de nuestro trabajo requiere interacciones interpersonales
+                limitadas. Solo necesitamos la capacidad de ingresar a su
+                propiedad, es por eso que hemos adoptado una política de NO
+                CONTACTO. Se han tomado las siguientes precauciones para
+                minimizar las interacciones cara a cara entre los empleados,
+                socios y clientes:
+              </p>
+              <p>
+                1. Cualquier documento que requiera una firma se puede dejar en
+                un espacio seguro en la propiedad del Cliente (es decir, buzón
+                y/o porche). Nuestro personal se comunicará en un margen de
+                tiempo para dejar y recoger estos artículos.
+              </p>
+              <p>
+                2. Los clientes no necesitan estar presentes durante ningún
+                trabajo. En la fecha de cualquier trabajo programado, los
+                clientes solo deben asegurarse que el equipo instalador tenga
+                acceso al panel y/o sub-panel de servicio eléctrico y que todas
+                las mascotas estén aseguradas dentro.
+              </p>
+              <p>
+                3. Si se requiere el acceso dentro de una residencia, los
+                clientes pueden dejar las puertas laterales sin llave o dejar su
+                garaje abierto para que el supervisor de los instaladores entre,
+                y el mismo se asegurara de desinfectar todas las áreas con las
+                que se haya tenido contacto y mantener 6 pies de espacio
+                personal con cualquier persona que esté dentro del hogar.
+              </p>
+              <p className="important-message">
+                Se alienta a los clientes a contactar a la instaladora por
+                cualquier inquietud. Harán todo lo posible para hacer los
+                ajustes necesarios para completar su proyecto, manteniendo su
+                seguridad como máxima prioridad.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
