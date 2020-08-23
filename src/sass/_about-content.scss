@@ -1,0 +1,122 @@
+.AboutContent-first {
+  //   border: 1px solid red;
+  //   background: rgba(153, 212, 226, 0.1);
+  //   background: rgba(63, 88, 166, 0.1);
+  //   background: rgba(48, 78, 133, 0.2);
+
+  .AboutContent-about {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 9rem 0.5rem;
+    //  border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    //  align-items: center;
+
+    .img-wrapper {
+      img {
+        width: 300px;
+        // border: 1px solid red;
+        height: 300px;
+        //   border-radius: 50%;
+
+        width: 550px;
+        // border: 1px solid red;
+        height: 355px;
+      }
+    }
+
+    .video-wrapper {
+      // border: 1px solid red;
+      width: 53%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        text-transform: uppercase;
+        color: #3f58a6;
+        margin-bottom: 1.5rem;
+        margin-top: -1rem;
+        font-size: 1.5rem;
+      }
+      span {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+      }
+
+      a {
+        border: 1px solid red;
+        text-transform: uppercase;
+        padding: 0.5rem 1.5rem;
+
+        background: #3f58a6;
+        color: white;
+        border: none;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.AboutContent-second {
+  background: rgba(186, 197, 229, 0.2);
+  //   background: #f4f4f4;
+  background: rgba(145, 159, 201, 0.2);
+  background: rgba(98, 115, 168, 1);
+  background: rgba(48, 78, 133, 0.2);
+  //   background: none;
+
+  .AboutContent-why {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 9rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    //  border: 1px solid red;
+
+    .description-wrapper {
+      width: 53%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // border: 1px solid blue;
+      h3 {
+        text-transform: uppercase;
+        color: #3f58a6;
+        margin-bottom: 1.5rem;
+        margin-top: -1rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        //   border: 1px solid red;
+        line-height: 1.5;
+      }
+
+      a {
+        border: 1px solid red;
+        text-transform: uppercase;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+
+        background: #3f58a6;
+        color: white;
+        border: none;
+      }
+    }
+    .finance-help {
+      // border: 1px solid red;
+      width: 550px;
+      height: 355px;
+    }
+  }
+}
