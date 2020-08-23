@@ -1,0 +1,62 @@
+.Footer {
+  background: rgb(6, 6, 6);
+  color: #b8b7b7;
+
+  font-size: 0.9rem;
+  .Footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 0.5rem 2rem;
+
+    .vegas-info {
+      // border: 1px solid red;
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      // text-align: center;
+      display: flex;
+      justify-content: space-around;
+      span {
+        //   border: 1px solid red;
+        padding-right: 1.5rem;
+        border-right: 1px solid white;
+        &:last-child {
+          border: none;
+          padding: 0;
+        }
+      }
+
+      a {
+        margin-left: 0.5rem;
+        color: #b8b7b7;
+
+        text-decoration: underline;
+      }
+    }
+
+    .texas-info {
+      // border: 1px solid red;
+      margin-bottom: 3rem;
+      // text-align: center;
+      display: flex;
+      justify-content: space-around;
+      span {
+        //   border: 1px solid red;
+        padding-right: 1.5rem;
+        border-right: 1px solid white;
+        &:last-child {
+          border: none;
+        }
+      }
+
+      a {
+        margin-left: 0.5rem;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}
