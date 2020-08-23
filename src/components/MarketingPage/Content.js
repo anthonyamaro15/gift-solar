@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import imgOne from "../../imgs/nublada.png";
 import imgtwo from "../../imgs/panelfb.png";
 import ModalForm from "./ModalForm";
+import QuestionsComponent from "./QestionsComponent";
+import ToggleQuestions from "./ToogleQuestions";
+import { questions } from "../../questions/questionsData";
 
 const Content = () => {
+  const [showAnswer, setShowAnswer] = useState(false);
+
+  const toggleAnswer = () => {
+    setShowAnswer(!showAnswer);
+    console.log("check hre ", showAnswer);
+  };
   return (
     <div>
       <div className="Content-first">
@@ -120,6 +129,17 @@ const Content = () => {
           </div>
         </section>
       </div>
+      {/********************* QUESTIONS CONTENT ******************************/}
+      <div className="Content-fifth">
+        <section className="Content-questions">
+          <h3>preguntas frequentes</h3>
+          <div className="question-wrapper"></div>
+          {questions.map((question, i) => (
+            <ToggleQuestions key={i} data={question} />
+          ))}
+        </section>
+      </div>
+      {/*********************END OF QUESTIONS CONTENT ******************************/}
     </div>
   );
 };
