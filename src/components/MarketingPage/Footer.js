@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="vegas-info">
           <span>
             Email:
-            <a href="#">info@giftsolarpower.com</a>
+            <a href="www.giftsolar.com">info@giftsolarpower.com</a>
           </span>
           <span>Business WhatsApp 956-518-3132</span>
         </div>

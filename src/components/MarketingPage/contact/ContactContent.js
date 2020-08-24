@@ -11,11 +11,11 @@ const ContactContent = () => {
             <div className="contact-info">
               <span>
                 Tel:
-                <a href="#">956-518-3132</a>
+                <a href="#phone">956-518-3132</a>
               </span>
               <span>
                 email:
-                <a href="#">info@giftsolarpower.com</a>
+                <a href="#email">info@giftsolarpower.com</a>
               </span>
               <p>
                 Locations: <span>Las Vegas NV, Palmview TX</span>
