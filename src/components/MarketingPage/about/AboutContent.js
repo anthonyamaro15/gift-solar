@@ -77,7 +77,7 @@ const AboutContent = () => {
           </div>
         </section>
       </div>
-      <div className="Content-third">
+      <div className="AboutContent-third">
         <section className="Content-us">
           <div className="package-us">
             <h3>COMO ME VOY A BENEFICIAR DEL INCENTIVO EMPRESARIAL?</h3>

@@ -1,12 +1,12 @@
 import React from "react";
 
-const AboutHeader = () => {
+const ContactHeader = () => {
   return (
-    <header className="AboutHeader">
-      <div className="AboutHeader-wrapper">
-        <h1>sobre nosotros</h1>
+    <header className="ContactHeader">
+      <div className="ContactHeader-wrapper">
+        <h1>contactanos</h1>
         {/**
-         <h1>sobre gift solar</h1>
+         
            <p>
           Ofrecemos 3 exelentes paquetes donde incluye un extra para su salud,
           convenientes y muy accesibles donde podra obtener un prestamo personal
@@ -19,4 +19,4 @@ const AboutHeader = () => {
   );
 };
 
-export default AboutHeader;
+export default ContactHeader;
