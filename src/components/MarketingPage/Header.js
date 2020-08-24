@@ -10,7 +10,7 @@ const Header = () => {
           convenientes y muy accesibles donde podra obtener un prestamo personal
           si lo califica
         </p>
-        <a href="#">leer mas</a>
+        <a href="#about">leer mas</a>
       </div>
     </header>
   );

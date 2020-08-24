@@ -1,23 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import imgOne from "../../imgs/nublada.png";
 import imgtwo from "../../imgs/panelfb.png";
 import ModalForm from "./ModalForm";
-import QuestionsComponent from "./QestionsComponent";
 import ToggleQuestions from "./ToogleQuestions";
 import { questions } from "../../questions/questionsData";
 
 const Content = () => {
-  const [showAnswer, setShowAnswer] = useState(false);
+  //   const [showAnswer, setShowAnswer] = useState(false);
 
-  const toggleAnswer = () => {
-    setShowAnswer(!showAnswer);
-    console.log("check hre ", showAnswer);
-  };
+  //   const toggleAnswer = () => {
+  //     setShowAnswer(!showAnswer);
+  //     console.log("check hre ", showAnswer);
+  //   };
   return (
     <div>
       <div className="Content-first">
         <section className="Content-about">
-          <img src={imgOne} alt="image one" />
+          <img src={imgOne} alt="about gift solar plans" />
           <div className="video-wrapper">
             <h3>sobre gift solar</h3>
             <div className="video-container">
@@ -30,7 +29,7 @@ const Content = () => {
                 nuestros empleados a no solo sobresalir en sus departamentos en
                 la empresa, sino a buscar nuevas formas de avanzar en su rama.
               </p>
-              <a href="#">leer mas</a>
+              <a href="#about">leer mas</a>
             </div>
           </div>
         </section>
@@ -66,11 +65,11 @@ const Content = () => {
                 visite el sitio web de su departamento local de salud para
                 averiguar qué se necesita y cómo puede ayudar.
               </p>
-              <a href="#">leer mas</a>
+              <a href="#about">leer mas</a>
             </div>
           </div>
 
-          <img src={imgtwo} alt="image one" />
+          <img src={imgtwo} alt="why choose gift solar" />
         </section>
       </div>
       <div className="Content-third">

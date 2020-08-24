@@ -7,7 +7,7 @@ const AboutContent = () => {
       <div className="AboutContent-first">
         <section className="AboutContent-about">
           <div className="img-wrapper">
-            <img src={imgAbout} alt="image one" />
+            <img src={imgAbout} alt="An imagen of gift solar CEO" />
           </div>
 
           <div className="video-wrapper">
