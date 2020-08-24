@@ -76,47 +76,108 @@
         }
       }
     }
+  }
+}
 
-    .phone-appoinment {
-      border: 1px solid red;
-      h3 {
-        text-transform: uppercase;
-      }
+// #picker {
+//   color: red;
+//   a {
+//     color: red;
+//   }
+//   span {
+//     color: blue;
+//     background: grey;
+//   }
 
-      .flex-wrapper {
-        display: flex;
-        justify-content: space-between;
-        form {
-          //  border: 1px solid red;
-          width: 70%;
+//   p {
+//     color: red;
+//   }
+//   input {
+//     color: green;
+//   }
+// }
+.phone-appoinment {
+  // border: 1px solid red;
+  h3 {
+    text-transform: uppercase;
+  }
 
-          //   margin: 0 auto;
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    form {
+      //  border: 1px solid red;
+      width: 70%;
 
-          //   align-items: center;
+      //   margin: 0 auto;
 
-          label {
-            width: 100%;
-            input {
-              width: 100%;
-              border: 1px solid grey;
-              padding: 1rem;
-              margin-bottom: 1rem;
-              font-size: 1rem;
-              border-radius: 4px;
-            }
-          }
-          button {
-            // border: 1px solid red;
-            text-transform: uppercase;
-            padding: 0.5rem 1.5rem;
+      //   align-items: center;
+      .time-picker {
+        margin-bottom: 1rem;
+        //   display: none;
+        border-radius: 0;
+        padding: 0;
+        border: none;
 
-            background: #3f58a6;
-            color: white;
-            border: none;
-            font-size: 0.9rem;
-            border-radius: 4px;
+        button {
+          background: none;
+          color: #333;
+          border-radius: 0;
+          padding: 0.7rem 0.2rem;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: rgba(128, 128, 128, 0.2);
           }
         }
+      }
+      //  .date-time {
+      //    // border: 1px solid red;
+      //    color: #333;
+
+      //    margin-bottom: 1rem;
+      //    input {
+      //      padding: 0rem 0.2rem;
+      //      //   border: 1px solid red;
+      //      border: none;
+      //      color: #333;
+      //    }
+
+      //    button {
+      //      background: none;
+      //      //   border: 1px solid red;
+      //      color: #333;
+      //      border-radius: 0;
+      //      padding: 0.7rem 0.2rem;
+      //      transition: background 0.3s ease;
+
+      //      &:hover {
+      //        background: rgba(128, 128, 128, 0.2);
+      //      }
+      //    }
+      //  }
+
+      label {
+        width: 100%;
+        input {
+          width: 100%;
+          border: 1px solid grey;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          font-size: 1rem;
+          border-radius: 4px;
+        }
+      }
+      button {
+        // border: 1px solid red;
+        text-transform: uppercase;
+        padding: 0.5rem 1.5rem;
+
+        background: #3f58a6;
+        color: white;
+        border: none;
+        font-size: 0.9rem;
+        border-radius: 4px;
       }
     }
   }
