@@ -56,6 +56,16 @@ const Content = () => {
                 qué se necesita y cómo puede ayudar.
                */}
               </p>
+              <p className="donations">
+                {" "}
+                <span>TIENES SUMINISTROS PARA DONAR?</span> Visite{" "}
+                <a href="google.com" className="donation-link">
+                  GetUsPPE.org
+                </a>
+                para encontrar sitios locales de donaciones en 41 estados, o
+                visite el sitio web de su departamento local de salud para
+                averiguar qué se necesita y cómo puede ayudar.
+              </p>
               <a href="#">leer mas</a>
             </div>
           </div>
