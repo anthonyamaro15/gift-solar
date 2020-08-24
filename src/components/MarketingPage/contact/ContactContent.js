@@ -1,4 +1,5 @@
 import React from "react";
+import DateTimePickerComp from "./DateTimePicker";
 
 const ContactContent = () => {
   return (
@@ -65,10 +66,14 @@ const ContactContent = () => {
           </div>
 
           <div className="phone-appoinment">
-            <h3>agenda cita</h3>
+            <h3>AGENDAR UNA CITA POR TELEFONO</h3>
             <div className="flex-wrapper">
               <div className="placeholder"></div>
               <form>
+                <label htmlFor="date-time" className="date-time"></label>
+                <span className="time-picker">
+                  <DateTimePickerComp />
+                </span>
                 <label htmlFor="name">
                   <input
                     type="text"
