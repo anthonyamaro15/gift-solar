@@ -4,6 +4,7 @@ import imgtwo from "../../imgs/panelfb.png";
 import ModalForm from "./ModalForm";
 import ToggleQuestions from "./ToogleQuestions";
 import { questions } from "../../questions/questionsData";
+import { Link as SmothLink } from "react-scroll";
 
 const Content = () => {
   //   const [showAnswer, setShowAnswer] = useState(false);
@@ -29,7 +30,9 @@ const Content = () => {
                 nuestros empleados a no solo sobresalir en sus departamentos en
                 la empresa, sino a buscar nuevas formas de avanzar en su rama.
               </p>
-              <a href="#about">leer mas</a>
+              <SmothLink to="mas" smooth={true} duration={1000}>
+                leer mas
+              </SmothLink>
             </div>
           </div>
         </section>
@@ -65,14 +68,14 @@ const Content = () => {
                 visite el sitio web de su departamento local de salud para
                 averiguar qué se necesita y cómo puede ayudar.
               </p>
-              <a href="#about">leer mas</a>
+              <a href="/about#more">leer mas</a>
             </div>
           </div>
 
           <img src={imgtwo} alt="why choose gift solar" />
         </section>
       </div>
-      <div className="Content-third">
+      <div className="Content-third" id="mas">
         <section className="Content-us">
           <div className="package-us">
             <h3>compromiso de gift solar</h3>
@@ -92,7 +95,7 @@ const Content = () => {
           </div>
         </section>
       </div>
-      <div className="Content-forth">
+      <div className="Content-forth" id="paquetes">
         <section className="Content-packages">
           <h3>paquetes</h3>
           <div className="Content-inner-wrapper">

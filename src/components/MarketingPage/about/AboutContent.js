@@ -37,7 +37,7 @@ const AboutContent = () => {
           </div>
         </section>
       </div>
-      <div className="AboutContent-second">
+      <div className="AboutContent-second" id="more">
         <section className="AboutContent-why">
           <div className="description-wrapper">
             <h3>PROGRAMA DE AYUDA FINANCIERA</h3>

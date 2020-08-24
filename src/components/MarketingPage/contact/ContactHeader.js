@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactHeader = () => {
   return (
-    <header className="ContactHeader">
+    <header className="ContactHeader" id="top">
       <div className="ContactHeader-wrapper">
         <h1>contactanos</h1>
         {/**

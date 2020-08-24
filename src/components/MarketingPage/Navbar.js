@@ -1,15 +1,16 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../imgs/logo1.png";
+import { Link as SmothLink } from "react-scroll";
 
 const Navbar = () => {
   return (
     <div className="Navbar">
       <div className="inner-wrapper">
-        <Link to="/" className="logo">
+        <SmothLink to="top" className="logo" smooth={true} duration={1000}>
           <img src={logo} alt="solar panel" />
           <span>gift solar</span>
-        </Link>
+        </SmothLink>
 
         <nav>
           <NavLink to="/" exact activeClassName="active">
