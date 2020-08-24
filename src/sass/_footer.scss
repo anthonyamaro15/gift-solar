@@ -40,18 +40,28 @@
       // text-align: center;
       display: flex;
       justify-content: space-around;
+
       span {
         //   border: 1px solid red;
-        padding-right: 1.5rem;
+        padding-right: 1.9rem;
         border-right: 1px solid white;
+
         &:last-child {
           border: none;
         }
+
+        .facebook {
+          //  border: 1px solid red;
+          color: #b8b7b7;
+          font-size: 1rem;
+          margin-left: -1rem;
+        }
       }
 
-      a {
-        margin-left: 0.5rem;
-      }
+      // a {
+      //   //   margin-left: 0.5rem;
+      //   //   margin-right: 0.5rem;
+      // }
     }
 
     p {
