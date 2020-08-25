@@ -490,3 +490,76 @@
     cursor: pointer;
   }
 }
+
+// THIS HANDLES YEARLY INFORMATION
+.yearly-information {
+  border: 1px solid grey;
+  max-width: 420px;
+  margin-bottom: 1rem;
+
+  .month-cost {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background: rgb(207, 204, 204);
+
+    span {
+      padding: 0.4rem 0rem;
+      width: 34%;
+
+      &:nth-child(1) {
+        border-right: 1px solid grey;
+        border-bottom: 1px solid grey;
+      }
+      &:nth-child(2) {
+        border-right: 1px solid grey;
+        border-bottom: 1px solid grey;
+      }
+      &:nth-child(3) {
+        border-bottom: 1px solid grey;
+      }
+    }
+  }
+
+  .month-and-values {
+    .months-container {
+      display: flex;
+      justify-content: space-between;
+
+      align-items: flex-end;
+
+      span {
+        width: 34%;
+        text-align: center;
+        padding-top: 0.1rem;
+        border-bottom: 1px solid grey;
+        border-right: 1px solid grey;
+        padding-right: 0.1rem;
+        padding: 0.2rem 0rem;
+      }
+      label {
+        width: 34%;
+        text-align: center;
+
+        input {
+          padding-top: 0.6rem;
+          background: transparent;
+          width: 100%;
+          border-bottom: 1px solid grey;
+          border-right: 1px solid grey;
+        }
+      }
+      .border {
+        border-right: none;
+      }
+
+      #diciembre,
+      #diciembre-cost {
+        border-bottom: none;
+      }
+      .diciembre {
+        border-bottom: none;
+      }
+    }
+  }
+}
