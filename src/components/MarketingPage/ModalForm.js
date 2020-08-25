@@ -618,11 +618,202 @@ const ModalForm = () => {
           </div>
           {/*********  END OF POWER BILL INFO *********/}
 
+          <div className="yearly-information">
+            <div className="month-cost">
+              <span>Mes</span>
+              <span>Kilowatts</span>
+              <span>$Costo</span>
+            </div>
+            <div className="month-and-values">
+              <div className="months-container">
+                <span>Enero</span>
+                <label htmlFor="enero">
+                  <input type="text" name="enero-kilowatts" id="enero" />
+                </label>
+                <label htmlFor="enero-cost">
+                  <input
+                    type="text"
+                    name="enero-cost"
+                    id="enero-cost"
+                    className="border"
+                  />
+                </label>
+              </div>
+              <div className="months-container">
+                <span>Febrero</span>
+                <label htmlFor="febrero">
+                  <input type="text" name="febrero-kilowatts" id="febrero" />
+                </label>
+                <label htmlFor="febrero-cost">
+                  <input
+                    type="text"
+                    name="febrero-cost"
+                    id="febrero-cost"
+                    className="border"
+                  />
+                </label>
+              </div>
+              <div className="months-container">
+                <span>Marzo</span>
+                <label htmlFor="marzo">
+                  <input type="text" name="marzo-kilowatts" id="marzo" />
+                </label>
+                <label htmlFor="marzo-cost">
+                  <input
+                    type="text"
+                    name="marzo-cost"
+                    id="marzo-cost"
+                    className="border"
+                  />
+                </label>
+              </div>{" "}
+              <div className="months-container">
+                <span>Abril</span>
+                <label htmlFor="abril">
+                  <input type="text" name="abril-kilowatts" id="abril" />
+                </label>
+                <label htmlFor="abril-cost">
+                  <input
+                    type="text"
+                    name="abril-cost"
+                    id="abril-cost"
+                    className="border"
+                  />
+                </label>
+              </div>{" "}
+              <div className="months-container">
+                <span>Mayo</span>
+                <label htmlFor="mayo">
+                  <input type="text" name="mayo-kilowatts" id="mayo" />
+                </label>
+                <label htmlFor="mayo-cost">
+                  <input
+                    type="text"
+                    name="mayo-cost"
+                    id="mayo-cost"
+                    className="border"
+                  />
+                </label>
+              </div>{" "}
+              <div className="months-container">
+                <span>Junio</span>
+                <label htmlFor="junio">
+                  <input type="text" name="junio-kilowatts" id="junio" />
+                </label>
+                <label htmlFor="junio-cost">
+                  <input
+                    type="text"
+                    name="junio-cost"
+                    id="junio-cost"
+                    className="border"
+                  />
+                </label>
+              </div>{" "}
+              <div className="months-container">
+                <span>Julio</span>
+                <label htmlFor="julio">
+                  <input type="text" name="julio-kilowatts" id="julio" />
+                </label>
+                <label htmlFor="julio-cost">
+                  <input
+                    type="text"
+                    name="julio-cost"
+                    id="julio-cost"
+                    className="border"
+                  />
+                </label>
+              </div>{" "}
+              <div className="months-container">
+                <span>Agosto</span>
+                <label htmlFor="agosto">
+                  <input type="text" name="agosto-kilowatts" id="agosto" />
+                </label>
+                <label htmlFor="agosto-cost">
+                  <input
+                    type="text"
+                    name="agosto-cost"
+                    id="agosto-cost"
+                    className="border"
+                  />
+                </label>
+              </div>{" "}
+              <div className="months-container">
+                <span>Septiembre</span>
+                <label htmlFor="septiembre">
+                  <input
+                    type="text"
+                    name="septiembre-kilowatts"
+                    id="septiembre"
+                  />
+                </label>
+                <label htmlFor="septiembre-cost">
+                  <input
+                    type="text"
+                    name="septiembre-cost"
+                    id="septiembre-cost"
+                    className="border"
+                  />
+                </label>
+              </div>{" "}
+              <div className="months-container">
+                <span>Octubre</span>
+                <label htmlFor="octubre">
+                  <input type="text" name="octubre-kilowatts" id="octubre" />
+                </label>
+                <label htmlFor="octubre-cost">
+                  <input
+                    type="text"
+                    name="octubre-cost"
+                    id="octubre-cost"
+                    className="border"
+                  />
+                </label>
+              </div>{" "}
+              <div className="months-container">
+                <span>Noviembre</span>
+                <label htmlFor="noviembre">
+                  <input
+                    type="text"
+                    name="noviembre-kilowatts"
+                    id="noviembre"
+                  />
+                </label>
+                <label htmlFor="noviembre-cost">
+                  <input
+                    type="text"
+                    name="noviembre-cost"
+                    id="noviembre-cost"
+                    className="border"
+                  />
+                </label>
+              </div>
+              <div className="months-container">
+                <span className="diciembre">Diciembre</span>
+                <label htmlFor="diciembre">
+                  <input
+                    type="text"
+                    name="diciembre-kilowatts"
+                    id="diciembre"
+                  />
+                </label>
+                <label htmlFor="diciembre-cost">
+                  <input
+                    type="text"
+                    name="diciembre-cost"
+                    id="diciembre-cost"
+                    className="border"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+          {/************************ END OF YEARLY INFORMATION BILL ***********************/}
           <div className="update-file">
             <label htmlFor="pdf">
               <input type="file" name="pdf-file" id="pdf" ref={register} />
             </label>
           </div>
+
           <button>enviar</button>
         </form>
       </Modal>
