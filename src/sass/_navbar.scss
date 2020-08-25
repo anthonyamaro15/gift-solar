@@ -1,6 +1,7 @@
 .Navbar {
   //   border: 1px solid red;
   //   background: rgb(31, 30, 30);
+  transition: background 0.5s ease;
 
   position: fixed;
   top: 0;
@@ -61,4 +62,12 @@
       }
     }
   }
+}
+.scroll {
+  background: red;
+  background: rgb(6, 6, 6);
+  background: rgba(63, 88, 166, 0.9);
+  //   background: rgb(63, 88, 166);
+
+  //   transition: background 0.5s ease;
 }
