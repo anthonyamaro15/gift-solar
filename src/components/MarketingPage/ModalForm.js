@@ -2,15 +2,169 @@ import React, { useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const ModalForm = () => {
   const [open, setOpen] = useState(false);
   const { register, reset, handleSubmit } = useForm();
 
+  const [powerFile, setPowerFile] = useState("");
+  const [pdfName, setPdfName] = useState("");
+  const [imgContainer, setImgContainer] = useState([
+    { imgs: "fsfsfsff", imgs: "fsflkfls" },
+  ]);
+
   const onSubmit = (values) => {
-    console.log("values here ", values);
-    reset();
+    const newData = { ...values, pdfName, pdfFile: powerFile };
+    console.log("what about now ", imgContainer);
   };
+
+  const uploadPdf = (e) => {
+    const file = e.target.files[0];
+
+    let reader = new FileReader();
+    setPdfName(file.name);
+    reader.readAsDataURL(file);
+    reader.onload = (e) => {
+      setPowerFile(e.target.result);
+    };
+  };
+
+  const uploadImg1 = (e) => {
+    let images = e.target.files;
+    const formData = new FormData();
+    for (let i = 0; i < images.length; i++) {
+      // console.log("imgs here ", images[i]);
+      formData.append("upload_preset", "pl2czq6m");
+      formData.append("file", images[i]);
+      //  console.log(images[i]);
+      // setImgContainer([...imgContainer, { imgs: images[i] }]);
+      axios
+        .post("https://httpbin.org/anything", formData)
+        .then((res) => {
+          let imgs = res.data.files;
+
+          //  console.log("response her e", res.data.files);
+          setImgContainer([...imgContainer, { imgs }]);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      // axios
+      //   .post(
+      //     `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
+      //     formData
+      //   )
+      //   .then((res) => {
+      //     setImgContainer([...imgContainer, res.data.secure_url]);
+      //     //  console.log("her check ", imgContainer);
+      //   })
+      //   .catch((err) => [console.log(err)]);
+      //  }
+      //  let newM = images.map((imgs) => {
+      //    formData.append("upload_preset", "pl2czq6m");
+      //    formData.append(imgs.name, imgs);
+      //    console.log(imgs);
+      //    setImgContainer([...imgContainer, { imgs }]);
+      //   });
+      //  console.log("her ", images[0]);
+
+      //  const files = e.target.files[0];
+      //  const formData = new FormData();
+      //  formData.append("upload_preset", "pl2czq6m");
+      //  formData.append("file", files);
+
+      //   axios
+      //     .post(`https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`, formData)
+      //     .then((res) => {
+      //       setImg(res.data.secure_url);
+      //     })
+      //     .catch((err) => [console.log(err)]);
+    }
+    //   console.log("her check ", imgContainer);
+    //   console.log("check data here ", test);
+  };
+
+  //   const uploadimg2 = (e) => {
+  //          const files = e.target.files[0];
+  //          const formData = new FormData();
+  //          formData.append("upload_preset", "pl2czq6m");
+  //          formData.append("file", files);
+
+  //          axios
+  //            .post(
+  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
+  //              formData
+  //            )
+  //            .then((res) => {
+  //              setImg(res.data.secure_url);
+  //            })
+  //            .catch((err) => [console.log(err)]);
+  //   };
+  //   const uploadimg3 = (e) => {
+  //          const files = e.target.files[0];
+  //          const formData = new FormData();
+  //          formData.append("upload_preset", "pl2czq6m");
+  //          formData.append("file", files);
+
+  //          axios
+  //            .post(
+  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
+  //              formData
+  //            )
+  //            .then((res) => {
+  //              setImg(res.data.secure_url);
+  //            })
+  //            .catch((err) => [console.log(err)]);
+  //   };
+  //   const uploadimg4 = (e) => {
+  //          const files = e.target.files[0];
+  //          const formData = new FormData();
+  //          formData.append("upload_preset", "pl2czq6m");
+  //          formData.append("file", files);
+
+  //          axios
+  //            .post(
+  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
+  //              formData
+  //            )
+  //            .then((res) => {
+  //              setImg(res.data.secure_url);
+  //            })
+  //            .catch((err) => [console.log(err)]);
+  //   };
+  //   const uploadimg5 = (e) => {
+  //          const files = e.target.files[0];
+  //          const formData = new FormData();
+  //          formData.append("upload_preset", "pl2czq6m");
+  //          formData.append("file", files);
+
+  //          axios
+  //            .post(
+  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
+  //              formData
+  //            )
+  //            .then((res) => {
+  //              setImg(res.data.secure_url);
+  //            })
+  //            .catch((err) => [console.log(err)]);
+  //   };
+  //   const uploadimg6 = (e) => {
+  //          const files = e.target.files[0];
+  //          const formData = new FormData();
+  //          formData.append("upload_preset", "pl2czq6m");
+  //          formData.append("file", files);
+
+  //          axios
+  //            .post(
+  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
+  //              formData
+  //            )
+  //            .then((res) => {
+  //              setImg(res.data.secure_url);
+  //            })
+  //            .catch((err) => [console.log(err)]);
+  //   };
   return (
     <div className="ModalForm">
       <button className="button" onClick={() => setOpen(true)}>
@@ -628,7 +782,12 @@ const ModalForm = () => {
               <div className="months-container">
                 <span>Enero</span>
                 <label htmlFor="enero">
-                  <input type="text" name="enero-kilowatts" id="enero" />
+                  <input
+                    type="text"
+                    name="enero-kilowatts"
+                    id="enero"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="enero-cost">
                   <input
@@ -636,13 +795,19 @@ const ModalForm = () => {
                     name="enero-cost"
                     id="enero-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>
               <div className="months-container">
                 <span>Febrero</span>
                 <label htmlFor="febrero">
-                  <input type="text" name="febrero-kilowatts" id="febrero" />
+                  <input
+                    type="text"
+                    name="febrero-kilowatts"
+                    id="febrero"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="febrero-cost">
                   <input
@@ -650,13 +815,19 @@ const ModalForm = () => {
                     name="febrero-cost"
                     id="febrero-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>
               <div className="months-container">
                 <span>Marzo</span>
                 <label htmlFor="marzo">
-                  <input type="text" name="marzo-kilowatts" id="marzo" />
+                  <input
+                    type="text"
+                    name="marzo-kilowatts"
+                    id="marzo"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="marzo-cost">
                   <input
@@ -664,13 +835,19 @@ const ModalForm = () => {
                     name="marzo-cost"
                     id="marzo-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>{" "}
               <div className="months-container">
                 <span>Abril</span>
                 <label htmlFor="abril">
-                  <input type="text" name="abril-kilowatts" id="abril" />
+                  <input
+                    type="text"
+                    name="abril-kilowatts"
+                    id="abril"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="abril-cost">
                   <input
@@ -678,13 +855,19 @@ const ModalForm = () => {
                     name="abril-cost"
                     id="abril-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>{" "}
               <div className="months-container">
                 <span>Mayo</span>
                 <label htmlFor="mayo">
-                  <input type="text" name="mayo-kilowatts" id="mayo" />
+                  <input
+                    type="text"
+                    name="mayo-kilowatts"
+                    id="mayo"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="mayo-cost">
                   <input
@@ -692,13 +875,19 @@ const ModalForm = () => {
                     name="mayo-cost"
                     id="mayo-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>{" "}
               <div className="months-container">
                 <span>Junio</span>
                 <label htmlFor="junio">
-                  <input type="text" name="junio-kilowatts" id="junio" />
+                  <input
+                    type="text"
+                    name="junio-kilowatts"
+                    id="junio"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="junio-cost">
                   <input
@@ -706,13 +895,19 @@ const ModalForm = () => {
                     name="junio-cost"
                     id="junio-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>{" "}
               <div className="months-container">
                 <span>Julio</span>
                 <label htmlFor="julio">
-                  <input type="text" name="julio-kilowatts" id="julio" />
+                  <input
+                    type="text"
+                    name="julio-kilowatts"
+                    id="julio"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="julio-cost">
                   <input
@@ -720,13 +915,19 @@ const ModalForm = () => {
                     name="julio-cost"
                     id="julio-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>{" "}
               <div className="months-container">
                 <span>Agosto</span>
                 <label htmlFor="agosto">
-                  <input type="text" name="agosto-kilowatts" id="agosto" />
+                  <input
+                    type="text"
+                    name="agosto-kilowatts"
+                    id="agosto"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="agosto-cost">
                   <input
@@ -734,6 +935,7 @@ const ModalForm = () => {
                     name="agosto-cost"
                     id="agosto-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>{" "}
@@ -744,6 +946,7 @@ const ModalForm = () => {
                     type="text"
                     name="septiembre-kilowatts"
                     id="septiembre"
+                    ref={register}
                   />
                 </label>
                 <label htmlFor="septiembre-cost">
@@ -752,13 +955,19 @@ const ModalForm = () => {
                     name="septiembre-cost"
                     id="septiembre-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>{" "}
               <div className="months-container">
                 <span>Octubre</span>
                 <label htmlFor="octubre">
-                  <input type="text" name="octubre-kilowatts" id="octubre" />
+                  <input
+                    type="text"
+                    name="octubre-kilowatts"
+                    id="octubre"
+                    ref={register}
+                  />
                 </label>
                 <label htmlFor="octubre-cost">
                   <input
@@ -766,6 +975,7 @@ const ModalForm = () => {
                     name="octubre-cost"
                     id="octubre-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>{" "}
@@ -776,6 +986,7 @@ const ModalForm = () => {
                     type="text"
                     name="noviembre-kilowatts"
                     id="noviembre"
+                    ref={register}
                   />
                 </label>
                 <label htmlFor="noviembre-cost">
@@ -784,6 +995,7 @@ const ModalForm = () => {
                     name="noviembre-cost"
                     id="noviembre-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>
@@ -794,6 +1006,7 @@ const ModalForm = () => {
                     type="text"
                     name="diciembre-kilowatts"
                     id="diciembre"
+                    ref={register}
                   />
                 </label>
                 <label htmlFor="diciembre-cost">
@@ -802,6 +1015,7 @@ const ModalForm = () => {
                     name="diciembre-cost"
                     id="diciembre-cost"
                     className="border"
+                    ref={register}
                   />
                 </label>
               </div>
@@ -810,8 +1024,43 @@ const ModalForm = () => {
           {/************************ END OF YEARLY INFORMATION BILL ***********************/}
           <div className="update-file">
             <label htmlFor="pdf">
-              <input type="file" name="pdf-file" id="pdf" ref={register} />
+              <input
+                type="file"
+                name="pdf-file"
+                id="pdf"
+                onChange={uploadPdf}
+              />
             </label>
+          </div>
+          {/************************ END OF YEARLY UPDATE-FILES ***********************/}
+          <div className="upload-imgs-container">
+            <label htmlFor="img1">
+              <input
+                type="file"
+                name="img1"
+                id="img1"
+                multiple
+                onChange={uploadImg1}
+              />
+            </label>
+
+            {/**
+               <label htmlFor="img2">
+              <input type="file" name="img2" id="img2" onChange={uploadImg1} />
+            </label>
+            <label htmlFor="img3">
+              <input type="file" name="img3" id="img3" onChange={uploadImg1} />
+            </label>
+            <label htmlFor="img4">
+              <input type="file" name="img4" id="img4" onChange={uploadImg1} />
+            </label>
+            <label htmlFor="img5">
+              <input type="file" name="img5" id="img5" onChange={uploadImg1} />
+            </label>
+            <label htmlFor="img6">
+              <input type="file" name="img6" id="img6" onChange={uploadImg1} />
+            </label>
+            */}
           </div>
 
           <button>enviar</button>
