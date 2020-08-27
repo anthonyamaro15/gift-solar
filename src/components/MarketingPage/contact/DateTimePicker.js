@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import DateTimePicker from "react-datetime-picker";
 
-function DateTimePickerComp() {
+function DateTimePickerComp({ setPhoneAppoinment }) {
   const [value, onChange] = useState(new Date());
+  setPhoneAppoinment(value.toLocaleString());
 
   return (
     <div id="picker">
