@@ -1,6 +1,6 @@
 import React from "react";
 import imgOne from "../../imgs/nublada.png";
-import imgtwo from "../../imgs/panelfb.png";
+import imgtwo from "../../imgs/nublada.png";
 import ModalForm from "./ModalForm";
 import ToggleQuestions from "./ToogleQuestions";
 import { questions } from "../../questions/questionsData";
@@ -19,7 +19,8 @@ const Content = () => {
         <section className="Content-about">
           <img src={imgOne} alt="about gift solar plans" />
           <div className="video-wrapper">
-            <h3>sobre gift solar</h3>
+            <h3>sobre nosotros</h3>
+            <h2>energia solar</h2>
             <div className="video-container">
               <p>
                 En Gift Solar hemos trabajado duro para construir una cultura
@@ -41,6 +42,8 @@ const Content = () => {
         <section className="Content-why">
           <div className="description-wrapper">
             <h3>porque solar panel</h3>
+
+            <h2>tu mejor inversion</h2>
             <div className="whyus-container">
               <p>
                 Gift Solar se asocia con empresas y distribuidores de energía
@@ -78,7 +81,8 @@ const Content = () => {
       <div className="Content-third" id="mas">
         <section className="Content-us">
           <div className="package-us">
-            <h3>compromiso de gift solar</h3>
+            <h3>compromiso</h3>
+            <h2>nuestras metas</h2>
             <p>
               <span>Nuestra mision: </span> facilitar el cambio de nuestro medio
               ambiente por medio de la energia renovable,{" "}
@@ -98,6 +102,7 @@ const Content = () => {
       <div className="Content-forth" id="paquetes">
         <section className="Content-packages">
           <h3>paquetes</h3>
+          <h2>diferentes opciones</h2>
           <div className="Content-inner-wrapper">
             <div className="premium share">
               <h3>premium</h3>
@@ -144,7 +149,8 @@ const Content = () => {
       {/********************* QUESTIONS CONTENT ******************************/}
       <div className="Content-fifth">
         <section className="Content-questions">
-          <h3>preguntas frequentes</h3>
+          <h3>dudas</h3>
+          <h2>checa las preguntas mas frequentes</h2>
           <div className="question-wrapper"></div>
           {questions.map((question, i) => (
             <ToggleQuestions key={i} data={question} />
