@@ -2,7 +2,7 @@
   height: 80vh;
   background: grey;
   position: relative;
-  background: rgba(5, 5, 5, 0.3);
+  background: rgba(5, 5, 5, 0.4);
   color: #f4f4f4;
   //   backdrop-filter: blur(50px);
 
@@ -13,10 +13,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url("../imgs/header4.jpg");
+    background: url("../imgs/header3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     z-index: -1;
     //  backdrop-filter: blur(20px);
     //  filter: blur(3px);
