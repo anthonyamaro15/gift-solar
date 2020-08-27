@@ -4,7 +4,6 @@ const AboutHeader = () => {
   return (
     <header className="AboutHeader" id="top">
       <div className="AboutHeader-wrapper">
-        <h1>sobre nosotros</h1>
         {/**
          <h1>sobre gift solar</h1>
            <p>

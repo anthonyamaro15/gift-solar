@@ -13,7 +13,7 @@ const AboutContent = () => {
           <div className="video-wrapper">
             <h3>mensage</h3>
             <div className="video-container">
-              <span>Diana Montoya, CEO</span>
+              <h2>Diana Montoya, CEO</h2>
               <p>
                 “En Gift Solar se tomaron muchas medidas, después de trabajar
                 para varias compañías que simplemente hicieron las cosas mal. Si
@@ -41,6 +41,7 @@ const AboutContent = () => {
         <section className="AboutContent-why">
           <div className="description-wrapper">
             <h3>PROGRAMA DE AYUDA FINANCIERA</h3>
+            <h2>personas confian en nosotros</h2>
             <div className="whyus-container">
               <p>
                 Estamos enfocados en la transición energética para que se logre
@@ -80,7 +81,8 @@ const AboutContent = () => {
       <div className="AboutContent-third">
         <section className="Content-us">
           <div className="package-us">
-            <h3>COMO ME VOY A BENEFICIAR DEL INCENTIVO EMPRESARIAL?</h3>
+            <h3>algunos beneficios</h3>
+            <h2>COMO ME VOY A BENEFICIAR DEL INCENTIVO EMPRESARIAL</h2>
             <p>
               Dependiendo del tamaño de tu sistema de paneles solares será tu
               incentivo empresarial, por ejemplo: Si el tamaño de tu sistema es
@@ -95,7 +97,8 @@ const AboutContent = () => {
       {/** HOW GIFT SOLAR IS REACTING TO COVID19 */}
       <div className="AboutContent-forth">
         <section className="AboutContent-why">
-          <h3>COMO ES QUE GIFT SOLAR ESTA RESPONDIENDO AL COVID-19 </h3>
+          <h3>important</h3>
+          <h2>COMO ES QUE GIFT SOLAR ESTA RESPONDIENDO AL COVID-19 </h2>
           <div className="description-wrapper">
             <div className="whyus-container">
               <span>NUESTRA RESPUESTA A COVID-19</span>
