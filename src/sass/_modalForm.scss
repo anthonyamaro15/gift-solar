@@ -311,7 +311,7 @@
 
     .HOA {
       // border: 1px solid red;
-      color: red;
+      // color: red;
       display: flex;
       margin-bottom: 1.5rem;
       span {
@@ -325,7 +325,7 @@
         input {
           margin-right: 0.3rem;
           font-weight: normal;
-          color: red;
+          //  color: red;
         }
       }
 
@@ -341,9 +341,10 @@
       .important {
         font-weight: bold;
 
-        input {
-          border-bottom: 1px solid red;
-        }
+        //   input {
+        //    //  border-bottom: 1px solid red;
+
+        //   }
       }
     }
 
@@ -388,7 +389,7 @@
       display: flex;
       span {
         //   border: 1px solid blue;
-        color: red;
+        //   color: red;
         font-weight: bold;
         width: 45%;
         margin-bottom: 0;
@@ -480,7 +481,7 @@
   }
 
   button {
-    margin: 1rem 0 4rem;
+    margin: 2rem 0 4rem;
     text-transform: uppercase;
     padding: 0.5rem 1.5rem;
     font-size: 0.7rem;
@@ -562,4 +563,30 @@
       }
     }
   }
+}
+
+#upload-img-btn {
+  .btn-wrapper {
+    span {
+      font-size: 0.7rem;
+      // padding: 0.1rem 1.5rem;
+      box-shadow: none;
+      border-radius: 4px;
+
+      &:hover {
+        //  background: none;
+        box-shadow: none;
+        background: rgb(224, 223, 223);
+      }
+    }
+  }
+}
+
+.upload-imgs-container {
+  //   border: 1px solid red;
+  margin: 2rem 0 1rem;
+  display: flex;
+  width: 75%;
+
+  justify-content: space-between;
 }

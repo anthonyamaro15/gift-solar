@@ -29,6 +29,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 img {
@@ -45,4 +46,8 @@ input {
 button,
 input {
   outline: none;
+}
+
+button {
+  border-radius: 4px;
 }
