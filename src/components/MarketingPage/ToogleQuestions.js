@@ -17,7 +17,7 @@ const ToggleQuestions = ({ data }) => {
         collapsed
         duration={300}
         render={({ onToggle, setCollapsibleElement, progress }) => (
-          <div className="my-collapsible" onClick={onToggle}>
+          <div id="my-collapsible" onClick={onToggle}>
             <div className="btn-arrows">
               <p className="question">{question}</p>
               <span>{showAnswer ? <IoIosArrowDown /> : <IoIosArrowUp />}</span>

@@ -7,15 +7,63 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 9rem 0.5rem;
-
     display: flex;
     justify-content: space-between;
+    //  border: 1px solid blue;
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
 
-    img {
+    @media (max-width: $sm-desktop) {
+      flex-wrap: wrap-reverse;
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 100%;
+    }
+
+    .img-wrapper {
       width: 550px;
-      // border: 1px solid red;
-      height: 400px;
-      object-fit: contain;
+      height: 350px;
+      // border: 1px solid blue;
+      @media (max-width: $med-desktop) {
+        width: 500px;
+        height: 350px;
+      }
+
+      @media (max-width: $sm-desktop) {
+        //   border: 1px solid red;
+        width: 90%;
+        //   height: 300px;
+      }
+
+      @media (max-width: $lg-phone) {
+        //  border: 1px solid red;
+
+        height: 250px;
+      }
+
+      img {
+        width: 100%;
+        //   border: 1px solid red;
+        height: 100%;
+        //   object-fit: contain;
+        //   height: 350px;
+
+        @media (max-width: $sm-desktop) {
+          //  border: 1px solid red;
+          width: 100%;
+          //   height: 300px;
+        }
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          object-fit: fill;
+          //   height: 300px;
+        }
+      }
     }
 
     .video-wrapper {
@@ -25,12 +73,33 @@
       flex-direction: column;
       justify-content: center;
 
+      @media (max-width: $med-desktop) {
+        margin-left: 2rem;
+      }
+
+      @media (max-width: $sm-desktop) {
+        width: 90%;
+        margin-bottom: 2.5rem;
+        margin-left: 0;
+      }
+
+      @media (max-width: $lg-phone) {
+        //  border: 1px solid red;
+        //   margin-bottom: 0;
+      }
+
       h3 {
         text-transform: uppercase;
         color: #3f58a6;
         margin-bottom: 0.4rem;
         margin-top: -1rem;
         font-size: 1.1rem;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
       }
 
       h2 {
@@ -40,6 +109,11 @@
         margin-bottom: 1.3rem;
         //   font-size: 2.5rem;
         //   text-transform: capitalize;
+
+        @media (max-width: $lg-phone) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
       }
 
       p {
@@ -47,6 +121,11 @@
         //   font-weight: 300;
         margin-bottom: 2rem;
         line-height: 1.5;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
       }
 
       a {
@@ -58,6 +137,11 @@
         color: white;
         border: none;
         font-size: 0.9rem;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.8rem;
+          padding: 0.4rem 1.5rem;
+        }
       }
     }
   }
@@ -78,18 +162,49 @@
     justify-content: space-between;
     //  border: 1px solid red;
 
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
+    @media (max-width: $sm-desktop) {
+      flex-wrap: wrap;
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 100%;
+    }
+
     .description-wrapper {
       width: 53%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       // border: 1px solid blue;
+
+      @media (max-width: $med-desktop) {
+        margin-right: 2rem;
+      }
+
+      @media (max-width: $sm-desktop) {
+        width: 90%;
+        margin-bottom: 2.5rem;
+        margin-right: 0;
+      }
+
       h3 {
         text-transform: uppercase;
         color: #3f58a6;
         margin-bottom: 0.4rem;
         margin-top: -1rem;
         font-size: 1.1rem;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
       }
 
       h2 {
@@ -98,12 +213,22 @@
         margin-bottom: 1.4rem;
         //   font-size: 2.5rem;
         //   text-transform: capitalize;
+
+        @media (max-width: $lg-phone) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
       }
       p {
         font-size: 1rem;
         margin-bottom: 2rem;
         //   border: 1px solid red;
         line-height: 1.5;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
 
         &:first-child {
           margin-bottom: 1rem;
@@ -137,13 +262,45 @@
         background: #3f58a6;
         color: white;
         border: none;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.8rem;
+          padding: 0.4rem 1.5rem;
+        }
       }
     }
-    img {
-      // border: 1px solid red;
+
+    .img-wrapper {
       width: 550px;
-      height: 400px;
-      object-fit: contain;
+      height: 350px;
+      @media (max-width: $med-desktop) {
+        width: 500px;
+        height: 350px;
+      }
+
+      @media (max-width: $sm-desktop) {
+        //   border: 1px solid red;
+        width: 90%;
+        //   height: 300px;
+      }
+
+      @media (max-width: $lg-phone) {
+        //  border: 1px solid red;
+
+        height: 250px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: $sm-desktop) {
+          width: 100%;
+        }
+
+        @media (max-width: $lg-phone) {
+          object-fit: fill;
+        }
+      }
     }
   }
 }
@@ -155,6 +312,19 @@
     margin: 0 auto;
     padding: 9rem 0.5rem;
 
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
+    @media (max-width: $sm-desktop) {
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 100%;
+    }
+
     .package-us {
       // border: 1px solid blue;
       h3 {
@@ -164,6 +334,12 @@
         font-size: 1.1rem;
         margin-bottom: 0.4rem;
         color: #3f58a6;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
       }
       h2 {
         text-align: center;
@@ -172,6 +348,11 @@
         margin-bottom: 1.3rem;
         //   font-size: 2.5rem;
         //   text-transform: capitalize;
+
+        @media (max-width: $lg-phone) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
       }
 
       p {
@@ -181,6 +362,11 @@
         margin: 0 auto;
         text-align: center;
         //   font-size: 1.1rem;
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+          //  margin-bottom: 1.5rem;
+        }
+
         span {
           font-weight: bold;
           //  color: #3f58a6;
@@ -202,12 +388,31 @@
     margin: 0 auto;
     padding: 9rem 0.5rem;
 
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
+    @media (max-width: $sm-desktop) {
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 95%;
+    }
+
     h3 {
       text-align: center;
       text-transform: uppercase;
       color: #3f58a6;
       margin-bottom: 0.4rem;
       font-size: 1.1rem;
+
+      @media (max-width: $lg-phone) {
+        //  border: 1px solid red;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
     }
 
     h2 {
@@ -217,6 +422,11 @@
       margin-bottom: 1.3rem;
       // font-size: 2.5rem;
       // text-transform: capitalize;
+
+      @media (max-width: $lg-phone) {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
     }
 
     .Content-inner-wrapper {
@@ -224,12 +434,26 @@
       justify-content: space-between;
       // border: 1px solid red;
 
+      @media (max-width: $laptop) {
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: $med-phone) {
+        justify-content: center;
+      }
+
       h3 {
         text-align: center;
         text-transform: uppercase;
         color: #333;
         font-size: 1.2rem;
         margin-bottom: 2rem;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
       }
 
       .share {
@@ -239,12 +463,26 @@
         background: white;
         border-radius: 5px;
         box-shadow: 0px 0px 15px 0px rgba(200, 200, 200, 0.5);
+
+        @media (max-width: $laptop) {
+          width: 48%;
+          margin-bottom: 1rem;
+        }
+
+        @media (max-width: $med-phone) {
+          width: 90%;
+        }
         p {
           //  font-size: 0.9rem;
           font-weight: bold;
           margin-bottom: 0.5rem;
           //  font-size: 0.9rem;
           //  color: #3f58a6;
+
+          @media (max-width: $lg-phone) {
+            //  border: 1px solid red;
+            font-size: 0.9rem;
+          }
         }
 
         ol li {
@@ -252,6 +490,12 @@
           margin-left: 1rem;
           margin-bottom: 0.5rem;
           //  line-height: 1.5;
+
+          @media (max-width: $lg-phone) {
+            //  border: 1px solid red;
+            font-size: 0.8rem;
+            margin-bottom: 0.4rem;
+          }
         }
       }
     }
@@ -262,13 +506,23 @@
 
       p {
         font-size: 0.8rem;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 0.7rem;
+        }
       }
 
       .title {
         text-transform: uppercase;
         margin: 1rem 0 0.3rem;
         font-weight: bold;
-        font-size: 0.8rem;
+        //   font-size: 0.8rem;
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 0.7rem;
+          //  margin-bottom: 0;
+        }
       }
 
       button {
@@ -280,6 +534,12 @@
         color: white;
         border: none;
         cursor: pointer;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 0.8rem;
+          padding: 0.4rem 1.5rem;
+        }
       }
     }
   }
@@ -296,12 +556,32 @@
     padding: 9rem 0.5rem;
     //  transition: all 2s ease;
 
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
+    @media (max-width: $sm-desktop) {
+      flex-wrap: wrap-reverse;
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 90%;
+    }
+
     h3 {
       text-align: center;
       font-size: 1.1rem;
       text-transform: uppercase;
       color: #3f58a6;
       margin-bottom: 0.4rem;
+
+      @media (max-width: $lg-phone) {
+        //  border: 1px solid red;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
     }
 
     h2 {
@@ -311,46 +591,61 @@
       margin-bottom: 2.5rem;
       // font-size: 2.5rem;
       // text-transform: capitalize;
+
+      @media (max-width: $lg-phone) {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+      }
     }
 
     //  .question-wrapper {
 
     //  }
-  }
-}
 
-// handles toggling questions
-.my-collapsible {
-  padding: 1rem 1.5rem 0.5rem;
-  border-radius: 5px;
-  transition: all 2s ease;
-  margin-bottom: 1.5rem;
-  box-shadow: 0px 0px 15px 0px rgba(200, 200, 200, 0.5);
-  cursor: pointer;
+    // handles toggling questions
+    #my-collapsible {
+      padding: 1rem 1.5rem 0.5rem;
+      //  border-radius: 5px;
+      transition: all 2s ease;
+      margin-bottom: 1.5rem;
+      box-shadow: 0px 0px 15px 0px rgba(200, 200, 200, 0.5);
+      cursor: pointer;
 
-  .btn-arrows {
-    display: flex;
-    justify-content: space-between;
+      .btn-arrows {
+        display: flex;
+        justify-content: space-between;
 
-    span {
-      font-size: 1.5rem;
+        span {
+          font-size: 1.5rem;
+        }
+      }
+
+      .question {
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        background: none;
+        text-transform: capitalize;
+        //   border: 1px solid red;
+
+        width: 90%;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.8rem;
+          margin-bottom: 0;
+        }
+      }
+      .answer {
+        font-size: 1rem;
+        width: 90%;
+        color: grey;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+        }
+      }
     }
   }
-}
-
-.question {
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  background: none;
-  text-transform: capitalize;
-
-  width: 90%;
-}
-.answer {
-  font-size: 1rem;
-  width: 90%;
-  color: grey;
 }

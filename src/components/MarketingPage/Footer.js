@@ -15,21 +15,26 @@ const Footer = () => {
           <span>Business WhatsApp 956-518-3132</span>
         </div>
         <div className="texas-info">
-          <span>Lic. TX803652509</span>
-          <span>Palmview TX </span>
-          <span>
-            <a href="www.facebook.com" target="_blank" className="facebook">
-              <FaFacebook />
-            </a>
-          </span>
-          <span>Lic. NV20171275489</span>
-          <span>Las Vegas NV </span>
-          <span>
-            <a href="www.facebook.com" target="_blank" className="facebook">
-              <FaFacebook />
-            </a>
-          </span>
+          <div className="tex">
+            <span>Lic. TX803652509</span>
+            <span>Palmview TX </span>
+            <span>
+              <a href="www.facebook.com" target="_blank" className="facebook">
+                <FaFacebook />
+              </a>
+            </span>
+          </div>
+          <div className="vegas">
+            <span>Lic. NV20171275489</span>
+            <span>Las Vegas NV </span>
+            <span>
+              <a href="www.facebook.com" target="_blank" className="facebook">
+                <FaFacebook />
+              </a>
+            </span>
+          </div>
         </div>
+
         <p>&copy; Copyright Gift Solar LLC.</p>
       </div>
     </footer>

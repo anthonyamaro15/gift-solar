@@ -6,6 +6,11 @@
   color: #f4f4f4;
   //   backdrop-filter: blur(50px);
 
+  @media (max-width: $lg-phone) {
+    //  border: 1px solid red;
+    height: 70vh;
+  }
+
   &::after {
     content: "";
     width: 100%;
