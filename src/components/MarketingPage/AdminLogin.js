@@ -33,7 +33,8 @@ const AdminLogin = () => {
               </label>
             </p>
             <span>
-              Olvido la contrasenia?<Link>click aqui</Link>
+              Olvido la contrasenia?
+              <Link to="/resetpassword">click aqui</Link>
             </span>
             <button type="submit">login</button>
           </form>
