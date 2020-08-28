@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../imgs/logo1.png";
 import { Link as SmothLink } from "react-scroll";
+import AdminLogin from "./AdminLogin";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -40,6 +41,14 @@ const Navbar = () => {
           <NavLink to="/contact" exact activeClassName="active">
             contact
           </NavLink>
+          {/**
+          <NavLink to="/login" exact activeClassName="active">
+            admin
+          </NavLink>
+         */}
+          <div className="btn-login">
+            <AdminLogin />
+          </div>
         </nav>
       </div>
     </div>

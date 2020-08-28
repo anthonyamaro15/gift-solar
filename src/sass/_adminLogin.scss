@@ -1,0 +1,23 @@
+.btn-login {
+  .AdminLogin {
+    button {
+      padding: 0.3rem 1.3rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      background: #3f58a6;
+      color: #f4f4f4;
+      border: none;
+      cursor: pointer;
+    }
+
+    .inner-modal {
+      h2 {
+        color: red;
+      }
+      form {
+        border: 1px solid blue;
+      }
+    }
+  }
+}
