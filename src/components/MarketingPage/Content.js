@@ -17,7 +17,10 @@ const Content = () => {
     <div>
       <div className="Content-first">
         <section className="Content-about">
-          <img src={imgOne} alt="about gift solar plans" />
+          <div className="img-wrapper">
+            <img src={imgOne} alt="about gift solar plans" />
+          </div>
+
           <div className="video-wrapper">
             <h3>sobre nosotros</h3>
             <h2>energia solar</h2>
@@ -75,7 +78,9 @@ const Content = () => {
             </div>
           </div>
 
-          <img src={imgtwo} alt="why choose gift solar" />
+          <div className="img-wrapper">
+            <img src={imgtwo} alt="why choose gift solar" />
+          </div>
         </section>
       </div>
       <div className="Content-third" id="mas">
