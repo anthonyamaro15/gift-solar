@@ -31,6 +31,10 @@
     justify-content: center;
     height: 100%;
 
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
     h1 {
       text-transform: uppercase;
       // border: 1px solid blue;
@@ -41,6 +45,15 @@
       font-size: 3rem;
       // text-transform: capitalize;
       // font-size: 3.7rem;
+
+      @media (max-width: $med-desktop) {
+        font-size: 2.6rem;
+        max-width: 600px;
+      }
+
+      @media (max-width: $med-phone) {
+        font-size: 2.2rem;
+      }
     }
 
     p {
@@ -50,6 +63,15 @@
       // border: 1px solid red;
       line-height: 1.4;
       letter-spacing: 0.2px;
+
+      @media (max-width: $med-desktop) {
+        //   font-size: 2.6rem;
+        max-width: 550px;
+      }
+
+      @media (max-width: $med-phone) {
+        font-size: 1.1rem;
+      }
     }
     a {
       width: 120px;
