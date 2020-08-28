@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
+import { Link } from "react-router-dom";
 
 const AdminLogin = () => {
   const [open, setOpen] = useState(false);
@@ -12,19 +13,29 @@ const AdminLogin = () => {
           <h2 className="h2">Admin Login</h2>
           <form className="form-login">
             <p>
-              <label htmlFor="firstName">
-                First name
-                <input type="text" />
+              <label htmlFor="email">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="email"
+                />
               </label>
             </p>
             <p>
-              <label htmlFor="lastName">
-                Last name
-                <input type="text" />
+              <label htmlFor="password">
+                <input
+                  type="text"
+                  name="password"
+                  id="password"
+                  placeholder="password"
+                />
               </label>
             </p>
-            <button>test</button>
-            <input type="submit" value="Submit" />
+            <span>
+              Olvido la contrasenia?<Link>click aqui</Link>
+            </span>
+            <button type="submit">login</button>
           </form>
         </div>
       </Modal>
