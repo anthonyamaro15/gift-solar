@@ -3,16 +3,30 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+  },
+  input: {
+    display: "none",
+  },
+  button: {
+    fontSize: "0.7rem",
+  },
+}));
 
 const ModalForm = () => {
   const [open, setOpen] = useState(false);
   const { register, reset, handleSubmit } = useForm();
-
+  const classes = useStyles();
   const [powerFile, setPowerFile] = useState("");
   const [pdfName, setPdfName] = useState("");
-  const [imgContainer, setImgContainer] = useState([
-    { imgs: "fsfsfsff", imgs: "fsflkfls" },
-  ]);
+  const [imgContainer, setImgContainer] = useState([]);
 
   const onSubmit = (values) => {
     const newData = { ...values, pdfName, pdfFile: powerFile };
@@ -31,140 +45,110 @@ const ModalForm = () => {
   };
 
   const uploadImg1 = (e) => {
-    let images = e.target.files;
+    let files = e.target.files[0];
     const formData = new FormData();
-    for (let i = 0; i < images.length; i++) {
-      // console.log("imgs here ", images[i]);
-      formData.append("upload_preset", "pl2czq6m");
-      formData.append("file", images[i]);
-      //  console.log(images[i]);
-      // setImgContainer([...imgContainer, { imgs: images[i] }]);
-      axios
-        .post("https://httpbin.org/anything", formData)
-        .then((res) => {
-          let imgs = res.data.files;
 
-          //  console.log("response her e", res.data.files);
-          setImgContainer([...imgContainer, { imgs }]);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      // axios
-      //   .post(
-      //     `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
-      //     formData
-      //   )
-      //   .then((res) => {
-      //     setImgContainer([...imgContainer, res.data.secure_url]);
-      //     //  console.log("her check ", imgContainer);
-      //   })
-      //   .catch((err) => [console.log(err)]);
-      //  }
-      //  let newM = images.map((imgs) => {
-      //    formData.append("upload_preset", "pl2czq6m");
-      //    formData.append(imgs.name, imgs);
-      //    console.log(imgs);
-      //    setImgContainer([...imgContainer, { imgs }]);
-      //   });
-      //  console.log("her ", images[0]);
-
-      //  const files = e.target.files[0];
-      //  const formData = new FormData();
-      //  formData.append("upload_preset", "pl2czq6m");
-      //  formData.append("file", files);
-
-      //   axios
-      //     .post(`https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`, formData)
-      //     .then((res) => {
-      //       setImg(res.data.secure_url);
-      //     })
-      //     .catch((err) => [console.log(err)]);
-    }
-    //   console.log("her check ", imgContainer);
-    //   console.log("check data here ", test);
+    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("file", files);
+    axios
+      .post(
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        formData
+      )
+      .then((res) => {
+        //  console.log("response her e", res.data.files);
+        setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
-  //   const uploadimg2 = (e) => {
-  //          const files = e.target.files[0];
-  //          const formData = new FormData();
-  //          formData.append("upload_preset", "pl2czq6m");
-  //          formData.append("file", files);
+  const uploadImg2 = (e) => {
+    const files = e.target.files[0];
+    const formData = new FormData();
+    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("file", files);
 
-  //          axios
-  //            .post(
-  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
-  //              formData
-  //            )
-  //            .then((res) => {
-  //              setImg(res.data.secure_url);
-  //            })
-  //            .catch((err) => [console.log(err)]);
-  //   };
-  //   const uploadimg3 = (e) => {
-  //          const files = e.target.files[0];
-  //          const formData = new FormData();
-  //          formData.append("upload_preset", "pl2czq6m");
-  //          formData.append("file", files);
+    axios
+      .post(
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        formData
+      )
+      .then((res) => {
+        //  console.log("response her e", res.data.files);
+        setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
+      })
+      .catch((err) => [console.log(err)]);
+  };
+  const uploadImg3 = (e) => {
+    const files = e.target.files[0];
+    const formData = new FormData();
+    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("file", files);
 
-  //          axios
-  //            .post(
-  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
-  //              formData
-  //            )
-  //            .then((res) => {
-  //              setImg(res.data.secure_url);
-  //            })
-  //            .catch((err) => [console.log(err)]);
-  //   };
-  //   const uploadimg4 = (e) => {
-  //          const files = e.target.files[0];
-  //          const formData = new FormData();
-  //          formData.append("upload_preset", "pl2czq6m");
-  //          formData.append("file", files);
+    axios
+      .post(
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        formData
+      )
+      .then((res) => {
+        //  console.log("response her e", res.data.files);
+        setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
+      })
+      .catch((err) => [console.log(err)]);
+  };
+  const uploadImg4 = (e) => {
+    const files = e.target.files[0];
+    const formData = new FormData();
+    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("file", files);
 
-  //          axios
-  //            .post(
-  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
-  //              formData
-  //            )
-  //            .then((res) => {
-  //              setImg(res.data.secure_url);
-  //            })
-  //            .catch((err) => [console.log(err)]);
-  //   };
-  //   const uploadimg5 = (e) => {
-  //          const files = e.target.files[0];
-  //          const formData = new FormData();
-  //          formData.append("upload_preset", "pl2czq6m");
-  //          formData.append("file", files);
+    axios
+      .post(
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        formData
+      )
+      .then((res) => {
+        //  console.log("response her e", res.data.files);
+        setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
+      })
+      .catch((err) => [console.log(err)]);
+  };
+  const uploadImg5 = (e) => {
+    const files = e.target.files[0];
+    const formData = new FormData();
+    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("file", files);
 
-  //          axios
-  //            .post(
-  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
-  //              formData
-  //            )
-  //            .then((res) => {
-  //              setImg(res.data.secure_url);
-  //            })
-  //            .catch((err) => [console.log(err)]);
-  //   };
-  //   const uploadimg6 = (e) => {
-  //          const files = e.target.files[0];
-  //          const formData = new FormData();
-  //          formData.append("upload_preset", "pl2czq6m");
-  //          formData.append("file", files);
+    axios
+      .post(
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        formData
+      )
+      .then((res) => {
+        //  console.log("response her e", res.data.files);
+        setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
+      })
+      .catch((err) => [console.log(err)]);
+  };
+  const uploadImg6 = (e) => {
+    const files = e.target.files[0];
+    const formData = new FormData();
+    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("file", files);
 
-  //          axios
-  //            .post(
-  //              `https://api.cloudinary.com/v1_1/dedps0vtx/image/upload`,
-  //              formData
-  //            )
-  //            .then((res) => {
-  //              setImg(res.data.secure_url);
-  //            })
-  //            .catch((err) => [console.log(err)]);
-  //   };
+    axios
+      .post(
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        formData
+      )
+      .then((res) => {
+        //  console.log("response her e", res.data.files);
+        setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
+      })
+      .catch((err) => [console.log(err)]);
+  };
   return (
     <div className="ModalForm">
       <button className="button" onClick={() => setOpen(true)}>
@@ -1022,19 +1006,94 @@ const ModalForm = () => {
             </div>
           </div>
           {/************************ END OF YEARLY INFORMATION BILL ***********************/}
-          <div className="update-file">
-            <label htmlFor="pdf">
-              <input
-                type="file"
-                name="pdf-file"
-                id="pdf"
-                onChange={uploadPdf}
-              />
-            </label>
-          </div>
-          {/************************ END OF YEARLY UPDATE-FILES ***********************/}
+
           <div className="upload-imgs-container">
-            <label htmlFor="img1">
+            <div className={classes.root} id="upload-img-btn">
+              <input
+                className={classes.input}
+                id="img1"
+                type="file"
+                name="img1"
+                onChange={uploadImg1}
+              />
+              <label htmlFor="img1" className="btn-wrapper">
+                <Button variant="contained" component="span">
+                  Img 1
+                </Button>
+              </label>
+            </div>
+            <div className={classes.root} id="upload-img-btn">
+              <input
+                className={classes.input}
+                id="img2"
+                type="file"
+                name="img2"
+                onChange={uploadImg2}
+              />
+              <label htmlFor="img2" className="btn-wrapper">
+                <Button variant="contained" component="span">
+                  Img 2
+                </Button>
+              </label>
+            </div>{" "}
+            <div className={classes.root} id="upload-img-btn">
+              <input
+                className={classes.input}
+                id="img3"
+                type="file"
+                name="img3"
+                onChange={uploadImg3}
+              />
+              <label htmlFor="img3" className="btn-wrapper">
+                <Button variant="contained" component="span">
+                  Img 3
+                </Button>
+              </label>
+            </div>{" "}
+            <div className={classes.root} id="upload-img-btn">
+              <input
+                className={classes.input}
+                id="img4"
+                type="file"
+                name="img4"
+                onChange={uploadImg4}
+              />
+              <label htmlFor="img4" className="btn-wrapper">
+                <Button variant="contained" component="span">
+                  Img 4
+                </Button>
+              </label>
+            </div>{" "}
+            <div className={classes.root} id="upload-img-btn">
+              <input
+                className={classes.input}
+                id="img5"
+                type="file"
+                name="img5"
+                onChange={uploadImg5}
+              />
+              <label htmlFor="img5" className="btn-wrapper">
+                <Button variant="contained" component="span">
+                  Img 5
+                </Button>
+              </label>
+            </div>{" "}
+            <div className={classes.root} id="upload-img-btn">
+              <input
+                className={classes.input}
+                id="img6"
+                type="file"
+                name="img6"
+                onChange={uploadImg6}
+              />
+              <label htmlFor="img6" className="btn-wrapper">
+                <Button variant="contained" component="span">
+                  Img 6
+                </Button>
+              </label>
+            </div>
+            {/**
+              <label htmlFor="img1">
               <input
                 type="file"
                 name="img1"
@@ -1043,7 +1102,7 @@ const ModalForm = () => {
                 onChange={uploadImg1}
               />
             </label>
-
+            */}
             {/**
                <label htmlFor="img2">
               <input type="file" name="img2" id="img2" onChange={uploadImg1} />
@@ -1062,7 +1121,23 @@ const ModalForm = () => {
             </label>
             */}
           </div>
+          {/************************ END OF INPUT IMGS CONTAINER ***********************/}
+          <div className={classes.root} id="upload-img-btn">
+            <input
+              className={classes.input}
+              id="contained-button-file"
+              type="file"
+              name="pdf-file"
+              onChange={uploadPdf}
+            />
+            <label htmlFor="contained-button-file" className="btn-wrapper">
+              <Button variant="contained" component="span">
+                Choose PDF
+              </Button>
+            </label>
+          </div>
 
+          {/************************ END OF YEARLY UPDATE-FILES ***********************/}
           <button>enviar</button>
         </form>
       </Modal>
