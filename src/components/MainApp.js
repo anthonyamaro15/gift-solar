@@ -2,6 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import MainHomePage from "./MarketingPage/MainHomePage";
 import Navbar from "./MarketingPage/Navbar";
+import MobileNavbar from "./MarketingPage/MobileNavbar";
 import AboutPage from "./MarketingPage/about/AboutPage";
 import ContactPage from "./MarketingPage/contact/ContactPage";
 import Footer from "./MarketingPage/Footer";
@@ -10,6 +11,7 @@ const MainApp = () => {
   return (
     <div>
       <Navbar />
+      <MobileNavbar />
       <Route exact path="/">
         <MainHomePage />
       </Route>
