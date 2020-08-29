@@ -7,10 +7,18 @@
   @media (max-width: $lg-phone) {
     font-size: 0.8rem;
   }
+
+  @media (max-width: $galaxy) {
+    font-size: 0.7rem;
+  }
   .Footer-inner {
     max-width: 900px;
     margin: 0 auto;
     padding: 4rem 0.5rem 2rem;
+
+    @media (max-width: $galaxy) {
+      padding: 3rem 0.5rem 1rem;
+    }
 
     .vegas-info {
       // border: 1px solid red;
@@ -70,7 +78,7 @@
         justify-content: space-between;
 
         @media (max-width: $lg-phone) {
-          width: 70%;
+          width: 80%;
           margin-bottom: 0.5rem;
         }
       }
@@ -83,6 +91,10 @@
         @media (max-width: $s-laptop) {
           margin-bottom: 0.5rem;
           border-right: none;
+        }
+
+        @media (max-width: $galaxy) {
+          margin-bottom: 0;
         }
 
         &:last-child {
@@ -110,6 +122,10 @@
 
       @media (max-width: $lg-phone) {
         font-size: 0.7rem;
+      }
+
+      @media (max-width: $galaxy) {
+        font-size: 0.6rem;
       }
     }
   }
