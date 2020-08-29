@@ -23,7 +23,7 @@ const ContactContent = () => {
 
           <ContactGiftSolarForm />
           <div className="phone-appoinment">
-            <h3>AGENDAR UNA CITA POR TELEFONO</h3>
+            <h3>oh AGENDAR UNA CITA POR TELEFONO</h3>
             <div className="flex-wrapper">
               <div className="placeholder"></div>
               <form onSubmit={handleSubmit(onSubmit)}>

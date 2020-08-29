@@ -70,7 +70,9 @@ const ContactGiftSolarForm = () => {
               className={errors.message ? "empty" : ""}
             ></textarea>
           </label>
-          <button>submit</button>
+          <button type="submit" className="contact-btn">
+            submit
+          </button>
         </form>
       </div>
     </div>
