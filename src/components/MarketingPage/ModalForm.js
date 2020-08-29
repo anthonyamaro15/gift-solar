@@ -181,7 +181,7 @@ const ModalForm = () => {
           <div className="power-bill-info">
             <h3>informacion de la cuenta de energia electrica</h3>
             <label htmlFor="acc-num">
-              Numero de cuenta de NV Energy
+              Numero de cuenta de NV Energy:
               <input
                 type="number"
                 id="acc-num"
@@ -221,7 +221,9 @@ const ModalForm = () => {
           </div>
 
           {/************************ END OF YEARLY UPDATE-FILES ***********************/}
-          <button>enviar</button>
+          <button type="submit" className="submit-form">
+            enviar
+          </button>
         </form>
       </Modal>
     </div>
