@@ -1,6 +1,6 @@
 import React from "react";
 
-const PropertyInfoComponent = ({ register }) => {
+const PropertyInfoComponent = ({ register, errors }) => {
   return (
     <div className="property-info">
       <h3>informacion de la propiedad</h3>
@@ -8,19 +8,32 @@ const PropertyInfoComponent = ({ register }) => {
       <div className="house">
         <label htmlFor="year">
           Ano construida:
-          <input type="text" name="house-year-built" id="year" ref={register} />
+          <input
+            type="text"
+            name="houseYearBuilt"
+            id="year"
+            ref={register({ required: true })}
+            className={errors.houseYearBuilt ? "not-empty-values" : ""}
+          />
         </label>
         <label htmlFor="sqrFoot">
           Pies cuadrados:
-          <input type="text" name="house-sqrFoot" id="sqrFoot" ref={register} />
+          <input
+            type="text"
+            name="houseSqrFoot"
+            id="sqrFoot"
+            ref={register({ required: true })}
+            className={errors.houseSqrFoot ? "not-empty-values" : ""}
+          />
         </label>{" "}
         <label htmlFor="totalFloors">
           Cuantos pisos:
           <input
             type="text"
-            name="house-total-floors"
+            name="houseTotalFloors"
             id="totalFloors"
-            ref={register}
+            ref={register({ required: true })}
+            className={errors.houseTotalFloors ? "not-empty-values" : ""}
           />
         </label>
       </div>
