@@ -24,6 +24,19 @@
     //  border: 1px solid blue;
     width: 350px;
 
+    @media (max-width: $lg-phone) {
+      width: 300px;
+    }
+
+    //   @media (max-width: $galaxy) {
+    //     width: 350px;
+    //     font-size: 0.6rem;
+    //   }
+
+    .not-empty-values {
+      border: 1px solid red;
+    }
+
     p {
       margin-bottom: 1rem;
 
@@ -42,6 +55,15 @@
           &::placeholder {
             font-weight: 300;
           }
+
+          @media (max-width: $lg-phone) {
+            font-size: 0.9rem;
+            padding: 0.5rem;
+          }
+
+          @media (max-width: $galaxy) {
+            font-size: 0.8rem;
+          }
         }
       }
     }
@@ -51,6 +73,14 @@
       // display: ;
       margin-bottom: 1rem;
       // font-weight: 300;
+
+      @media (max-width: $lg-phone) {
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: $galaxy) {
+        font-size: 0.8rem;
+      }
 
       a {
         text-transform: capitalize;
@@ -70,6 +100,15 @@
       color: #f4f4f4;
       border: none;
       cursor: pointer;
+
+      @media (max-width: $lg-phone) {
+        font-size: 0.8rem;
+        //   padding: 0.4rem 1.5rem;
+      }
+
+      @media (max-width: $galaxy) {
+        font-size: 0.7rem;
+      }
     }
   }
 }

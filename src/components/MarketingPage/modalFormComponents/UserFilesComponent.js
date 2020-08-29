@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserFilesComponent = ({ register }) => {
+const UserFilesComponent = ({ register, errors }) => {
   return (
     <div className="subtitle">
       <h3>evaluacion recidencial</h3>
@@ -9,13 +9,14 @@ const UserFilesComponent = ({ register }) => {
         <h3>informacion de los propietarios</h3>
         {/***************** START OF USER FIELDS *********************/}
         {/** first user */}
-        <label htmlFor="first-name" className="nombre">
+        <label htmlFor="firstName" className="nombre">
           1. Nombre:
           <input
             type="text"
-            id="first-name"
-            name="first-person-name"
-            ref={register}
+            id="firstName"
+            name="firstPersonName"
+            ref={register({ required: true })}
+            className={errors.firstPersonName ? "not-empty-values" : ""}
           />
         </label>
         <div className="phone-info">
@@ -23,20 +24,16 @@ const UserFilesComponent = ({ register }) => {
             Tel:
             <input
               type="number"
-              name="first-person-number"
+              name="firstPersonNumber"
               id="first-phone"
-              ref={register}
+              ref={register({ required: true })}
+              className={errors.firstPersonNumber ? "not-empty-values" : ""}
             />
           </label>
           <div className="taxes">
             <span>Declara Impuestos?</span>
             <label htmlFor="first-yes">
-              <input
-                type="checkbox"
-                name="first-person-do-taxes"
-                id="first-yes"
-                ref={register}
-              />
+              <input type="checkbox" name="firstPersonDoTaxes" id="first-yes" />
               Si
             </label>
             <label htmlFor="first-no">
@@ -55,9 +52,10 @@ const UserFilesComponent = ({ register }) => {
           Correo electronico:
           <input
             type="email"
-            name="first-person-email"
+            name="firstPersonEmail"
             id="first-email"
-            ref={register}
+            ref={register({ required: true })}
+            className={errors.firstPersonEmail ? "not-empty-values" : ""}
           />
         </label>
         {/** second user */}
@@ -115,20 +113,44 @@ const UserFilesComponent = ({ register }) => {
         {/** end of second user */}
         <label htmlFor="address" className="address1">
           Direccion:
-          <input type="text" name="address" id="address" ref={register} />
+          <input
+            type="text"
+            name="address"
+            id="address"
+            ref={register({ required: true })}
+            className={errors.address ? "not-empty-values" : ""}
+          />
         </label>
         <div className="address">
           <label htmlFor="city" className="city">
             Ciudad:
-            <input type="text" name="city" id="city" ref={register} />
+            <input
+              type="text"
+              name="city"
+              id="city"
+              ref={register({ required: true })}
+              className={errors.city ? "not-empty-values" : ""}
+            />
           </label>
           <label htmlFor="state" className="state">
             Estado:
-            <input type="text" name="state" id="state" ref={register} />
+            <input
+              type="text"
+              name="state"
+              id="state"
+              ref={register({ required: true })}
+              className={errors.state ? "not-empty-values" : ""}
+            />
           </label>
           <label htmlFor="zipcode" className="zipcode">
             Codigo Postal:
-            <input type="text" name="zipcode" id="zipcode" ref={register} />
+            <input
+              type="text"
+              name="zipcode"
+              id="zipcode"
+              ref={register({ required: true })}
+              className={errors.zipcode ? "not-empty-values" : ""}
+            />
           </label>
         </div>
       </div>

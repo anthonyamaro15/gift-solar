@@ -39,6 +39,14 @@
     }
   }
 
+  .not-empty-values {
+    border-bottom: 1px solid red;
+  }
+
+  .not-empty-checkbox {
+    color: red;
+  }
+
   .form-title {
     text-align: center;
     margin: 4rem 0 1rem;
@@ -678,6 +686,10 @@
       justify-content: space-between;
 
       align-items: flex-end;
+
+      .not-empty-values {
+        color: red;
+      }
 
       span {
         width: 34%;

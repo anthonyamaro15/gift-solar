@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ModalForm = () => {
   const [open, setOpen] = useState(false);
-  const { register, reset, handleSubmit } = useForm();
+  const { register, reset, errors, handleSubmit } = useForm();
   const classes = useStyles();
   const [powerFile, setPowerFile] = useState("");
   //   const [pdfName, setPdfName] = useState("");
@@ -167,16 +167,16 @@ const ModalForm = () => {
           <h3 className="form-title">quiero applicar para el paquete:</h3>
           <PackageTypeComponent register={register} />
 
-          <UserFilesComponent register={register} />
+          <UserFilesComponent register={register} errors={errors} />
           {/***************** END OF USER FIELDS *********************/}
           {/***************** START OF PROPERTY INORMATION *********************/}
-          <PropertyInfoComponent register={register} />
+          <PropertyInfoComponent register={register} errors={errors} />
           {/********* end of HOA *********/}
 
           {/********* SECOND FORM INFORMATION *********/}
           <PowerInfoComponent register={register} />
           {/*********  END OF POWER SYSTEM INFORMATION  *********/}
-          <ACComponent register={register} />
+          <ACComponent register={register} errors={errors} />
           {/*********  END OF AC INFORMATION *********/}
           <div className="power-bill-info">
             <h3>informacion de la cuenta de energia electrica</h3>
@@ -184,15 +184,16 @@ const ModalForm = () => {
               Numero de cuenta de NV Energy:
               <input
                 type="number"
-                id="acc-num"
-                name="power-bill-acc-num"
-                ref={register}
+                id="accNumber"
+                name="powerBillAccNumber"
+                ref={register({ required: true })}
+                className={errors.powerBillAccNumber ? "not-empty-values" : ""}
               />
             </label>
           </div>
           {/*********  END OF POWER BILL INFO *********/}
 
-          <YearlyInfoComponent register={register} />
+          <YearlyInfoComponent register={register} errors={errors} />
           {/************************ END OF YEARLY INFORMATION BILL ***********************/}
 
           <UploadImgsComponent
