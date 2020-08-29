@@ -7,12 +7,13 @@ const AdminSearchForm = () => {
 
   const onSubmit = (value) => {
     console.log(value);
-    reset();
+    //  reset();
   };
+
   return (
     <section className="AdminSearchForm">
-      <p>Busca por Email o por Numbero de telefo.</p>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <p>Busca por Email o por Numbero de telefo.</p>
         <label htmlFor="search">
           <input
             type="text"
@@ -20,7 +21,7 @@ const AdminSearchForm = () => {
             id="search"
             placeholder="Buscar"
             ref={register({ required: true })}
-            className={errors ? "not-empty-values" : ""}
+            className={errors.search ? "empty-values-not-allow" : ""}
           />
           <span className="error">{error && error}</span>
         </label>
