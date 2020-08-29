@@ -133,6 +133,10 @@
           font-size: 0.9rem;
           margin-bottom: 1.5rem;
         }
+
+        @media (max-width: $galaxy) {
+          font-size: 0.8rem;
+        }
       }
 
       a {
@@ -232,6 +236,10 @@
           font-size: 0.9rem;
           margin-bottom: 1.5rem;
         }
+
+        @media (max-width: $galaxy) {
+          font-size: 0.8rem;
+        }
       }
 
       a {
@@ -263,6 +271,10 @@
         @media (max-width: $lg-phone) {
           font-size: 0.9rem;
           margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: $galaxy) {
+          font-size: 0.8rem;
         }
       }
     }
@@ -338,6 +350,10 @@
         @media (max-width: $lg-phone) {
           font-size: 0.9rem;
           //  margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: $galaxy) {
+          font-size: 0.8rem;
         }
 
         span {
@@ -418,10 +434,18 @@
 
       p {
         margin-bottom: 1rem;
+
+        @media (max-width: $galaxy) {
+          font-size: 0.8rem;
+        }
       }
       span {
         margin-bottom: 0.3rem;
         font-weight: bold;
+
+        @media (max-width: $galaxy) {
+          font-size: 0.8rem;
+        }
       }
       .important-message {
         font-weight: bold;

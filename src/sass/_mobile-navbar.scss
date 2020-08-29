@@ -1,7 +1,7 @@
 .MobileNavbar {
   width: 280px;
   //   background: #333;
-  background: rgb(6, 6, 6);
+  background: rgba(6, 6, 6, 1);
   //   background: #f4f4f4;
   //   background: rgba(63, 88, 166, 1);
   border-left: 1px solid rgb(61, 59, 59);
@@ -12,8 +12,12 @@
   //   border: 1px solid red;
   height: 100vh;
   transition: all 0.5s ease;
-  transform: translate(350px);
+  transform: translate(600px);
   z-index: 100;
+
+  @media (max-width: $med-phone) {
+    width: 100%;
+  }
 
   // add when click
   &.show {
@@ -76,6 +80,10 @@
     display: block;
   }
 
+  @media (max-width: $med-phone) {
+    top: 0.4rem;
+  }
+
   // when cllick again
   &.close {
     //  background: #333;
@@ -95,13 +103,15 @@
       }
 
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(9px, -9px);
+        transform: rotate(-45deg) translate(7px, -6px);
       }
     }
   }
 
   .lines {
     padding: 2px 4px;
+    padding: 1px 4px;
+
     margin: 6px 0;
     //  background: @white;
     background: red;
@@ -114,5 +124,9 @@
     //  @media @phone {
     //    width: 35px;
     //  }
+
+    @media (max-width: $med-phone) {
+      padding: 1px 4px;
+    }
   }
 }
