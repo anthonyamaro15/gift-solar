@@ -11,18 +11,68 @@
     //  border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    //  align-items: center;
+    align-items: center;
+
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
+    @media (max-width: $sm-desktop) {
+      flex-wrap: wrap-reverse;
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 100%;
+    }
 
     .img-wrapper {
-      img {
-        width: 300px;
-        // border: 1px solid red;
-        height: 300px;
-        //   border-radius: 50%;
+      width: 550px;
+      height: 350px;
+      @media (max-width: $med-desktop) {
+        width: 500px;
+        height: 350px;
+      }
 
-        width: 550px;
-        // border: 1px solid red;
-        height: 355px;
+      @media (max-width: $sm-desktop) {
+        //   border: 1px solid red;
+        width: 90%;
+        //   height: 300px;
+      }
+
+      @media (max-width: $lg-phone) {
+        //  border: 1px solid red;
+
+        height: 250px;
+      }
+      img {
+        //   width: 300px;
+        //   // border: 1px solid red;
+        //   height: 300px;
+        //   //   border-radius: 50%;
+
+        //   width: 550px;
+        //   // border: 1px solid red;
+        //   height: 355px;
+
+        width: 100%;
+        //   border: 1px solid red;
+        height: 100%;
+        //   object-fit: contain;
+        //   height: 350px;
+
+        @media (max-width: $sm-desktop) {
+          //  border: 1px solid red;
+          width: 100%;
+          //   height: 300px;
+        }
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          object-fit: fill;
+          //   height: 300px;
+        }
       }
     }
 
@@ -33,12 +83,33 @@
       flex-direction: column;
       justify-content: center;
 
+      @media (max-width: $med-desktop) {
+        margin-left: 2rem;
+      }
+
+      @media (max-width: $sm-desktop) {
+        width: 90%;
+        margin-bottom: 2.5rem;
+        margin-left: 0;
+      }
+
+      @media (max-width: $lg-phone) {
+        //  border: 1px solid red;
+        //   margin-bottom: 0;
+      }
+
       h3 {
         text-transform: uppercase;
         color: #3f58a6;
         margin-bottom: 0.4rem;
         margin-top: -1rem;
         font-size: 1.1rem;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
       }
       h2 {
         //   text-align: center;
@@ -47,12 +118,21 @@
         margin-bottom: 1.3rem;
         // font-size: 2.5rem;
         // text-transform: capitalize;
+
+        @media (max-width: $lg-phone) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
       }
 
       p {
         font-size: 1rem;
         margin-bottom: 2rem;
         line-height: 1.5;
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
       }
 
       a {
@@ -85,18 +165,48 @@
     justify-content: space-between;
     //  border: 1px solid red;
 
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
+    @media (max-width: $sm-desktop) {
+      flex-wrap: wrap;
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 100%;
+    }
+
     .description-wrapper {
       width: 53%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       // border: 1px solid blue;
+
+      @media (max-width: $med-desktop) {
+        margin-right: 2rem;
+      }
+
+      @media (max-width: $sm-desktop) {
+        width: 90%;
+        //   margin-bottom: 2.5rem;
+        margin-right: 0;
+      }
       h3 {
         text-transform: uppercase;
         color: #3f58a6;
         margin-bottom: 0.4rem;
         margin-top: -1rem;
         font-size: 1.1rem;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
       }
       h2 {
         //   text-align: center;
@@ -105,6 +215,11 @@
         margin-bottom: 1.3rem;
         // font-size: 2.5rem;
         // text-transform: capitalize;
+
+        @media (max-width: $lg-phone) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
       }
 
       p {
@@ -112,10 +227,15 @@
         margin-bottom: 2rem;
         //   border: 1px solid red;
         line-height: 1.5;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
       }
 
       a {
-        border: 1px solid red;
+        //   border: 1px solid red;
         text-transform: uppercase;
         padding: 0.5rem 1.5rem;
         font-size: 0.9rem;
@@ -128,7 +248,23 @@
     .finance-help {
       // border: 1px solid red;
       width: 550px;
-      height: 355px;
+
+      @media (max-width: $sm-desktop) {
+        width: 90%;
+        //   margin-bottom: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        //   border: 1px solid red;
+        line-height: 1.5;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
+      }
     }
   }
 }
@@ -141,8 +277,28 @@
     margin: 0 auto;
     padding: 9rem 0.5rem;
 
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
+    @media (max-width: $sm-desktop) {
+      flex-wrap: wrap;
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 100%;
+    }
+
     .package-us {
-      // border: 1px solid blue;
+      // @media (max-width: $med-desktop) {
+      //   margin-right: 2rem;
+      // }
+
+      // @media (max-width: $sm-desktop) {
+      //   width: 100%;
+      // }
       h3 {
         text-align: center;
         font-size: 1.1rem;
@@ -150,6 +306,12 @@
         font-size: 1.1rem;
         margin-bottom: 0.4rem;
         color: #3f58a6;
+
+        @media (max-width: $lg-phone) {
+          //  border: 1px solid red;
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
       }
       h2 {
         text-align: center;
@@ -158,6 +320,11 @@
         margin-bottom: 1.3rem;
         // font-size: 2.5rem;
         // text-transform: capitalize;
+
+        @media (max-width: $lg-phone) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
       }
 
       p {
@@ -167,6 +334,12 @@
         margin: 0 auto;
         text-align: center;
         //   font-size: 1.1rem;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+          //  margin-bottom: 1.5rem;
+        }
+
         span {
           font-weight: bold;
           //  color: #3f58a6;
@@ -187,6 +360,21 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 9rem 0.5rem;
+    //  border: 1px solid red;
+
+    @media (max-width: $med-desktop) {
+      width: 85%;
+    }
+
+    @media (max-width: $sm-desktop) {
+      flex-wrap: wrap;
+      padding: 7rem 0.5rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $lg-phone) {
+      width: 100%;
+    }
 
     h3 {
       text-align: center;
@@ -194,6 +382,12 @@
       color: #3f58a6;
       margin-bottom: 0.4rem;
       font-size: 1.1rem;
+
+      @media (max-width: $lg-phone) {
+        //   border: 1px solid red;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
     }
 
     h2 {
@@ -204,12 +398,23 @@
       // font-weight: normal;
       // font-size: 2.5rem;
       // text-transform: capitalize;
+
+      @media (max-width: $lg-phone) {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
     }
 
     .description-wrapper {
       display: flex;
       justify-content: space-between;
       // border: 1px solid red;
+      width: 90%;
+      margin: 0 auto;
+
+      @media (max-width: $lg-phone) {
+        font-size: 0.9rem;
+      }
 
       p {
         margin-bottom: 1rem;

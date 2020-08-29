@@ -1,6 +1,5 @@
 .Navbar {
-  //   border: 1px solid red;
-  //   background: rgb(31, 30, 30);
+  //  background: rgb(31, 30, 30);
   transition: background 0.5s ease;
 
   position: fixed;
@@ -9,7 +8,6 @@
   right: 0;
   z-index: 100;
   .inner-wrapper {
-    //  border: 1px solid red;
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
@@ -56,7 +54,6 @@
     }
 
     nav {
-      // border: 1px solid blue;
       display: flex;
       align-items: center;
 
