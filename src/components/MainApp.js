@@ -7,19 +7,29 @@ import AboutPage from "./MarketingPage/about/AboutPage";
 import ContactPage from "./MarketingPage/contact/ContactPage";
 import Footer from "./MarketingPage/Footer";
 
+import AdminMain from "./PrivateComponents/AdminMain";
+
 const MainApp = () => {
   return (
     <div>
-      <Navbar />
-      <MobileNavbar />
       <Route exact path="/">
+        <Navbar />
+        <MobileNavbar />
         <MainHomePage />
       </Route>
       <Route exact path="/about">
+        <Navbar />
+        <MobileNavbar />
         <AboutPage />
       </Route>
       <Route exact path="/contact">
+        <Navbar />
+        <MobileNavbar />
         <ContactPage />
+      </Route>
+
+      <Route exact path="/dashboard">
+        <AdminMain />
       </Route>
       <Footer />
     </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../imgs/logo1.png";
 import { Link as SmothLink } from "react-scroll";
 import AdminLogin from "./AdminLogin";
