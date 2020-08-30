@@ -21,8 +21,10 @@ const AdminSearchForm = () => {
             id="search"
             placeholder="Buscar"
             ref={register({ required: true })}
-            className={errors.search ? "empty-values-not-allow" : ""}
           />
+          <p className="errors">
+            {errors.search && "Porfavor introducir informacion requerida"}
+          </p>
           <span className="error">{error && error}</span>
         </label>
         <button type="submit">submit</button>

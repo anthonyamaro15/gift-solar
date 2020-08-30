@@ -54,3 +54,22 @@ button {
   border-radius: 4px;
   font-family: "Open Sans", sans-serif;
 }
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: $blue;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}

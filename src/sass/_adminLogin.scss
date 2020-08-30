@@ -1,40 +1,22 @@
 .AdminLogin {
   button {
-    padding: 0.3rem 1.3rem;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+    @include mainButton(0.3rem 1.3rem);
     font-weight: 300;
-    background: #3f58a6;
-    color: #f4f4f4;
-    border: none;
-    cursor: pointer;
   }
 }
 
 .inner-modal {
   padding: 2rem 1rem;
   h2 {
-    //  color: red;
     font-size: 1.4rem;
-    text-transform: uppercase;
     text-align: center;
     margin-bottom: 1.5rem;
   }
   form {
-    //  border: 1px solid blue;
     width: 350px;
 
     @media (max-width: $lg-phone) {
       width: 300px;
-    }
-
-    //   @media (max-width: $galaxy) {
-    //     width: 350px;
-    //     font-size: 0.6rem;
-    //   }
-
-    .not-empty-values {
-      border: 1px solid red;
     }
 
     label {
@@ -42,39 +24,13 @@
       position: relative;
 
       input {
-        width: 100%;
-        padding: 0.4rem 0.3rem;
-        font-size: 1rem;
-        font-family: "Open Sans", sans-serif;
-        color: #333;
-        //  border: 1px solid red;
-        border: 1px solid #333;
-        border-radius: 4px;
-        margin-bottom: 1.5rem;
-        &::placeholder {
-          font-weight: 300;
-        }
-
-        @media (max-width: $lg-phone) {
-          font-size: 0.9rem;
-          padding: 0.5rem;
-        }
-
-        @media (max-width: $galaxy) {
-          font-size: 0.8rem;
-        }
+        @include inputProps(1.5rem);
+        padding: 0.5rem 0.3rem;
       }
-      .error {
-        position: absolute;
-        top: 2.3rem;
-        left: 0;
-        font-size: 0.8rem;
-        color: red;
 
-        @media (max-width: $lg-phone) {
-          top: 2.2rem;
-          font-size: 0.7rem;
-        }
+      // Add className if admin tries to submit empty values
+      .error {
+        @include error(2.3rem);
       }
 
       .eye {
@@ -87,9 +43,7 @@
 
     span {
       font-size: 0.9rem;
-      // display: ;
       margin-bottom: 1rem;
-      // font-weight: 300;
 
       @media (max-width: $lg-phone) {
         font-size: 0.8rem;
@@ -102,33 +56,16 @@
       .forgotpassword {
         text-transform: capitalize;
         margin-left: 0.3rem;
-        color: #3f58a6;
+        color: $blue;
         background: none;
         padding: 0;
         display: inline-block;
-        //   text-decoration: underline;
       }
     }
 
     button {
+      @include mainButton(0.3rem 1.3rem);
       display: block;
-      padding: 0.3rem 1.3rem;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      // font-weight: 300;
-      background: #3f58a6;
-      color: #f4f4f4;
-      border: none;
-      cursor: pointer;
-
-      @media (max-width: $lg-phone) {
-        font-size: 0.8rem;
-        //   padding: 0.4rem 1.5rem;
-      }
-
-      @media (max-width: $galaxy) {
-        font-size: 0.7rem;
-      }
     }
   }
 }

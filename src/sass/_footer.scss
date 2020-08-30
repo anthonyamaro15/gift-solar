@@ -21,21 +21,17 @@
     }
 
     .vegas-info {
-      // border: 1px solid red;
       width: 60%;
       margin: 0 auto;
       margin-bottom: 2rem;
-      // text-align: center;
-      display: flex;
-      justify-content: space-around;
+      @include flex(space-around);
 
       @media (max-width: $s-laptop) {
         flex-wrap: wrap;
       }
       span {
-        //   border: 1px solid red;
         padding-right: 1.5rem;
-        border-right: 1px solid white;
+        border-right: 1px solid $white;
 
         @media (max-width: $s-laptop) {
           margin-bottom: 0.5rem;
@@ -56,11 +52,8 @@
     }
 
     .texas-info {
-      // border: 1px solid red;
       margin-bottom: 3rem;
-      // text-align: center;
-      display: flex;
-      justify-content: space-around;
+      @include flex(space-around);
 
       @media (max-width: $s-laptop) {
         flex-wrap: wrap;
@@ -72,10 +65,8 @@
 
       .tex,
       .vegas {
-        //   border: 1px solid blue;
         width: 45%;
-        display: flex;
-        justify-content: space-between;
+        @include flex(space-between);
 
         @media (max-width: $lg-phone) {
           width: 80%;
@@ -84,9 +75,8 @@
       }
 
       span {
-        //  border: 1px solid red;
         padding-right: 1.9rem;
-        border-right: 1px solid white;
+        border-right: 1px solid $white;
 
         @media (max-width: $s-laptop) {
           margin-bottom: 0.5rem;
@@ -103,17 +93,11 @@
         }
 
         .facebook {
-          //  border: 1px solid red;
           color: #b8b7b7;
           font-size: 1rem;
           margin-left: -1rem;
         }
       }
-
-      // a {
-      //   //   margin-left: 0.5rem;
-      //   //   margin-right: 0.5rem;
-      // }
     }
 
     p {

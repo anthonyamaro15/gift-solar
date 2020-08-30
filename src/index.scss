@@ -1,23 +1,31 @@
+// global sass files
 @import "./sass/variables";
+@import "./sass/mixins";
 @import "./sass/global";
+
+// homepage sass files
 @import "./sass/navbar";
+@import "./sass/mobile-navbar";
 @import "./sass/header";
 @import "./sass/content";
 @import "./sass/modalForm";
-@import "./sass/toggleQuestions";
-@import "./sass/footer";
+// @import "./sass/toggleQuestions";
 
+// about sass files
 @import "./sass/about-header";
 @import "./sass/about-content";
 
+// contact sass files
 @import "./sass/contact-header";
 @import "./sass/contact-content";
-@import "./sass/adminLogin";
-@import "./sass/mobile-navbar";
 
+// admin sass files
+@import "./sass/adminLogin";
 @import "./sass/admin-navbar";
 @import "./sass/admin-header";
 @import "./sass/admin-searchForm";
 @import "./sass/admin-displayInfo";
 @import "./sass/forgotPassword";
 @import "./sass/resetPassword";
+
+@import "./sass/footer";
