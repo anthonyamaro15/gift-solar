@@ -9,6 +9,7 @@ import Footer from "./MarketingPage/Footer";
 
 import AdminMain from "./PrivateComponents/AdminMain";
 import ForgotPassword from "./PrivateComponents/ForgotPassword";
+import ResetPassword from "./PrivateComponents/ResetPassword";
 
 const MainApp = () => {
   return (
@@ -36,6 +37,12 @@ const MainApp = () => {
         <Navbar />
         <MobileNavbar />
         <ForgotPassword />
+      </Route>
+
+      <Route exact path="/reset/:token">
+        <Navbar />
+        <MobileNavbar />
+        <ResetPassword />
       </Route>
       <Footer />
     </div>
