@@ -5,15 +5,20 @@ import DateTimePicker from "react-datetime-picker";
 import { useForm } from "react-hook-form";
 
 const ContactContent = () => {
-  const [value, onChange] = useState(new Date());
+  const [value, onChange] = useState("");
   const { register, reset, errors, handleSubmit } = useForm();
-  //   console.log("values", value.toLocaleString());
+  const [error, setError] = useState("");
+  //   console.log("values", value);
 
   const onSubmit = (data) => {
-    let convertDate = String(value.toLocaleString());
-    const newData = { ...data, appoimentTime: convertDate };
-    console.log("check this ", newData);
-    reset();
+    if (value === "") {
+      setError("Porfavor selecione fecha y hora");
+    } else {
+      let convertDate = String(value.toLocaleString());
+      const newData = { ...data, appoinmentTime: convertDate };
+      console.log("check this ", newData);
+      // reset();
+    }
   };
   return (
     <div>
@@ -31,6 +36,7 @@ const ContactContent = () => {
                 <span className="time-picker">
                   <div id="picker">
                     <DateTimePicker onChange={onChange} value={value} />
+                    <p className="error">{error && error}</p>
                   </div>
                 </span>
                 <label htmlFor="name">
@@ -40,8 +46,8 @@ const ContactContent = () => {
                     id="name"
                     placeholder="Nombre"
                     ref={register({ required: true })}
-                    className={errors.name ? "empty" : ""}
                   />
+                  <p className="error">{errors.name && "Nombre requerido"}</p>
                 </label>
                 <label htmlFor="number">
                   <input
@@ -50,8 +56,10 @@ const ContactContent = () => {
                     id="number"
                     placeholder="Numero de telefono"
                     ref={register({ required: true })}
-                    className={errors.number ? "empty" : ""}
                   />
+                  <p className="error">
+                    {errors.number && "Numbero requerido"}
+                  </p>
                 </label>
                 <button>submit</button>
               </form>

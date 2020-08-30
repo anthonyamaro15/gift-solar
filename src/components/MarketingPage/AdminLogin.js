@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 const AdminLogin = () => {
   const [open, setOpen] = useState(false);
   const { register, errors, handleSubmit } = useForm();
+  const history = useHistory();
 
   const onSubmit = (values) => {
     console.log(values);
+    history.push("/dashboard");
   };
   return (
     <div className="AdminLogin">
@@ -26,8 +28,8 @@ const AdminLogin = () => {
                   id="email"
                   placeholder="email"
                   ref={register({ required: true })}
-                  className={errors.email ? "not-empty-values" : ""}
                 />
+                <p className="error">{errors.email && "Email requerido"}</p>
               </label>
             </p>
             <p>
@@ -38,8 +40,10 @@ const AdminLogin = () => {
                   id="password"
                   placeholder="password"
                   ref={register({ required: true })}
-                  className={errors.password ? "not-empty-values" : ""}
                 />
+                <p className="error">
+                  {errors.password && "Password requerido"}
+                </p>
               </label>
             </p>
             <span>
