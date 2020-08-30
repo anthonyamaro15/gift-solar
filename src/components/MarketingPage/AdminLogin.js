@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { BiShow, BiHide } from "react-icons/bi";
 
 const AdminLogin = () => {
   const [open, setOpen] = useState(false);
   const { register, errors, handleSubmit } = useForm();
+  const [show, setShow] = useState(false);
+
   const history = useHistory();
 
   const onSubmit = (values) => {
@@ -19,6 +22,10 @@ const AdminLogin = () => {
     setOpen(false);
     history.push("/forgotpassword");
     window.location.reload(true);
+  };
+
+  const togglePassword = () => {
+    setShow(!show);
   };
 
   return (
@@ -41,12 +48,15 @@ const AdminLogin = () => {
 
             <label htmlFor="password">
               <input
-                type="text"
+                type={show ? "text" : "password"}
                 name="password"
                 id="password"
                 placeholder="password"
                 ref={register({ required: true })}
               />
+              <span className="eye" onClick={togglePassword}>
+                {show ? <BiShow /> : <BiHide />}
+              </span>
               <p className="error">{errors.password && "Password requerido"}</p>
             </label>
 

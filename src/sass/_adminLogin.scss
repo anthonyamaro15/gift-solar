@@ -76,6 +76,13 @@
           font-size: 0.7rem;
         }
       }
+
+      .eye {
+        position: absolute;
+        top: 0.7rem;
+        right: 1rem;
+        cursor: pointer;
+      }
     }
 
     span {
