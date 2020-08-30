@@ -8,6 +8,7 @@ import ContactPage from "./MarketingPage/contact/ContactPage";
 import Footer from "./MarketingPage/Footer";
 
 import AdminMain from "./PrivateComponents/AdminMain";
+import ForgotPassword from "./PrivateComponents/ForgotPassword";
 
 const MainApp = () => {
   return (
@@ -30,6 +31,11 @@ const MainApp = () => {
 
       <Route exact path="/dashboard">
         <AdminMain />
+      </Route>
+      <Route exact path="/forgotpassword">
+        <Navbar />
+        <MobileNavbar />
+        <ForgotPassword />
       </Route>
       <Footer />
     </div>
