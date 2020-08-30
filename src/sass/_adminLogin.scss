@@ -37,47 +37,43 @@
       border: 1px solid red;
     }
 
-    p {
-      margin-bottom: 1rem;
+    label {
+      width: 100%;
+      position: relative;
 
-      label {
+      input {
         width: 100%;
-        position: relative;
-
-        input {
-          width: 100%;
-          padding: 0.4rem 0.3rem;
-          font-size: 1rem;
-          font-family: "Open Sans", sans-serif;
-          color: #333;
-          //  border: 1px solid red;
-          border: 1px solid #333;
-          border-radius: 4px;
-          margin-bottom: 0.7rem;
-          &::placeholder {
-            font-weight: 300;
-          }
-
-          @media (max-width: $lg-phone) {
-            font-size: 0.9rem;
-            padding: 0.5rem;
-          }
-
-          @media (max-width: $galaxy) {
-            font-size: 0.8rem;
-          }
+        padding: 0.4rem 0.3rem;
+        font-size: 1rem;
+        font-family: "Open Sans", sans-serif;
+        color: #333;
+        //  border: 1px solid red;
+        border: 1px solid #333;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+        &::placeholder {
+          font-weight: 300;
         }
-        .error {
-          position: absolute;
-          top: 2.3rem;
-          left: 0;
-          font-size: 0.8rem;
-          color: red;
 
-          @media (max-width: $lg-phone) {
-            top: 2.2rem;
-            font-size: 0.7rem;
-          }
+        @media (max-width: $lg-phone) {
+          font-size: 0.9rem;
+          padding: 0.5rem;
+        }
+
+        @media (max-width: $galaxy) {
+          font-size: 0.8rem;
+        }
+      }
+      .error {
+        position: absolute;
+        top: 2.3rem;
+        left: 0;
+        font-size: 0.8rem;
+        color: red;
+
+        @media (max-width: $lg-phone) {
+          top: 2.2rem;
+          font-size: 0.7rem;
         }
       }
     }
@@ -96,10 +92,13 @@
         font-size: 0.8rem;
       }
 
-      a {
+      .forgotpassword {
         text-transform: capitalize;
         margin-left: 0.3rem;
         color: #3f58a6;
+        background: none;
+        padding: 0;
+        display: inline-block;
         //   text-decoration: underline;
       }
     }
