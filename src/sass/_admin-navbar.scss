@@ -1,18 +1,15 @@
 .AdminNavbar {
-  //  background: rgb(31, 30, 30);
-  //   transition: background 0.5s ease;
-
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   .inner-wrapper {
-    max-width: 1300px;
+    max-width: $max-w;
     margin: 0 auto;
-    display: flex;
     padding: 1.5rem 0.5rem;
-    justify-content: space-between;
+
+    @include flex(space-between);
     align-items: center;
     text-transform: uppercase;
 
@@ -41,7 +38,7 @@
       span {
         margin-left: 0.7rem;
         font-size: 1.5rem;
-        color: #f4f4f4;
+        color: $white;
         font-family: "Noto Sans", sans-serif;
 
         @media (max-width: $med-phone) {
@@ -52,7 +49,7 @@
 
     nav {
       button {
-        color: #f4f4f4;
+        color: $white;
 
         transition: color 0.3s ease;
         font-size: 0.9rem;

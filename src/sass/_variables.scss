@@ -1,6 +1,12 @@
-// change widht of navbar at 1450px
-// change to mobile navbar at 800px
+// main with
+$max-w: 1300px;
 
+// main colors
+$blue: #3f58a6;
+$white: #f4f4f4;
+$black: #333;
+
+// media queries variables
 $med-desktop: 1450px;
 $sm-desktop: 1180px;
 $s-laptop: 900px;
@@ -9,9 +15,3 @@ $laptop: 800px;
 $lg-phone: 650px;
 $med-phone: 500px;
 $galaxy: 414px;
-
-// when it gets to 1450px width change the width of all container to 85%;
-// 0.9rem font size for p tags,
-// margin-bottom 1.5rem
-
-// 0.8rem for a tags

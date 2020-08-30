@@ -1,9 +1,8 @@
 .AdminHeader {
   height: 40vh;
-  background: grey;
   position: relative;
   background: rgba(5, 5, 5, 0.4);
-  color: #f4f4f4;
+  color: $white;
 
   @media (max-width: $lg-phone) {
     height: 30vh;
@@ -16,19 +15,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url("../imgs/header3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include bg-imgs("../imgs/header3.jpg", center);
+
     z-index: -1;
   }
   .Header-wrapper {
     padding: 0rem 0.5rem;
-    max-width: 1300px;
+    max-width: $max-w;
     margin: 0 auto;
-    display: flex;
+
+    @include flex(center);
     flex-direction: column;
-    justify-content: center;
     height: 100%;
 
     @media (max-width: $med-desktop) {
@@ -36,7 +33,6 @@
     }
 
     h1 {
-      text-transform: uppercase;
       text-align: center;
 
       @media (max-width: $med-phone) {

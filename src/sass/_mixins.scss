@@ -1,0 +1,87 @@
+// flex mixin
+@mixin flex($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+// main button mixin
+@mixin mainButton($padding) {
+  text-transform: uppercase;
+  padding: $padding;
+  background: $blue;
+  color: $white;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media (max-width: $lg-phone) {
+    font-size: 0.8rem;
+    padding: 0.4rem 1.5rem;
+  }
+
+  @media (max-width: $galaxy) {
+    font-size: 0.7rem;
+  }
+}
+
+// paragraphs tags mixin
+@mixin pTagsProps($margin) {
+  margin-bottom: $margin;
+
+  @media (max-width: $lg-phone) {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: $galaxy) {
+    font-size: 0.8rem;
+  }
+}
+
+// errors mixin
+@mixin error($top) {
+  position: absolute;
+  top: $top;
+  left: 0;
+  color: red;
+  font-size: 0.8rem;
+
+  @media (max-width: $lg-phone) {
+    top: 2.2rem;
+    font-size: 0.7rem;
+  }
+}
+
+// inputs mixin
+@mixin inputProps($margin) {
+  width: 100%;
+  border: 1px solid grey;
+  padding: 1rem;
+  margin-bottom: $margin;
+  font-size: 1rem;
+  border-radius: 4px;
+  color: $black;
+
+  &::placeholder {
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  @media (max-width: $lg-phone) {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: $galaxy) {
+    font-size: 0.8rem;
+  }
+}
+
+// background properties mixin
+@mixin bg-imgs($url, $position) {
+  background: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: $position;
+}

@@ -1,25 +1,18 @@
 .Navbar {
-  //  background: rgb(31, 30, 30);
   transition: background 0.5s ease;
-
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+
   .inner-wrapper {
-    max-width: 1300px;
+    max-width: $max-w;
     margin: 0 auto;
-    display: flex;
+    @include flex(space-between);
     padding: 1.5rem 0.5rem;
-    justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-    //  position: fixed;
-    //  top: 0;
-    //  left: 0;
-    //  right: 0;
-    //  border: 1px solid red;
 
     @media (max-width: $med-desktop) {
       max-width: 85%;
@@ -30,7 +23,6 @@
     }
 
     .logo {
-      // border: 1px solid blue;
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -45,11 +37,9 @@
         }
       }
       span {
-        //   text-transform: uppercase;
         margin-left: 0.7rem;
         font-size: 1.5rem;
-        //   font-weight: 00;
-        color: #f4f4f4;
+        color: $white;
         font-family: "Noto Sans", sans-serif;
 
         @media (max-width: $med-phone) {
@@ -66,14 +56,8 @@
         display: none;
       }
       a {
-        //   border: 1px solid red;
         margin-right: 1.5rem;
-        //   padding: 0.4rem;
-        //   font-size: 1rem;
-        //   font-weight: 300;
-
-        color: #f4f4f4;
-        //   font-weight: bold;
+        color: $white;
         transition: color 0.3s ease;
         font-size: 0.9rem;
 
@@ -83,20 +67,12 @@
 
         &:last-child {
           margin-right: 0;
-          //  border: 1px solid red;
-          //  padding: 0.3rem 1.3rem;
-          //  //  font-weight: 300;
-          //  background: #3f58a6;
         }
       }
     }
   }
 }
 .scroll {
-  background: red;
-  background: rgb(6, 6, 6);
   background: rgba(63, 88, 166, 0.9);
-  //   background: rgb(63, 88, 166);
-
-  //   transition: background 0.5s ease;
 }
+// 103
