@@ -36,8 +36,8 @@ const ContactGiftSolarForm = () => {
               id="name"
               placeholder="Nombre"
               ref={register({ required: true })}
-              className={errors.name ? "empty" : ""}
             />
+            <p className="error">{errors.name && "Nombre requerido"}</p>
           </label>
           <label htmlFor="phone-number">
             <input
@@ -46,8 +46,8 @@ const ContactGiftSolarForm = () => {
               id="phone-number"
               placeholder="Numbero de telefono"
               ref={register({ required: true })}
-              className={errors.phoneNumber ? "empty" : ""}
             />
+            <p className="error">{errors.phoneNumber && "Numero requerido"}</p>
           </label>
           <label htmlFor="email">
             <input
@@ -56,8 +56,8 @@ const ContactGiftSolarForm = () => {
               id="email"
               placeholder="Email"
               ref={register({ required: true })}
-              className={errors.email ? "empty" : ""}
             />
+            <p className="error">{errors.email && "Email requerido"}</p>
           </label>
           <label htmlFor="message">
             <textarea
@@ -67,8 +67,8 @@ const ContactGiftSolarForm = () => {
               rows="5"
               placeholder="Tu mensage"
               ref={register({ required: true })}
-              className={errors.message ? "empty" : ""}
             ></textarea>
+            <p className="error-m">{errors.message && "Mensage requerido"}</p>
           </label>
           <button type="submit" className="contact-btn">
             submit
