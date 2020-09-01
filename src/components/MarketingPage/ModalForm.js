@@ -37,8 +37,15 @@ const ModalForm = () => {
   const [imgContainer, setImgContainer] = useState([]);
 
   const onSubmit = (values) => {
-    const newData = { ...values, pdfFile: powerFile, imgs: imgContainer };
-    console.log("what about now ", newData);
+    const newData = { ...values, pdf_file: powerFile, images: imgContainer };
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/api/application`, newData)
+      .then((res) => {
+        console.log("what is this? ", res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const uploadPdf = (e) => {
@@ -185,9 +192,11 @@ const ModalForm = () => {
               <input
                 type="number"
                 id="accNumber"
-                name="powerBillAccNumber"
+                name="power_bill_acc_number"
                 ref={register({ required: true })}
-                className={errors.powerBillAccNumber ? "not-empty-values" : ""}
+                className={
+                  errors.power_bill_acc_number ? "not-empty-values" : ""
+                }
               />
             </label>
           </div>

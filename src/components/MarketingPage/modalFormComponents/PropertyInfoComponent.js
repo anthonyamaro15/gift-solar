@@ -10,30 +10,30 @@ const PropertyInfoComponent = ({ register, errors }) => {
           Ano construida:
           <input
             type="text"
-            name="houseYearBuilt"
+            name="house_year_built"
             id="year"
             ref={register({ required: true })}
-            className={errors.houseYearBuilt ? "not-empty-values" : ""}
+            className={errors.house_year_built ? "not-empty-values" : ""}
           />
         </label>
         <label htmlFor="sqrFoot">
           Pies cuadrados:
           <input
             type="text"
-            name="houseSqrFoot"
+            name="house_sqrfoot"
             id="sqrFoot"
             ref={register({ required: true })}
-            className={errors.houseSqrFoot ? "not-empty-values" : ""}
+            className={errors.house_sqr_foot ? "not-empty-values" : ""}
           />
         </label>{" "}
         <label htmlFor="totalFloors">
           Cuantos pisos:
           <input
             type="text"
-            name="houseTotalFloors"
+            name="house_total_floors"
             id="totalFloors"
             ref={register({ required: true })}
-            className={errors.houseTotalFloors ? "not-empty-values" : ""}
+            className={errors.house_total_floors ? "not-empty-values" : ""}
           />
         </label>
       </div>
@@ -45,7 +45,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="residence">
               <input
                 type="checkbox"
-                name="family-residence"
+                name="family_residence"
                 id="residence"
                 ref={register}
               />
@@ -54,7 +54,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="town-house">
               <input
                 type="checkbox"
-                name="town-house"
+                name="town_house"
                 id="town-house"
                 ref={register}
               />
@@ -72,7 +72,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="mobile-home">
               <input
                 type="checkbox"
-                name="mobile-home"
+                name="mobile_home"
                 id="mobile-home"
                 ref={register}
               />
@@ -89,7 +89,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="shingle">
               <input
                 type="checkbox"
-                name="shingle-ceiling-type"
+                name="shingle_ceiling_type"
                 id="shingle"
                 ref={register}
               />
@@ -98,7 +98,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="teja">
               <input
                 type="checkbox"
-                name="teja-ceiling-type"
+                name="teja_ceiling_type"
                 id="teja"
                 ref={register}
               />
@@ -107,7 +107,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="barro">
               <input
                 type="checkbox"
-                name="barro-ceiling-type"
+                name="barro_ceiling_type"
                 id="barro"
                 ref={register}
               />
@@ -116,7 +116,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="madera">
               <input
                 type="checkbox"
-                name="madera-ceiling-type"
+                name="madera_ceiling_type"
                 id="madera"
                 ref={register}
               />
@@ -125,7 +125,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="plano">
               <input
                 type="checkbox"
-                name="plano-ceiling-type"
+                name="plano_ceiling_type"
                 id="plano"
                 ref={register}
               />
@@ -142,7 +142,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="exelente">
               <input
                 type="checkbox"
-                name="ceiling-condition-exelent"
+                name="ceiling_condition_excelent"
                 id="exelente"
                 ref={register}
               />
@@ -151,7 +151,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="bueno">
               <input
                 type="checkbox"
-                name="ceiling-condition-good"
+                name="ceiling_condition_good"
                 id="bueno"
                 ref={register}
               />
@@ -160,7 +160,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="pasable">
               <input
                 type="checkbox"
-                name="ceiling-condition-pasable"
+                name="ceiling_condition_pasable"
                 id="pasable"
                 ref={register}
               />
@@ -169,7 +169,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="viejo">
               <input
                 type="checkbox"
-                name="ceiling-condition-old"
+                name="ceiling_condition_old"
                 id="viejo"
                 ref={register}
               />
@@ -186,7 +186,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="nada">
               <input
                 type="checkbox"
-                name="sombreado-nada"
+                name="sombreado_nada"
                 id="nada"
                 ref={register}
               />
@@ -195,7 +195,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="poco">
               <input
                 type="checkbox"
-                name="sombreado-poco"
+                name="sombreado_poco"
                 id="poco"
                 ref={register}
               />
@@ -204,7 +204,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="mucho">
               <input
                 type="checkbox"
-                name="sombreado-mucho"
+                name="sombreado_mucho"
                 id="mucho"
                 ref={register}
               />
@@ -221,7 +221,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="withPool">
               <input
                 type="checkbox"
-                name="house-with-pool"
+                name="house_with_pool"
                 id="withPool"
                 ref={register}
               />
@@ -230,7 +230,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             <label htmlFor="noPool">
               <input
                 type="checkbox"
-                name="house-with-no-pool"
+                name="house_with_no_pool"
                 id="noPool"
                 ref={register}
               />
@@ -246,7 +246,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
           <input
             type="text"
             id="gate-number"
-            name="gate-number"
+            name="gate_number"
             ref={register}
           />
           (se require para hacer el site-survey)
@@ -256,13 +256,13 @@ const PropertyInfoComponent = ({ register, errors }) => {
       <div className="HOA">
         <span>HOA:</span>
         <label htmlFor="yes-hoa" className="yes-hoa">
-          <input type="checkbox" name="hoa-exist" id="yes-hoa" ref={register} />
+          <input type="checkbox" name="hoa_exist" id="yes-hoa" ref={register} />
           Si
         </label>
         <label htmlFor="no-hoa" className="yes-hoa">
           <input
             type="checkbox"
-            name="hoa-no-exist"
+            name="hoa_no_exist"
             id="no-hoa"
             ref={register}
           />
@@ -272,14 +272,14 @@ const PropertyInfoComponent = ({ register, errors }) => {
           HOA INFO:
           <input
             type="text"
-            name="hoa-information"
+            name="hoa_information"
             id="hoa-info"
             ref={register}
           />
         </label>
         <label htmlFor="hoa-phone" className="important">
           Tel:
-          <input type="number" name="hoa-phone" id="hoa-phone" ref={register} />
+          <input type="number" name="hoa_phone" id="hoa-phone" ref={register} />
         </label>
       </div>
     </div>

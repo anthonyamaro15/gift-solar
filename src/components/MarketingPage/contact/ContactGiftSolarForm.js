@@ -1,12 +1,20 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const ContactGiftSolarForm = () => {
   const { register, reset, errors, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
-    reset();
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/api/contact`, data)
+      .then((res) => {
+        console.log("what is this ", res.data);
+        reset();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="Contact-inner">

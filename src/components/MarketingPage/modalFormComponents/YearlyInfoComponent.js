@@ -15,8 +15,8 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </span>
           <label htmlFor="enero">
             <input
-              type="text"
-              name="eneroKilowatts"
+              type="number"
+              name="enero_kilowatts"
               id="enero"
               ref={register({ required: true })}
             />
@@ -24,7 +24,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="enero-cost">
             <input
               type="text"
-              name="eneroCost"
+              name="enero_cost"
               id="enero-cost"
               className="border"
               ref={register({ required: true })}
@@ -37,8 +37,8 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </span>
           <label htmlFor="febrero">
             <input
-              type="text"
-              name="febreroKilowatts"
+              type="number"
+              name="febrero_kilowatts"
               id="febrero"
               ref={register({ required: true })}
             />
@@ -46,7 +46,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="febrero-cost">
             <input
               type="text"
-              name="febreroCost"
+              name="febrero_cost"
               id="febrero-cost"
               className="border"
               ref={register({ required: true })}
@@ -54,13 +54,13 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>
         <div className="months-container">
-          <span className={errors.marzoKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.marzo_kilowatts ? "not-empty-values" : ""}>
             Marzo
           </span>
           <label htmlFor="marzo">
             <input
-              type="text"
-              name="marzoKilowatts"
+              type="number"
+              name="marzo_kilowatts"
               id="marzo"
               ref={register({ required: true })}
             />
@@ -68,7 +68,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="marzo-cost">
             <input
               type="text"
-              name="marzo-cost"
+              name="marzo_cost"
               id="marzoCost"
               className="border"
               ref={register({ required: true })}
@@ -76,13 +76,13 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>{" "}
         <div className="months-container">
-          <span className={errors.abrilKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.abril_kilowatts ? "not-empty-values" : ""}>
             Abril
           </span>
           <label htmlFor="abril">
             <input
-              type="text"
-              name="abrilKilowatts"
+              type="number"
+              name="abril_kilowatts"
               id="abril"
               ref={register({ required: true })}
             />
@@ -90,7 +90,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="abril-cost">
             <input
               type="text"
-              name="abril-cost"
+              name="abril_cost"
               id="abrilCost"
               className="border"
               ref={register({ required: true })}
@@ -98,13 +98,13 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>{" "}
         <div className="months-container">
-          <span className={errors.mayoKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.mayo_kilowatts ? "not-empty-values" : ""}>
             Mayo
           </span>
           <label htmlFor="mayo">
             <input
-              type="text"
-              name="mayoKilowatts"
+              type="number"
+              name="mayo_kilowatts"
               id="mayo"
               ref={register({ required: true })}
             />
@@ -112,7 +112,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="mayo-cost">
             <input
               type="text"
-              name="mayo-cost"
+              name="mayo_cost"
               id="mayoCost"
               className="border"
               ref={register({ required: true })}
@@ -120,13 +120,13 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>{" "}
         <div className="months-container">
-          <span className={errors.junioKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.junio_kilowatts ? "not-empty-values" : ""}>
             Junio
           </span>
           <label htmlFor="junio">
             <input
-              type="text"
-              name="junioKilowatts"
+              type="number"
+              name="junio_kilowatts"
               id="junio"
               ref={register({ required: true })}
             />
@@ -134,7 +134,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="junio-cost">
             <input
               type="text"
-              name="junio-cost"
+              name="junio_cost"
               id="junioCost"
               className="border"
               ref={register({ required: true })}
@@ -142,13 +142,13 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>{" "}
         <div className="months-container">
-          <span className={errors.julioKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.julio_kilowatts ? "not-empty-values" : ""}>
             Julio
           </span>
           <label htmlFor="julio">
             <input
-              type="text"
-              name="julioKilowatts"
+              type="number"
+              name="julio_kilowatts"
               id="julio"
               ref={register({ required: true })}
             />
@@ -156,7 +156,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="julio-cost">
             <input
               type="text"
-              name="julio-cost"
+              name="julio_cost"
               id="julioCost"
               className="border"
               ref={register({ required: true })}
@@ -164,13 +164,13 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>{" "}
         <div className="months-container">
-          <span className={errors.agostoKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.agosto_kilowatts ? "not-empty-values" : ""}>
             Agosto
           </span>
           <label htmlFor="agosto">
             <input
-              type="text"
-              name="agostoKilowatts"
+              type="number"
+              name="agosto_kilowatts"
               id="agosto"
               ref={register({ required: true })}
             />
@@ -178,7 +178,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="agosto-cost">
             <input
               type="text"
-              name="agosto-cost"
+              name="agosto_cost"
               id="agostoCost"
               className="border"
               ref={register({ required: true })}
@@ -187,14 +187,14 @@ const YearlyInfoComponent = ({ register, errors }) => {
         </div>{" "}
         <div className="months-container">
           <span
-            className={errors.septiembreKilowatts ? "not-empty-values" : ""}
+            className={errors.septiembre_kilowatts ? "not-empty-values" : ""}
           >
             Septiembre
           </span>
           <label htmlFor="septiembre">
             <input
-              type="text"
-              name="septiembreKilowatts"
+              type="number"
+              name="septiembre_kilowatts"
               id="septiembre"
               ref={register({ required: true })}
             />
@@ -202,7 +202,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="septiembre-cost">
             <input
               type="text"
-              name="septiembre-cost"
+              name="septiembre_cost"
               id="septiembreCost"
               className="border"
               ref={register({ required: true })}
@@ -210,14 +210,14 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>{" "}
         <div className="months-container">
-          <span className={errors.octubreKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.octubre_kilowatts ? "not-empty-values" : ""}>
             {" "}
             Octubre
           </span>
           <label htmlFor="octubre">
             <input
-              type="text"
-              name="octubreKilowatts"
+              type="number"
+              name="octubre_kilowatts"
               id="octubre"
               ref={register({ required: true })}
             />
@@ -225,7 +225,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="octubre-cost">
             <input
               type="text"
-              name="octubreCost"
+              name="octubre_cost"
               id="octubre-cost"
               className="border"
               ref={register({ required: true })}
@@ -233,13 +233,15 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>{" "}
         <div className="months-container">
-          <span className={errors.noviembreKilowatts ? "not-empty-values" : ""}>
+          <span
+            className={errors.noviembre_kilowatts ? "not-empty-values" : ""}
+          >
             Noviembre
           </span>
           <label htmlFor="noviembre">
             <input
-              type="text"
-              name="noviembreKilowatts"
+              type="number"
+              name="noviembre_kilowatts"
               id="noviembre"
               ref={register({ required: true })}
             />
@@ -247,7 +249,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="noviembre-cost">
             <input
               type="text"
-              name="noviembre-cost"
+              name="noviembre_cost"
               id="noviembreCost"
               className="border"
               ref={register({ required: true })}
@@ -257,7 +259,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
         <div className="months-container">
           <span
             className={
-              errors.diciembreKilowatts
+              errors.diciembre_kilowatts
                 ? "not-empty-values diciembre"
                 : "diciembre"
             }
@@ -266,8 +268,8 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </span>
           <label htmlFor="diciembre">
             <input
-              type="text"
-              name="diciembreKilowatts"
+              type="number"
+              name="diciembre_kilowatts"
               id="diciembre"
               ref={register({ required: true })}
             />
@@ -275,7 +277,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           <label htmlFor="diciembre-cost">
             <input
               type="text"
-              name="diciembreCost"
+              name="diciembre_cost"
               id="diciembre-cost"
               className="border"
               ref={register({ required: true })}

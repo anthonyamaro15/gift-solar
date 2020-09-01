@@ -10,6 +10,7 @@ import Footer from "./MarketingPage/Footer";
 import AdminMain from "./PrivateComponents/AdminMain";
 import ForgotPassword from "./PrivateComponents/ForgotPassword";
 import ResetPassword from "./PrivateComponents/ResetPassword";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 const MainApp = () => {
   return (
@@ -30,9 +31,6 @@ const MainApp = () => {
         <ContactPage />
       </Route>
 
-      <Route exact path="/dashboard">
-        <AdminMain />
-      </Route>
       <Route exact path="/forgotpassword">
         <Navbar />
         <MobileNavbar />
@@ -44,6 +42,8 @@ const MainApp = () => {
         <MobileNavbar />
         <ResetPassword />
       </Route>
+
+      <PrivateRoute path="/dashboard" component={AdminMain} />
       <Footer />
     </div>
   );

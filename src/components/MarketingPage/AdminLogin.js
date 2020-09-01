@@ -4,6 +4,7 @@ import { Modal } from "react-responsive-modal";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { BiShow, BiHide } from "react-icons/bi";
+import { axiosWithAuth } from "../../utils/axiosWithAuth";
 
 const AdminLogin = () => {
   const [open, setOpen] = useState(false);
@@ -13,9 +14,16 @@ const AdminLogin = () => {
   const history = useHistory();
 
   const onSubmit = (values) => {
-    console.log(values);
-    history.push("/dashboard");
-    //   window.location.reload(true);
+    axiosWithAuth()
+      .post("/api/auth/login", values)
+      .then((res) => {
+        localStorage.setItem("token", JSON.stringify(res.data.token));
+        history.push("/dashboard");
+        window.location.reload(true);
+      })
+      .catch((err) => {
+        console.log("here ", err);
+      });
   };
 
   const redirecTo = () => {

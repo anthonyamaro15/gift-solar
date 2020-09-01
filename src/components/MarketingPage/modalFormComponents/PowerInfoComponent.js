@@ -9,7 +9,7 @@ const PowerInfoComponent = ({ register }) => {
         <label htmlFor="is-panel-close">
           <input
             type="checkbox"
-            name="is-power-panel-close"
+            name="is_power_panel_close"
             id="is-panel-close"
             ref={register}
           />
@@ -18,7 +18,7 @@ const PowerInfoComponent = ({ register }) => {
         <label htmlFor="is-panel-open">
           <input
             type="checkbox"
-            name="is-power-panel-open"
+            name="is_power_panel_open"
             id="is-panel-open"
             ref={register}
           />
@@ -33,7 +33,7 @@ const PowerInfoComponent = ({ register }) => {
         <label htmlFor="desc-fo-panel-close">
           <input
             type="text"
-            name="desc-for-panel-close"
+            name="desc_for_panel_close"
             id="desc-fo-panel-close"
             ref={register}
           />
@@ -44,7 +44,7 @@ const PowerInfoComponent = ({ register }) => {
         <label htmlFor="panel-size">
           <input
             type="text"
-            name="power-panel-size"
+            name="power_panel_size"
             id="panel-size"
             ref={register}
           />
