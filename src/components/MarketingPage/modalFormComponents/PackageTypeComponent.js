@@ -7,20 +7,20 @@ const PackageTypeComponent = ({ register }) => {
         premium
         <input
           type="checkbox"
-          name="package-premium"
+          name="package_premium"
           id="premium"
           ref={register}
         />
       </label>
       <label htmlFor="plus">
         plus
-        <input type="checkbox" name="package-plus" id="plus" ref={register} />
+        <input type="checkbox" name="package_plus" id="plus" ref={register} />
       </label>{" "}
       <label htmlFor="basico">
         basico
         <input
           type="checkbox"
-          name="package-basico"
+          name="package_basico"
           id="basico"
           ref={register}
         />

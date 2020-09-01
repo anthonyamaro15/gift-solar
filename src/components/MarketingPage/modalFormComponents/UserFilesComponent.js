@@ -14,9 +14,9 @@ const UserFilesComponent = ({ register, errors }) => {
           <input
             type="text"
             id="firstName"
-            name="firstPersonName"
+            name="first_person_name"
             ref={register({ required: true })}
-            className={errors.firstPersonName ? "not-empty-values" : ""}
+            className={errors.first_person_name ? "not-empty-values" : ""}
           />
         </label>
         <div className="phone-info">
@@ -24,10 +24,10 @@ const UserFilesComponent = ({ register, errors }) => {
             Tel:
             <input
               type="number"
-              name="firstPersonNumber"
+              name="first_person_number"
               id="first-phone"
               ref={register({ required: true })}
-              className={errors.firstPersonNumber ? "not-empty-values" : ""}
+              className={errors.first_person_number ? "not-empty-values" : ""}
             />
           </label>
           <div className="taxes">
@@ -39,7 +39,7 @@ const UserFilesComponent = ({ register, errors }) => {
             <label htmlFor="first-no">
               <input
                 type="checkbox"
-                name="first-person-dont-do-taxes"
+                name="first_person_dont_do_taxes"
                 id="first-no"
                 ref={register}
               />
@@ -52,10 +52,10 @@ const UserFilesComponent = ({ register, errors }) => {
           Correo electronico:
           <input
             type="email"
-            name="firstPersonEmail"
+            name="first_person_email"
             id="first-email"
             ref={register({ required: true })}
-            className={errors.firstPersonEmail ? "not-empty-values" : ""}
+            className={errors.first_person_email ? "not-empty-values" : ""}
           />
         </label>
         {/** second user */}
@@ -64,7 +64,7 @@ const UserFilesComponent = ({ register, errors }) => {
           1. Nombre:
           <input
             type="text"
-            id="second-person-name"
+            id="second_person_name"
             name="second-name"
             ref={register}
           />
@@ -74,7 +74,7 @@ const UserFilesComponent = ({ register, errors }) => {
             Tel:
             <input
               type="number"
-              name="second-person-number"
+              name="second_person_number"
               id="second-phone"
               ref={register}
             />
@@ -84,7 +84,7 @@ const UserFilesComponent = ({ register, errors }) => {
             <label htmlFor="second-yes">
               <input
                 type="checkbox"
-                name="second-person-do-taxes"
+                name="second_person_do_taxes"
                 id="second-yes"
                 ref={register}
               />
@@ -93,7 +93,7 @@ const UserFilesComponent = ({ register, errors }) => {
             <label htmlFor="second-no">
               <input
                 type="checkbox"
-                name="second-person-dont-do-taxes"
+                name="second_person_dont_do_taxes"
                 id="second-no"
                 ref={register}
               />
@@ -105,7 +105,7 @@ const UserFilesComponent = ({ register, errors }) => {
           Correo electronico:
           <input
             type="email"
-            name="second-person-email"
+            name="second_person_email"
             id="second-email"
             ref={register}
           />

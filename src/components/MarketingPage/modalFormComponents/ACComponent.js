@@ -9,20 +9,20 @@ const ACComponent = ({ register, errors }) => {
           Cuantos aires acondicinados?
           <input
             type="text"
-            name="acCount"
+            name="ac_count"
             id="acs"
             ref={register({ required: true })}
-            className={errors.acCount ? "not-empty-values" : ""}
+            className={errors.ac_count ? "not-empty-values" : ""}
           />
         </label>
         <label htmlFor="heaters">
           Cuantos calentadores de agua?
           <input
             type="text"
-            name="heaterCount"
+            name="heater_count"
             id="heaters"
             ref={register({ required: true })}
-            className={errors.heaterCount ? "not-empty-values" : ""}
+            className={errors.heater_count ? "not-empty-values" : ""}
           />
         </label>
       </div>
@@ -31,24 +31,29 @@ const ACComponent = ({ register, errors }) => {
         <label htmlFor="gas">
           <input
             type="checkbox"
-            name="heaterGas"
+            name="heater_gas"
             id="gas"
             ref={register({ required: true })}
-            className={errors.heaterGas ? "not-empty-values" : ""}
+            className={errors.heater_gas ? "not-empty-values" : ""}
           />
           Gas
         </label>
         <label htmlFor="electric">
           <input
             type="checkbox"
-            name="heater-electric"
+            name="heater_electric"
             id="electric"
             ref={register}
           />
           Electrico
         </label>{" "}
-        <label htmlFor="heater-solar">
-          <input type="checkbox" name="solar" id="solar" ref={register} />
+        <label htmlFor="heater_solar">
+          <input
+            type="checkbox"
+            name="heater_solar"
+            id="solar"
+            ref={register}
+          />
           Solar
         </label>
       </div>
@@ -57,7 +62,7 @@ const ACComponent = ({ register, errors }) => {
         <label htmlFor="have-solar-panel">
           <input
             type="checkbox"
-            name="have-solar-panel"
+            name="have_solar_panel"
             id="have-solar-panel"
             ref={register}
           />
@@ -66,7 +71,7 @@ const ACComponent = ({ register, errors }) => {
         <label htmlFor="dont-have-solar-panel">
           <input
             type="checkbox"
-            name="dont-have-solar-panel"
+            name="dont_have_solar_panel"
             id="dont-have-solar-panel"
             ref={register}
           />

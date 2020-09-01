@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ContactGiftSolarForm from "./ContactGiftSolarForm";
 import DateTimePicker from "react-datetime-picker";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const ContactContent = () => {
   const [value, onChange] = useState("");
@@ -16,8 +17,17 @@ const ContactContent = () => {
     } else {
       let convertDate = String(value.toLocaleString());
       const newData = { ...data, appoinmentTime: convertDate };
-      console.log("check this ", newData);
-      // reset();
+
+      axios
+        .post(`${process.env.REACT_APP_API_URL}/api/appoinment`, newData)
+        .then((res) => {
+          console.log("what is the response ", res.data);
+          reset();
+          onChange("");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   };
   return (
