@@ -33,7 +33,12 @@ const UserFilesComponent = ({ register, errors }) => {
           <div className="taxes">
             <span>Declara Impuestos?</span>
             <label htmlFor="first-yes">
-              <input type="checkbox" name="firstPersonDoTaxes" id="first-yes" />
+              <input
+                type="checkbox"
+                name="first_person_do_taxes"
+                id="first-yes"
+                ref={register}
+              />
               Si
             </label>
             <label htmlFor="first-no">
@@ -65,7 +70,7 @@ const UserFilesComponent = ({ register, errors }) => {
           <input
             type="text"
             id="second_person_name"
-            name="second-name"
+            name="second_person_name"
             ref={register}
           />
         </label>
