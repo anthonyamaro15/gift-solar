@@ -1,6 +1,10 @@
 .AdminDisplayInfo {
   @include bg-imgs("../imgs/header4.jpg", top);
 
+  h3 {
+    color: $black;
+  }
+
   position: relative;
   z-index: 100;
   padding-bottom: 9rem;
@@ -38,7 +42,7 @@
       margin-bottom: 0.2rem;
       font-weight: bold;
       font-size: 0.9rem;
-      border-bottom: 1px solid rgb(185, 183, 183);
+      border-bottom: 1px solid rgb(214, 214, 214);
       padding: 0.3rem 0.2rem;
 
       @media (max-width: $lg-phone) {
@@ -104,6 +108,9 @@
 
         p {
           border: none;
+        }
+        .month {
+          text-transform: capitalize;
         }
 
         &:last-child {
