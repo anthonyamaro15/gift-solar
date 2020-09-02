@@ -39,12 +39,12 @@ const ModalForm = () => {
   const onSubmit = (values) => {
     const newData = { ...values, pdf_file: powerFile, images: imgContainer };
     axios
-      .post(`${process.env.REACT_APP_API_URL}/api/application`, newData)
+      .post(`${process.env.REACT_APP_API_URL}/api/application/add`, newData)
       .then((res) => {
         console.log("what is this? ", res.data);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("what is this error ? ", err.response.data.errorMessage);
       });
   };
 
@@ -63,15 +63,14 @@ const ModalForm = () => {
     let files = e.target.files[0];
     const formData = new FormData();
 
-    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
     formData.append("file", files);
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
         formData
       )
       .then((res) => {
-        //  console.log("response her e", res.data.files);
         setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
       })
       .catch((err) => {
@@ -82,16 +81,15 @@ const ModalForm = () => {
   const uploadImg2 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
         formData
       )
       .then((res) => {
-        //  console.log("response her e", res.data.files);
         setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
       })
       .catch((err) => [console.log(err)]);
@@ -99,16 +97,15 @@ const ModalForm = () => {
   const uploadImg3 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
         formData
       )
       .then((res) => {
-        //  console.log("response her e", res.data.files);
         setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
       })
       .catch((err) => [console.log(err)]);
@@ -116,16 +113,15 @@ const ModalForm = () => {
   const uploadImg4 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
         formData
       )
       .then((res) => {
-        //  console.log("response her e", res.data.files);
         setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
       })
       .catch((err) => [console.log(err)]);
@@ -133,16 +129,15 @@ const ModalForm = () => {
   const uploadImg5 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
         formData
       )
       .then((res) => {
-        //  console.log("response her e", res.data.files);
         setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
       })
       .catch((err) => [console.log(err)]);
@@ -150,16 +145,15 @@ const ModalForm = () => {
   const uploadImg6 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_API_SECRET);
+    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
         formData
       )
       .then((res) => {
-        //  console.log("response her e", res.data.files);
         setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
       })
       .catch((err) => [console.log(err)]);

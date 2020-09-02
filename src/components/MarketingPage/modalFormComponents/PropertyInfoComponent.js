@@ -20,10 +20,10 @@ const PropertyInfoComponent = ({ register, errors }) => {
           Pies cuadrados:
           <input
             type="text"
-            name="house_sqrfoot"
+            name="house_sqrtfoot"
             id="sqrFoot"
             ref={register({ required: true })}
-            className={errors.house_sqr_foot ? "not-empty-values" : ""}
+            className={errors.house_sqrfoot ? "not-empty-values" : ""}
           />
         </label>{" "}
         <label htmlFor="totalFloors">

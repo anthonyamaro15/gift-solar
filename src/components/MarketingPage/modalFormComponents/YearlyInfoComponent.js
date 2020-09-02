@@ -10,7 +10,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
       </div>
       <div className="month-and-values">
         <div className="months-container">
-          <span className={errors.eneroKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.enero_kilowatts ? "not-empty-values" : ""}>
             Enero
           </span>
           <label htmlFor="enero">
@@ -23,7 +23,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="enero-cost">
             <input
-              type="text"
+              type="number"
               name="enero_cost"
               id="enero-cost"
               className="border"
@@ -32,7 +32,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
         </div>
         <div className="months-container">
-          <span className={errors.febreroKilowatts ? "not-empty-values" : ""}>
+          <span className={errors.febrero_kilowatts ? "not-empty-values" : ""}>
             Febrero
           </span>
           <label htmlFor="febrero">
@@ -45,7 +45,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="febrero-cost">
             <input
-              type="text"
+              type="number"
               name="febrero_cost"
               id="febrero-cost"
               className="border"
@@ -67,7 +67,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="marzo-cost">
             <input
-              type="text"
+              type="number"
               name="marzo_cost"
               id="marzoCost"
               className="border"
@@ -89,7 +89,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="abril-cost">
             <input
-              type="text"
+              type="number"
               name="abril_cost"
               id="abrilCost"
               className="border"
@@ -111,7 +111,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="mayo-cost">
             <input
-              type="text"
+              type="number"
               name="mayo_cost"
               id="mayoCost"
               className="border"
@@ -133,7 +133,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="junio-cost">
             <input
-              type="text"
+              type="number"
               name="junio_cost"
               id="junioCost"
               className="border"
@@ -155,7 +155,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="julio-cost">
             <input
-              type="text"
+              type="number"
               name="julio_cost"
               id="julioCost"
               className="border"
@@ -177,7 +177,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="agosto-cost">
             <input
-              type="text"
+              type="number"
               name="agosto_cost"
               id="agostoCost"
               className="border"
@@ -201,7 +201,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="septiembre-cost">
             <input
-              type="text"
+              type="number"
               name="septiembre_cost"
               id="septiembreCost"
               className="border"
@@ -224,7 +224,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="octubre-cost">
             <input
-              type="text"
+              type="number"
               name="octubre_cost"
               id="octubre-cost"
               className="border"
@@ -248,7 +248,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="noviembre-cost">
             <input
-              type="text"
+              type="number"
               name="noviembre_cost"
               id="noviembreCost"
               className="border"
@@ -276,7 +276,7 @@ const YearlyInfoComponent = ({ register, errors }) => {
           </label>
           <label htmlFor="diciembre-cost">
             <input
-              type="text"
+              type="number"
               name="diciembre_cost"
               id="diciembre-cost"
               className="border"
