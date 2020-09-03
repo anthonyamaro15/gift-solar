@@ -13,6 +13,7 @@ const AdminSearchForm = ({ data, setFilteredResult }) => {
       ) {
         return user;
       }
+      return false;
     });
     setFilteredResult(result);
     if (result.length) {

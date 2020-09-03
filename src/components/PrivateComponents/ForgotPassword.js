@@ -6,6 +6,7 @@ const ForgotPassword = () => {
 
   const onSubmit = (values) => {
     console.log(values);
+    reset();
   };
   return (
     <div className="ForgotPassword">
