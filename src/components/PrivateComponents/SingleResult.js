@@ -1,5 +1,5 @@
 import React from "react";
-import example from "../../imgs/header1.jpg";
+import DisplayApplicationImgs from "./DisplayApplicationImgs";
 import DisplayYearlyInfo from "./DisplayYearlyInfo";
 import { manipulateData } from "./manipulateData";
 import { filterValues } from "../../helperFunctions/helperFunctions";
@@ -21,7 +21,6 @@ const SingleResult = ({ application }) => {
   const with_hoa = filterValues(data.with_hoa);
   const with_solar_panel = filterValues(data.with_solar_panel); //
 
-  console.log("is this showing?? ", with_solar_panel);
   return (
     <div className="inner-wrapper">
       <div className="user-info">
@@ -152,12 +151,18 @@ const SingleResult = ({ application }) => {
         ))}
       </div>
 
-      <div className="imgs">
-        <img src={example} alt="imagenes de informacion de luz" />
-      </div>
+      {images.map((img) => (
+        <DisplayApplicationImgs key={img.id} img={img} />
+      ))}
 
       <div className="pdf">
-        <a href="#">pdf</a>
+        <a
+          href={pdf_file[0].pdf_file}
+          download={pdf_file[0].pdf_name}
+          rel="noopener noreferrer"
+        >
+          pdf
+        </a>
       </div>
     </div>
   );

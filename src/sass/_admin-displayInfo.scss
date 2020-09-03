@@ -78,14 +78,20 @@
     }
 
     .imgs {
+      // border: 1px solid red;
+      display: flex;
+      margin-bottom: 1rem;
       img {
-        width: 300px;
-        height: 200px;
+        width: 200px;
+        height: 150px;
         object-fit: cover;
       }
     }
 
     .pdf {
+      button {
+        border: 1px solid red;
+      }
       margin: 1rem 0;
       a {
         @include mainButton(0.5rem 1.5rem);

@@ -33,11 +33,17 @@ const ModalForm = () => {
   const { register, reset, errors, handleSubmit } = useForm();
   const classes = useStyles();
   const [powerFile, setPowerFile] = useState("");
-  //   const [pdfName, setPdfName] = useState("");
+  const [pdfName, setPdfName] = useState("");
   const [imgContainer, setImgContainer] = useState([]);
 
   const onSubmit = (values) => {
-    const newData = { ...values, pdf_file: powerFile, images: imgContainer };
+    const newData = {
+      ...values,
+      pdf_file: powerFile,
+      pdf_name: pdfName,
+      images: imgContainer,
+    };
+    console.log("what is this data?? ", newData);
     axios
       .post(`${process.env.REACT_APP_API_URL}/api/application/add`, newData)
       .then((res) => {
@@ -47,16 +53,34 @@ const ModalForm = () => {
         console.log("what is this error ? ", err.response.data.errorMessage);
       });
   };
-
+  console.log("here ", pdfName);
   const uploadPdf = (e) => {
     const file = e.target.files[0];
 
     let reader = new FileReader();
-    //  setPdfName(file.name);
+    setPdfName(file.name);
+
     reader.readAsDataURL(file);
     reader.onload = (e) => {
       setPowerFile(e.target.result);
     };
+    //  const formData = new FormData();
+    //  formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
+    //  formData.append("file", file);
+
+    //  axios
+    //    .post(
+    //      `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
+    //      formData
+    //    )
+    //    .then((res) => {
+    //      console.log(res.data);
+    //      //   setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
+    //      setPowerFile(res.data.secure_url);
+    //    })
+    //    .catch((err) => {
+    //      console.log(err);
+    //    });
   };
 
   const uploadImg1 = (e) => {
