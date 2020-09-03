@@ -9,6 +9,7 @@ const ResetPassword = () => {
 
   const onSubmit = (values) => {
     console.log(values);
+    reset();
   };
 
   const togglePassword = () => {

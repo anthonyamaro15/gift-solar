@@ -3,8 +3,6 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 
 import PackageTypeComponent from "./modalFormComponents/PackageTypeComponent";
 import UserFilesComponent from "./modalFormComponents/UserFilesComponent";
@@ -14,24 +12,9 @@ import ACComponent from "./modalFormComponents/ACComponent";
 import YearlyInfoComponent from "./modalFormComponents/YearlyInfoComponent";
 import UploadImgsComponent from "./modalFormComponents/UploadImgsComponents";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-  input: {
-    display: "none",
-  },
-  button: {
-    fontSize: "0.7rem",
-  },
-}));
-
 const ModalForm = () => {
   const [open, setOpen] = useState(false);
-  const { register, reset, errors, handleSubmit } = useForm();
-  const classes = useStyles();
+  const { register, errors, handleSubmit } = useForm();
   const [powerFile, setPowerFile] = useState("");
   const [pdfName, setPdfName] = useState("");
   const [imgContainer, setImgContainer] = useState([]);
@@ -43,17 +26,19 @@ const ModalForm = () => {
       pdf_name: pdfName,
       images: imgContainer,
     };
-    console.log("what is this data?? ", newData);
+
     axios
       .post(`${process.env.REACT_APP_API_URL}/api/application/add`, newData)
-      .then((res) => {
-        console.log("what is this? ", res.data);
+      .then(() => {
+        setOpen(false);
+        setTimeout(() => {
+          alert("Hemos recivido sus datos nos comunicaremos con usted pronto.");
+        }, 1500);
       })
       .catch((err) => {
         console.log("what is this error ? ", err.response.data.errorMessage);
       });
   };
-  console.log("here ", pdfName);
   const uploadPdf = (e) => {
     const file = e.target.files[0];
 
@@ -64,23 +49,6 @@ const ModalForm = () => {
     reader.onload = (e) => {
       setPowerFile(e.target.result);
     };
-    //  const formData = new FormData();
-    //  formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
-    //  formData.append("file", file);
-
-    //  axios
-    //    .post(
-    //      `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
-    //      formData
-    //    )
-    //    .then((res) => {
-    //      console.log(res.data);
-    //      //   setImgContainer([...imgContainer, { imgs: res.data.secure_url }]);
-    //      setPowerFile(res.data.secure_url);
-    //    })
-    //    .catch((err) => {
-    //      console.log(err);
-    //    });
   };
 
   const uploadImg1 = (e) => {
@@ -224,7 +192,6 @@ const ModalForm = () => {
           {/************************ END OF YEARLY INFORMATION BILL ***********************/}
 
           <UploadImgsComponent
-            classes={classes}
             uploadImg1={uploadImg1}
             uploadImg2={uploadImg2}
             uploadImg3={uploadImg3}
@@ -233,24 +200,22 @@ const ModalForm = () => {
             uploadImg6={uploadImg6}
           />
           {/************************ END OF INPUT IMGS CONTAINER ***********************/}
-          <div className={classes.root} id="upload-img-btn">
-            <input
-              className={classes.input}
-              id="contained-button-file"
-              type="file"
-              name="pdf-file"
-              onChange={uploadPdf}
-            />
+          <div className="pdf-file-uploader-container">
             <label htmlFor="contained-button-file" className="btn-wrapper">
-              <Button variant="contained" component="span">
-                Choose PDF
-              </Button>
+              <span className={errors.pdf_file ? "empty" : ""}>Choose Pdf</span>
+              <input
+                id="contained-button-file"
+                type="file"
+                name="pdf_file"
+                onChange={uploadPdf}
+                ref={register({ required: true })}
+              />
             </label>
           </div>
 
           {/************************ END OF YEARLY UPDATE-FILES ***********************/}
           <button type="submit" className="submit-form">
-            enviar
+            submit
           </button>
         </form>
       </Modal>

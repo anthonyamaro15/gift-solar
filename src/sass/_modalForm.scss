@@ -562,12 +562,72 @@
     }
   }
 
-  .update-file {
-    margin-bottom: 1rem;
-    margin-left: -0.5rem;
-    input {
-      border: none;
+  //   .update-file {
+  //     margin-bottom: 1rem;
+  //     margin-left: -0.5rem;
+  //     input {
+  //       border: none;
+  //       cursor: pointer;
+  //     }
+  //   }
+
+  .pdf-file-uploader-container {
+    label {
+      width: 250px;
+      margin-bottom: 0.7rem;
+      padding: 0.2rem 0;
       cursor: pointer;
+      position: relative;
+
+      @media (max-width: $lg-phone) {
+        font-size: 0.6rem;
+        width: 185px;
+      }
+
+      @media (max-width: $galaxy) {
+        font-size: 0.5rem;
+        width: 160px;
+      }
+      input {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.7rem;
+        }
+
+        @media (max-width: $galaxy) {
+          font-size: 0.6rem;
+        }
+      }
+      span {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0.4rem;
+        width: 90px;
+        border-radius: 4px;
+        padding: 0.3rem 0;
+        color: $white;
+        background: $blue;
+        font-size: 0.8rem;
+        text-align: center;
+
+        @media (max-width: $lg-phone) {
+          font-size: 0.7rem;
+          width: 79px;
+        }
+
+        @media (max-width: $galaxy) {
+          font-size: 0.6rem;
+          width: 70px;
+        }
+
+        &.empty {
+          color: red;
+        }
+      }
     }
   }
 }
@@ -673,21 +733,86 @@
 
 .desc-about-imgs {
   margin-top: 2rem;
+  font-size: 0.9rem;
+
+  @media (max-width: $lg-phone) {
+    font-size: 0.7rem;
+  }
 }
 
 .upload-imgs-container {
   margin: 2rem 0 1rem;
   @include flex(space-between);
   width: 75%;
+  flex-wrap: wrap;
 
   @media (max-width: $lg-phone) {
     flex-wrap: wrap;
+    width: 100%;
+  }
+
+  label {
+    width: 250px;
+    margin-bottom: 0.7rem;
+    padding: 0.2rem 0;
+    cursor: pointer;
+    position: relative;
+
+    @media (max-width: $lg-phone) {
+      font-size: 0.6rem;
+      width: 185px;
+    }
+
+    @media (max-width: $galaxy) {
+      font-size: 0.5rem;
+      width: 160px;
+    }
+    input {
+      cursor: pointer;
+      width: 100%;
+      border: none;
+
+      @media (max-width: $lg-phone) {
+        font-size: 0.7rem;
+      }
+
+      @media (max-width: $galaxy) {
+        font-size: 0.6rem;
+      }
+    }
+    span {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0.4rem;
+      width: 90px;
+      border-radius: 4px;
+      padding: 0.3rem 0;
+      color: $black;
+      background: rgb(224, 223, 223);
+      font-size: 0.8rem;
+      text-align: center;
+
+      @media (max-width: $lg-phone) {
+        font-size: 0.7rem;
+        width: 79px;
+      }
+
+      @media (max-width: $galaxy) {
+        font-size: 0.6rem;
+        width: 70px;
+      }
+
+      &.empty {
+        color: red;
+      }
+    }
   }
 }
 
 .submit-form {
   @include mainButton(0.5rem 1.5rem);
-  margin: 2rem 0 4rem;
+  margin: 1rem 0 4rem 0.5rem;
   font-size: 0.7rem;
 
   @media (max-width: $galaxy) {
