@@ -89,13 +89,16 @@
     }
 
     .pdf {
-      button {
-        border: 1px solid red;
-      }
+      border: 1px solid red;
+      display: inline-block;
+
       margin: 1rem 0;
       a {
-        @include mainButton(0.5rem 1.5rem);
+        @include mainButton(0.4rem 1.5rem);
       }
+    }
+    .no-file {
+      @include pTagsProps(0.5rem);
     }
 
     .anual-power-info {

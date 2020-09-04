@@ -3,23 +3,35 @@ import DisplayApplicationImgs from "./DisplayApplicationImgs";
 import DisplayYearlyInfo from "./DisplayYearlyInfo";
 import { manipulateData } from "./manipulateData";
 import { filterValues } from "../../helperFunctions/helperFunctions";
+import { axiosWithAuth } from "../../utils/axiosWithAuth";
 
 const SingleResult = ({ application }) => {
   let data = manipulateData(application);
   const { images, pdf_file, yearly_information } = data;
 
-  const ceiling_condition = filterValues(data.ceiling_condition); //
-  const ceiling_type = filterValues(data.ceiling_type); //
-  const construction_type = filterValues(data.construction_type); //
-  const f_p_taxes = filterValues(data.f_p_taxes); //
-  const has_pool = filterValues(data.has_pool); //
-  const heater_type = filterValues(data.heater_type); //
-  const is_panel_open = filterValues(data.is_panel_open); //
-  const packages = filterValues(data.packages); //
-  const s_p_taxes = filterValues(data.s_p_taxes); //
-  const sombreado_type = filterValues(data.sombreado_type); //
+  const deletePdf = (obj) => {
+    axiosWithAuth()
+      .delete(
+        `${process.env.REACT_APP_API_URL}/api/application/delete-pdf/${obj.id}`
+      )
+      .then((res) =>
+        console.log("what is the response for deleting the pdf ? ", res.data)
+      )
+      .catch((err) => console.log(err.response.data.errorMessage));
+  };
+
+  const ceiling_condition = filterValues(data.ceiling_condition);
+  const ceiling_type = filterValues(data.ceiling_type);
+  const construction_type = filterValues(data.construction_type);
+  const f_p_taxes = filterValues(data.f_p_taxes);
+  const has_pool = filterValues(data.has_pool);
+  const heater_type = filterValues(data.heater_type);
+  const is_panel_open = filterValues(data.is_panel_open);
+  const packages = filterValues(data.packages);
+  const s_p_taxes = filterValues(data.s_p_taxes);
+  const sombreado_type = filterValues(data.sombreado_type);
   const with_hoa = filterValues(data.with_hoa);
-  const with_solar_panel = filterValues(data.with_solar_panel); //
+  const with_solar_panel = filterValues(data.with_solar_panel);
 
   return (
     <div className="inner-wrapper">
@@ -155,15 +167,19 @@ const SingleResult = ({ application }) => {
         <DisplayApplicationImgs key={img.id} img={img} />
       ))}
 
-      <div className="pdf">
-        <a
-          href={pdf_file[0].pdf_file}
-          download={pdf_file[0].pdf_name}
-          rel="noopener noreferrer"
-        >
-          pdf
-        </a>
-      </div>
+      {pdf_file.length ? (
+        <div className="pdf" onClick={() => deletePdf(pdf_file[0])}>
+          <a
+            href={pdf_file[0].pdf_file}
+            download={pdf_file[0].pdf_name}
+            rel="noopener noreferrer"
+          >
+            pdf
+          </a>
+        </div>
+      ) : (
+        <p className="no-file">No pdf file</p>
+      )}
     </div>
   );
 };
