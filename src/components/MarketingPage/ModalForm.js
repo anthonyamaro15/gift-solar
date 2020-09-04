@@ -161,16 +161,18 @@ const ModalForm = () => {
           <PackageTypeComponent register={register} />
 
           <UserFilesComponent register={register} errors={errors} />
-          {/***************** END OF USER FIELDS *********************/}
+
           {/***************** START OF PROPERTY INORMATION *********************/}
           <PropertyInfoComponent register={register} errors={errors} />
-          {/********* end of HOA *********/}
 
           {/********* SECOND FORM INFORMATION *********/}
+
           <PowerInfoComponent register={register} />
           {/*********  END OF POWER SYSTEM INFORMATION  *********/}
+
           <ACComponent register={register} errors={errors} />
           {/*********  END OF AC INFORMATION *********/}
+
           <div className="power-bill-info">
             <h3>informacion de la cuenta de energia electrica</h3>
             <label htmlFor="acc-num">

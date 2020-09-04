@@ -23,7 +23,7 @@ const PropertyInfoComponent = ({ register, errors }) => {
             name="house_sqrtfoot"
             id="sqrFoot"
             ref={register({ required: true })}
-            className={errors.house_sqrfoot ? "not-empty-values" : ""}
+            className={errors.house_sqrtfoot ? "not-empty-values" : ""}
           />
         </label>{" "}
         <label htmlFor="totalFloors">
