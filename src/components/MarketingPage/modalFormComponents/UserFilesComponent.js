@@ -66,7 +66,7 @@ const UserFilesComponent = ({ register, errors }) => {
         {/** second user */}
 
         <label htmlFor="second-name" className="nombre">
-          1. Nombre:
+          2. Nombre:
           <input
             type="text"
             id="second_person_name"

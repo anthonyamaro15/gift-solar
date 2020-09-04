@@ -10,6 +10,7 @@ const AdminLogin = () => {
   const [open, setOpen] = useState(false);
   const { register, errors, handleSubmit } = useForm();
   const [show, setShow] = useState(false);
+  const [serverError, setServerError] = useState("");
 
   const history = useHistory();
 
@@ -22,7 +23,7 @@ const AdminLogin = () => {
         window.location.reload(true);
       })
       .catch((err) => {
-        console.log("here ", err);
+        setServerError(err.response.data.errorMessage);
       });
   };
 
@@ -66,18 +67,15 @@ const AdminLogin = () => {
                 {show ? <BiShow /> : <BiHide />}
               </span>
               <p className="error">{errors.password && "Password requerido"}</p>
+              <p className="error">{serverError && serverError}</p>
             </label>
 
-            <span>
+            <p>
               Olvido la contrasenia?
-              <button
-                className="forgotpassword"
-                onClick={redirecTo}
-                to="/forgotpassword"
-              >
+              <span className="forgotpassword" onClick={redirecTo}>
                 click aqui
-              </button>
-            </span>
+              </span>
+            </p>
             <button type="submit">login</button>
           </form>
         </div>
