@@ -1,15 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useParams, useHistory } from "react-router-dom";
 import { BiShow, BiHide } from "react-icons/bi";
+import axios from "axios";
 
 const ResetPassword = () => {
   const { register, handleSubmit, reset, errors } = useForm();
   const [showOne, setShowOne] = useState(false);
   const [showTwo, setShowTwo] = useState(false);
+  const { token } = useParams();
+  const [errorPassword, setErrorPassword] = useState("");
+  const history = useHistory();
+
+  useEffect(() => {
+    if (errorPassword) {
+      setTimeout(() => {
+        setErrorPassword("");
+      }, 2000);
+    }
+  }, [errorPassword, setErrorPassword]);
 
   const onSubmit = (values) => {
-    console.log(values);
-    reset();
+    const { password, passwordTwo } = values;
+    let newpass = { password };
+    if (password !== passwordTwo) {
+      setErrorPassword("Passwords do not match.");
+    } else {
+      axios
+        .patch(
+          `${process.env.REACT_APP_API_URL}/api/auth/resetpassword/${token}`,
+          newpass
+        )
+        .then((res) => {
+          reset();
+          history.push("/");
+          setTimeout(() => {
+            alert(res.data.message);
+          }, 700);
+        })
+        .catch((err) => {
+          console.log(err.response.data.errorMessage);
+        });
+    }
   };
 
   const togglePassword = () => {
@@ -48,6 +80,7 @@ const ResetPassword = () => {
             {showTwo ? <BiShow /> : <BiHide />}
           </span>
           <p className="error">{errors.passwordTwo && "Password requerido"}</p>
+          <p className="error">{errorPassword && errorPassword}</p>
         </label>
         <button type="submit">submit</button>
       </form>

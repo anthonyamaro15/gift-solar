@@ -37,7 +37,7 @@ const MainApp = () => {
         <ForgotPassword />
       </Route>
 
-      <Route exact path="/reset/:token">
+      <Route exact path="/resetpassword/:token">
         <Navbar />
         <MobileNavbar />
         <ResetPassword />
