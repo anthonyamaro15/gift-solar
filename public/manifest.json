@@ -3,19 +3,19 @@
   "name": "Cambiate a energia solar",
   "icons": [
     {
-      "src": "./icon60.png",
-      "sizes": "60x60",
+      "src": "./logo64.png",
+      "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "./logo283.png",
+      "src": "logo192.png",
       "type": "image/png",
-      "sizes": "283x285"
+      "sizes": "192x192"
     },
     {
-      "src": "./logo628.png",
+      "src": "logo512.png",
       "type": "image/png",
-      "sizes": "628x482"
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
