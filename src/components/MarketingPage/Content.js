@@ -7,18 +7,15 @@ import { questions } from "../../questions/questionsData";
 import { Link as SmothLink } from "react-scroll";
 
 const Content = () => {
-  //   const [showAnswer, setShowAnswer] = useState(false);
-
-  //   const toggleAnswer = () => {
-  //     setShowAnswer(!showAnswer);
-  //     console.log("check hre ", showAnswer);
-  //   };
   return (
     <div>
       <div className="Content-first">
         <section className="Content-about">
           <div className="img-wrapper">
-            <img src={imgOne} alt="about gift solar plans" />
+            <img
+              src={imgOne}
+              alt="description el porque deverias de cambiarte a energia solar"
+            />
           </div>
 
           <div className="video-wrapper">
@@ -57,12 +54,6 @@ const Content = () => {
                 cada uno de los clientes esté entusiasmado con su decisión de
                 adoptar la energía solar. También estamos buscando formas únicas
                 de ayudar en nuestras comunidades y marcar una diferencia.
-                {/**
-                        ¿TIENES SUMINISTROS PARA DONAR? Visite GetUsPPE.org para
-                encontrar sitios locales de donaciones en 41 estados, o visite
-                el sitio web de su departamento local de salud para averiguar
-                qué se necesita y cómo puede ayudar.
-               */}
               </p>
               <p className="donations">
                 {" "}
@@ -79,7 +70,10 @@ const Content = () => {
           </div>
 
           <div className="img-wrapper">
-            <img src={imgtwo} alt="why choose gift solar" />
+            <img
+              src={imgtwo}
+              alt="porque deverias de cambiarte con gift solar"
+            />
           </div>
         </section>
       </div>

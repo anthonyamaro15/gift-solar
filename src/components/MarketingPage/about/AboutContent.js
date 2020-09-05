@@ -7,7 +7,10 @@ const AboutContent = () => {
       <div className="AboutContent-first">
         <section className="AboutContent-about">
           <div className="img-wrapper">
-            <img src={imgAbout} alt="An imagen of gift solar CEO" />
+            <img
+              src={imgAbout}
+              alt="un mensage de Diana Montoya CEO de Gift Solar"
+            />
           </div>
 
           <div className="video-wrapper">
@@ -48,13 +51,7 @@ const AboutContent = () => {
                 lo más rápido posible y sin riesgos de salud para nuestra
                 comunidad. Gift Solar a creado un INCENTIVO EMPRESARIAL para
                 todo aquel que le es requerido cambiarse a energía renovable,
-                sin tener que depender de un vendedor
-                {/**
-                        ¿TIENES SUMINISTROS PARA DONAR? Visite GetUsPPE.org para
-                encontrar sitios locales de donaciones en 41 estados, o visite
-                el sitio web de su departamento local de salud para averiguar
-                qué se necesita y cómo puede ayudar.
-               */}
+                sin tener que depender de un vendedor.
               </p>
             </div>
           </div>
