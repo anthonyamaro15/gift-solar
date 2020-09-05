@@ -69,6 +69,10 @@
     top: 0.4rem;
   }
 
+  @media (max-width: $med-phone) {
+    top: 0.2rem;
+  }
+
   // close mobile navbar when click on hamburger menu
   &.close {
     transform: rotate(180deg);
@@ -103,6 +107,10 @@
 
     @media (max-width: $med-phone) {
       padding: 1px 4px;
+    }
+
+    @media (max-width: $galaxy) {
+      width: 34px;
     }
   }
 }
