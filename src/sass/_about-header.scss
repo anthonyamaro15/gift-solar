@@ -14,13 +14,4 @@
     @include bg-imgs("../imgs/header4.jpg", center);
     z-index: -1;
   }
-  .AboutHeader-wrapper {
-    padding: 0rem 0.5rem;
-    max-width: $max-w;
-    margin: 0 auto;
-
-    @include flex(center);
-    flex-direction: column;
-    height: 100%;
-  }
 }

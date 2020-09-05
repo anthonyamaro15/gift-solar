@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import DateTimePickerComp from "./DateTimePicker";
 import ContactGiftSolarForm from "./ContactGiftSolarForm";
 import DateTimePicker from "react-datetime-picker";
 import { useForm } from "react-hook-form";
@@ -9,7 +8,6 @@ const ContactContent = () => {
   const [value, onChange] = useState("");
   const { register, reset, errors, handleSubmit } = useForm();
   const [error, setError] = useState("");
-  //   console.log("values", value);
 
   const onSubmit = (data) => {
     if (value === "") {

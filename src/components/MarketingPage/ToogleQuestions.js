@@ -12,7 +12,7 @@ const ToggleQuestions = ({ data }) => {
     setShowAnswer(!showAnswer);
   };
   return (
-    <div className="toggleAnswer" onClick={toggleAnswer}>
+    <section className="toggleAnswer" onClick={toggleAnswer}>
       <SlideToggle
         collapsed
         duration={300}
@@ -45,7 +45,7 @@ const ToggleQuestions = ({ data }) => {
           </div>
         )}
       />
-    </div>
+    </section>
   );
 };
 

@@ -16,13 +16,4 @@
 
     z-index: -1;
   }
-  .ContactHeader-wrapper {
-    padding: 0rem 0.5rem;
-    max-width: $max-w;
-    margin: 0 auto;
-
-    @include flex(center);
-    flex-direction: column;
-    height: 100%;
-  }
 }
