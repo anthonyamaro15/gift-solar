@@ -6,6 +6,7 @@ import AdminLogin from "./AdminLogin";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -42,7 +43,7 @@ const Navbar = () => {
             contact
           </NavLink>
           <div className="btn-login">
-            <AdminLogin />
+            <AdminLogin open={open} setOpen={setOpen} />
           </div>
         </nav>
       </div>

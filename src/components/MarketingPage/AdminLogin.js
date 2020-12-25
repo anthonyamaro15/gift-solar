@@ -6,8 +6,8 @@ import { useForm } from "react-hook-form";
 import { BiShow, BiHide } from "react-icons/bi";
 import { axiosWithAuth } from "../../utils/axiosWithAuth";
 
-const AdminLogin = () => {
-  const [open, setOpen] = useState(false);
+const AdminLogin = ({ open, setOpen }) => {
+//   const [open, setOpen] = useState(false);
   const { register, errors, handleSubmit } = useForm();
   const [show, setShow] = useState(false);
   const [serverError, setServerError] = useState("");
