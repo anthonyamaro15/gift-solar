@@ -3,6 +3,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { apiKey, apiSecret, serverUrl } from '../../envVariables';
 
 import PackageTypeComponent from "./modalFormComponents/PackageTypeComponent";
 import UserFilesComponent from "./modalFormComponents/UserFilesComponent";
@@ -28,7 +29,7 @@ const ModalForm = () => {
     };
 
     axios
-      .post(`${process.env.REACT_APP_API_URL}/api/application/add`, newData)
+      .post(`${serverUrl}/api/application/add`, newData)
       .then(() => {
         setOpen(false);
         setTimeout(() => {
@@ -55,11 +56,11 @@ const ModalForm = () => {
     let files = e.target.files[0];
     const formData = new FormData();
 
-    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
+    formData.append("upload_preset", apiSecret);
     formData.append("file", files);
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${apiKey}/image/upload`,
         formData
       )
       .then((res) => {
@@ -73,12 +74,12 @@ const ModalForm = () => {
   const uploadImg2 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
+    formData.append("upload_preset", apiSecret);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${apiKey}/image/upload`,
         formData
       )
       .then((res) => {
@@ -89,12 +90,12 @@ const ModalForm = () => {
   const uploadImg3 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
+    formData.append("upload_preset", apiSecret);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${apiKey}/image/upload`,
         formData
       )
       .then((res) => {
@@ -105,12 +106,12 @@ const ModalForm = () => {
   const uploadImg4 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
+    formData.append("upload_preset", apiSecret);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${apiKey}/image/upload`,
         formData
       )
       .then((res) => {
@@ -121,12 +122,12 @@ const ModalForm = () => {
   const uploadImg5 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
+    formData.append("upload_preset", apiSecret);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${apiKey}/image/upload`,
         formData
       )
       .then((res) => {
@@ -137,12 +138,12 @@ const ModalForm = () => {
   const uploadImg6 = (e) => {
     const files = e.target.files[0];
     const formData = new FormData();
-    formData.append("upload_preset", process.env.REACT_APP_API_SECRET);
+    formData.append("upload_preset", apiSecret);
     formData.append("file", files);
 
     axios
       .post(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_API_KEY}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${apiKey}/image/upload`,
         formData
       )
       .then((res) => {

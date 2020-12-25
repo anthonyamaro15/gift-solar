@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "msw": "^0.24.2",
+    "mutationobserver-shim": "^0.3.7"
   }
 }
