@@ -3,29 +3,27 @@ import ContactGiftSolarForm from "./ContactGiftSolarForm";
 import DateTimePicker from "react-datetime-picker";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { serverUrl } from '../../../envVariables';
 
 const ContactContent = () => {
   const [value, onChange] = useState("");
   const { register, reset, errors, handleSubmit } = useForm();
   const [error, setError] = useState("");
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (value === "") {
       setError("Porfavor selecione fecha y hora");
     } else {
       let convertDate = String(value.toLocaleString());
       const newData = { ...data, appoinmentTime: convertDate };
 
-      axios
-        .post(`${process.env.REACT_APP_API_URL}/api/appoinment`, newData)
-        .then((res) => {
-          console.log("what is the response ", res.data);
-          reset();
-          onChange("");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      try {
+         await axios.post(`${serverUrl}/api/appoinment`, newData);
+         reset(); 
+         onChange('');
+      } catch (error) {
+         console.log(error.response);
+      }
     }
   };
   return (

@@ -20,7 +20,6 @@ beforeAll(() => server.listen());
 afterAll(() => server.close());
 afterEach(() => server.restoreHandlers());
 
-
 describe("Renders AdminLogin without crashing", () => {
    let open = false;
    const setOpen = () => open = !open;
