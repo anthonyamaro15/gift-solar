@@ -20,7 +20,7 @@ const ModalForm = () => {
   const [pdfName, setPdfName] = useState("");
   const [imgContainer, setImgContainer] = useState([]);
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     const newData = {
       ...values,
       pdf_file: powerFile,
@@ -28,17 +28,15 @@ const ModalForm = () => {
       images: imgContainer,
     };
 
-    axios
-      .post(`${serverUrl}/api/application/add`, newData)
-      .then(() => {
-        setOpen(false);
-        setTimeout(() => {
-          alert("Hemos recivido sus datos nos comunicaremos con usted pronto.");
-        }, 1500);
-      })
-      .catch((err) => {
-        console.log("what is this error ? ", err.response.data.errorMessage);
-      });
+    try {
+      await axios.post(`${serverUrl}/api/application/add`, newData); 
+      setOpen(false);
+      setTimeout(() => {
+         alert("Hemos recivido sus datos nos comunicaremos con usted pronto.");
+      }, 1500);
+    } catch (error) {
+       console.log(error.response.data);
+    }
   };
   const uploadPdf = (e) => {
     const file = e.target.files[0];

@@ -1,21 +1,20 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { serverUrl } from '../../../envVariables';
 
 const ContactGiftSolarForm = () => {
   const { register, reset, errors, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
-    axios
-      .post(`${process.env.REACT_APP_API_URL}/api/contact`, data)
-      .then((res) => {
-        console.log("what is this ", res.data);
+  const onSubmit = async (data) => {
+     try {
+        await axios.post(`${serverUrl}/api/contact`, data);
         reset();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+     } catch (error) {
+        console.log(error.response);
+     }
   };
+
   return (
     <div className="Contact-inner">
       <div className="contact-info">
@@ -52,7 +51,7 @@ const ContactGiftSolarForm = () => {
               type="number"
               name="phoneNumber"
               id="phone-number"
-              placeholder="Numbero de telefono"
+              placeholder="Numero de telefono"
               ref={register({ required: true })}
             />
             <p className="error">{errors.phoneNumber && "Numero requerido"}</p>
